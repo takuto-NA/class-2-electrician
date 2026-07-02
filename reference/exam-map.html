@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>試験全体マップ — 合格ラインと今の立ち位置</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+  <style>
+    .toc {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.9rem 1.2rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .toc p {
+      margin: 0 0 0.4rem;
+      font-weight: 600;
+    }
+    .toc ol {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+    .toc li {
+      margin-bottom: 0.2rem;
+    }
+    .big-number {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .big-number-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .stat-row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 1.25rem 0 2rem;
+    }
+  </style>
+</head>
+<body>
+<article>
+  <h1>試験全体マップ</h1>
+  <p class="lesson-meta">参照資料 · 定期的に見返す「現在地確認」用ドキュメント</p>
+
+  <p class="lead">「今どこにいて、あとどれだけあるのか」がわからないと不安になる。この1枚で、合格ライン・出題範囲全体・現在の進捗・安心して臨めるライン・絶対に落とせないものを一望する。</p>
+
+  <div class="toc">
+    <p>この地図の構成</p>
+    <ol>
+      <li><a href="#pass-line">① 何割正解すれば受かるか</a></li>
+      <li><a href="#scope">② 範囲はどれくらいあるか</a></li>
+      <li><a href="#progress">③ 今勉強しているのはどの部分か</a></li>
+      <li><a href="#safety-line">④ 安心ラインはどこか</a></li>
+      <li><a href="#must-know">⑤ これだけは絶対に抑えるもの</a></li>
+    </ol>
+  </div>
+
+  <h2 id="pass-line">① 何割正解すれば受かるか</h2>
+
+  <div class="stat-row">
+    <div>
+      <div class="big-number">60%</div>
+      <div class="big-number-label">学科：50問中30問正解で合格</div>
+    </div>
+    <div>
+      <div class="big-number">欠陥0</div>
+      <div class="big-number-label">技能：1つでも欠陥があれば不合格</div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>学科試験</th>
+        <th>技能試験</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>形式</td>
+        <td>四肢択一 50問・120分</td>
+        <td>実技 40分・候補13問中1問</td>
+      </tr>
+      <tr>
+        <td>合格基準</td>
+        <td><strong>60点以上（100点満点・30問正解）</strong></td>
+        <td><strong>欠陥（施工上の不備）がないこと</strong></td>
+      </tr>
+      <tr>
+        <td>科目別の足切り</td>
+        <td><strong>なし</strong> — 苦手科目を0点でも他でカバー可能</td>
+        <td>加点方式ではない。1箇所の欠陥で不合格</td>
+      </tr>
+      <tr>
+        <td>合格率の目安</td>
+        <td>約55〜65%</td>
+        <td>約68〜74%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>ここが重要：学科は「満遍なく」より「取れる所を確実に」</strong>
+    科目別の足切りがないため、計算問題（電気理論・配電理論、計12問前後）が仮に全滅しても、残り約38問中30問（79%）取れれば合格できる。裏を返すと、<strong>配線図と暗記科目を固めるほうが計算を極めるより費用対効果が高い。</strong>
+  </div>
+
+  <h2 id="scope">② 範囲はどれくらいあるか</h2>
+
+  <p>学科は公式に7科目。実務的には「一般問題30問（暗記＋計算）」と「配線図問題20問（図記号・器具判別）」の2ブロックで捉えると動きやすい。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ブロック</th>
+        <th>科目</th>
+        <th>目安出題数</th>
+        <th>配点比率</th>
+        <th>性質</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="6">一般問題<br>（問1〜30）</td>
+        <td>① 電気に関する基礎理論</td>
+        <td>4〜6問</td>
+        <td>約10%</td>
+        <td>計算（オームの法則等）</td>
+      </tr>
+      <tr>
+        <td>② 配電理論及び配線設計</td>
+        <td>5〜7問</td>
+        <td>約12%</td>
+        <td>計算（電線太さ・電圧降下）</td>
+      </tr>
+      <tr>
+        <td>③ 電気機器・配線器具・材料・工具</td>
+        <td>5〜8問</td>
+        <td>約14%</td>
+        <td>暗記（レッスン2はここ）</td>
+      </tr>
+      <tr>
+        <td>④ 電気工事の施工方法</td>
+        <td>5〜7問</td>
+        <td>約12%</td>
+        <td>暗記</td>
+      </tr>
+      <tr>
+        <td>⑤ 一般用電気工作物等の検査方法</td>
+        <td>3〜5問</td>
+        <td>約8%</td>
+        <td>暗記</td>
+      </tr>
+      <tr>
+        <td>⑦ 保安に関する法令</td>
+        <td>3〜5問</td>
+        <td>約8%</td>
+        <td>暗記（レッスン1はここ）</td>
+      </tr>
+      <tr>
+        <td>配線図問題<br>（問31〜50）</td>
+        <td>⑥ 配線図</td>
+        <td><strong>20問</strong></td>
+        <td><strong>約40%</strong></td>
+        <td>図記号・器具判別・電線本数</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.85rem;color:var(--muted);font-family:'Source Sans 3',sans-serif;">※ 出題数は年度・回により変動する目安。科目区分は<a href="https://www.shiken.or.jp/construction/second/overview/">試験センター公式</a>準拠、内訳配分は各種予備校資料を参照。</p>
+
+  <p>技能試験は、事前公表される<strong>候補問題13問</strong>のうち1問が本番で出題される。範囲は狭いが「未知の問題」ではなく「13択の暗記＋実技」に近い。</p>
+
+  <div class="scene-card">
+    <div class="scene-card-label">技能試験13問の全体像</div>
+    <p>すべて住宅・小規模施設の配線が題材。難易度の目安（複数資料の共通見解）：<strong>易しい</strong>＝No.1・No.2・No.7・No.10・No.12、<strong>標準</strong>＝No.4・No.5・No.8・No.9、<strong>やや難</strong>＝No.3・No.6・No.11・No.13（特殊器具：タイムスイッチ、ねじなし電線管、自動点滅器など）。年明け（例年1月頃）に公式から正式版が公表される。</p>
+  </div>
+
+  <h2 id="progress">③ 今勉強しているのはどの部分か</h2>
+
+  <p>現在完了しているレッスンを、上の7科目にマッピングすると次のようになる。</p>
+
+  <div class="progress-map">
+    <div class="progress-row">
+      <span class="subject-name">① 基礎理論（計算）</span>
+      <span class="progress-track"><span class="progress-fill not-started" style="width:0%"></span></span>
+      <span class="progress-status">未着手</span>
+      <span class="subject-weight">約10%</span>
+    </div>
+    <div class="progress-row">
+      <span class="subject-name">② 配電理論・配線設計</span>
+      <span class="progress-track"><span class="progress-fill not-started" style="width:0%"></span></span>
+      <span class="progress-status">未着手</span>
+      <span class="subject-weight">約12%</span>
+    </div>
+    <div class="progress-row">
+      <span class="subject-name">③ 機器・配線器具・材料</span>
+      <span class="progress-track"><span class="progress-fill" style="width:25%"></span></span>
+      <span class="progress-status">レッスン2（1/4項目）</span>
+      <span class="subject-weight">約14%</span>
+    </div>
+    <div class="progress-row">
+      <span class="subject-name">④ 施工方法</span>
+      <span class="progress-track"><span class="progress-fill not-started" style="width:0%"></span></span>
+      <span class="progress-status">未着手</span>
+      <span class="subject-weight">約12%</span>
+    </div>
+    <div class="progress-row">
+      <span class="subject-name">⑤ 検査方法</span>
+      <span class="progress-track"><span class="progress-fill not-started" style="width:0%"></span></span>
+      <span class="progress-status">未着手</span>
+      <span class="subject-weight">約8%</span>
+    </div>
+    <div class="progress-row">
+      <span class="subject-name">⑥ 配線図</span>
+      <span class="progress-track"><span class="progress-fill not-started" style="width:0%"></span></span>
+      <span class="progress-status">未着手</span>
+      <span class="subject-weight">約40%</span>
+    </div>
+    <div class="progress-row">
+      <span class="subject-name">⑦ 法令</span>
+      <span class="progress-track"><span class="progress-fill" style="width:25%"></span></span>
+      <span class="progress-status">レッスン1（1/4項目）</span>
+      <span class="subject-weight">約8%</span>
+    </div>
+    <div class="progress-row">
+      <span class="subject-name">技能（候補13問）</span>
+      <span class="progress-track"><span class="progress-fill not-started" style="width:0%"></span></span>
+      <span class="progress-status">未着手</span>
+      <span class="subject-weight">別試験</span>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>率直に言うと：今はまだ全体の一部</strong>
+    レッスン1（30Vライン・法令の入口）とレッスン2（電線略称・機器材料の入口）は、配点にして<strong>7科目中2科目の「触り」</strong>程度。特に配点40%の<strong>配線図（⑥）</strong>と、計算系の①②にはまだ入っていない。ここから、配点の大きい配線図と、暗記で稼げる③④⑤⑦を優先して固めていくのが効率的な順路になる。
+  </div>
+
+  <h2 id="safety-line">④ 安心ラインはどこか</h2>
+
+  <p>合格ラインぴったり（30問・60%）を目標にするのはリスクが高い。本番の緊張、その年の難化、マークミスを考えると、<strong>安全マージン</strong>を積んでおきたい。</p>
+
+  <div class="line-meter">
+    <div class="line-meter-marker" style="left:60%;">危険ライン<strong>30問(60%)</strong></div>
+    <div class="line-meter-marker" style="left:80%;">安心ライン<strong>40問(80%)</strong></div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ライン</th>
+        <th>正解数の目安</th>
+        <th>意味</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>合格ライン</td>
+        <td>30問 / 50問（60%）</td>
+        <td>公式の最低基準。本番でここちょうどは危険</td>
+      </tr>
+      <tr>
+        <td><strong>安心ライン（推奨）</strong></td>
+        <td><strong>38〜40問 / 50問（76〜80%）</strong></td>
+        <td>模試・過去問演習でここに安定して届けば、本番の緊張・ケアレスミスを吸収できる</td>
+      </tr>
+      <tr>
+        <td>技能の安心ライン</td>
+        <td>候補13問すべてを<strong>2周・欠陥ゼロ</strong>で完成</td>
+        <td>「本番でどれが出ても迷わない」状態。1周目は時間オーバー可、2周目で40分以内＆欠陥ゼロを目指す</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>目安の学習期間（<a href="https://shikaku-dojo.lb-product.com/denki-kouji2/articles/study-guide">資格道場の目安</a>等を参考）：学科は過去問中心に<strong>1〜2ヶ〜月</strong>、技能は複線図＋候補問題の反復に<strong>1ヶ月前後</strong>。1年計画なら、余裕を持って前倒しし、直前期に安心ラインの底上げに充てられる。</p>
+
+  <h2 id="must-know">⑤ これだけは絶対に抑えるもの</h2>
+
+  <p>時間がなくても、この5つだけは死守する。配点比率と「暗記すれば確実に取れる」性質から優先順位をつけている。</p>
+
+  <div class="must-know">
+    <h3>1. 配線図の図記号（配点40%の土台）</h3>
+    <p>配線図20問はすべて図記号の読み取りが前提。コンセント・スイッチ（片切/3路/4路）・照明・分電盤・接地記号など、JIS図記号を見て即座に名前が出る状態が目標。<em>（今後のレッスンで暗記表を用意予定）</em></p>
+  </div>
+
+  <div class="must-know">
+    <h3>2. オームの法則と基本計算式</h3>
+    <p>V = IR（電圧＝電流×抵抗）、P = VI（電力＝電圧×電流）。基礎理論・配電理論の計算問題はほぼこの変形。公式を1つ覚えれば複数問に応用できるコスパの良い暗記。</p>
+  </div>
+
+  <div class="must-know">
+    <h3>3. 技能候補問題13問のリストと難易度</h3>
+    <p>No.1〜13の単線図がどんな回路か（スイッチ3路、タイムスイッチ、ねじなし電線管など）を見分けられること。「どれが出ても慌てない」ための地図。</p>
+  </div>
+
+  <div class="must-know">
+    <h3>4. 電線の色分けルール</h3>
+    <p>黒＝非接地側（電源から来る線）、白＝接地側（中性線）、緑＝接地（アース）。IV・VVFどちらでも共通の命綱ルール。配線図・技能どちらにも直結する。</p>
+  </div>
+
+  <div class="must-know">
+    <h3>5. 絶縁抵抗・接地抵抗の基準値</h3>
+    <p>対地電圧150V以下は0.1MΩ以上、300V以下は0.2MΩ以上など。数値は法令科目・検査科目の頻出パターンで、そのまま暗記すれば得点になる「丸暗記勝負」の代表例。</p>
+  </div>
+
+  <div class="ask-teacher">
+    <strong>次に何を優先すべきか迷ったら、このチャットで聞いてください。</strong>
+    「配線図の図記号を覚えたい」「オームの法則が苦手」など具体的に言ってもらえれば、その部分のレッスンを作ります。この地図は今後、レッスンが増えるたびに進捗バーを更新していきます。
+  </div>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0001-thirty-volt-line.html">レッスン1</a>
+    <a href="../lessons/0002-decode-cable-names.html">レッスン2</a>
+    <a href="glossary.html">用語集</a>
+    <a href="../MISSION.md">ミッション</a>
+  </nav>
+</article>
+</body>
+</html>

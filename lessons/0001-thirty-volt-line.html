@@ -13,8 +13,50 @@
 
   <p class="lead">「DIYで30V以上の電気を扱いたい」— その一言が、第2種電気工事士の勉強と直結している理由を押さえる。</p>
 
+  <div class="position-badge">
+    <div class="position-badge-header">
+      <span class="position-badge-subject">📍 科目⑦ 保安に関する法令</span>
+      <span class="position-badge-weight">学科50問中 約3〜5問（配点 約8%）</span>
+    </div>
+    <span class="progress-track"><span class="progress-fill" style="width:25%"></span></span>
+    <ul class="subtopic-checklist">
+      <li class="done">電気工作物の定義・30Vライン（このレッスン）</li>
+      <li class="todo">電気工事士法（資格の種類・義務・罰則）</li>
+      <li class="todo">電気用品安全法（PSEマーク等）</li>
+      <li class="todo">電気設備技術基準の要点</li>
+    </ul>
+    <p class="position-badge-note">法令科目のうち、まず「そもそも資格が要るか」の判断基準から着手。全体像は<a href="../reference/exam-map.html">試験全体マップ</a>を参照。</p>
+  </div>
+
+  <div class="cast-intro">
+    <div class="cast-member">
+      <div class="cast-avatar">⚡</div>
+      <div><strong>ボルト先生</strong><span>解説役</span></div>
+    </div>
+    <div class="cast-member student">
+      <div class="cast-avatar">💡</div>
+      <div><strong>アンペアくん</strong><span>DIYでオフグリッドを目指す聞き手</span></div>
+    </div>
+  </div>
+
   <h2>なぜ30V？</h2>
-  <p>日本の電気法令では、<strong>30V</strong>が重要な境界線になる。電気事業法上の「電気工作物」から、次の条件を<strong>すべて</strong>満たす設備は除外される。</p>
+
+  <div class="dialogue">
+    <div class="dialogue-turn student">
+      <div class="dialogue-avatar">💡</div>
+      <div class="dialogue-bubble">
+        <span class="dialogue-name">アンペアくん</span>
+        <p>先生、オフグリッドとか蓄電池をDIYでやりたいって言ったら、いきなり「第2種を取れ」って言われたんですけど…正直つながりがピンと来てないんです。</p>
+      </div>
+    </div>
+    <div class="dialogue-turn">
+      <div class="dialogue-avatar">⚡</div>
+      <div class="dialogue-bubble">
+        <span class="dialogue-name">ボルト先生</span>
+        <p>いい疑問だね。実は日本の電気の法律には、はっきりした境界線がひとつあるんだ。それが<strong>30V</strong>。電気事業法上の「電気工作物」から、次の条件を<strong>すべて</strong>満たす設備だけが除外される。</p>
+      </div>
+    </div>
+  </div>
 
   <div class="callout">
     <strong>電気工作物から除外される条件</strong>
@@ -22,26 +64,85 @@
     かつ、30V以上の電気設備と<strong>電気的に接続されていない</strong>こと。
   </div>
 
-  <p>Arduinoの5V実験や、単独の豆電球回路は、この枠外に収まることが多い。一方、あなたが挙げた<strong>オフグリッド・蓄電池・ソーラー</strong>は、たいてい30Vを超え、しかも系統や他の機器と接続する。つまり<strong>電気工作物</strong>に入り、原則として<strong>資格のある者</strong>が工事を行う領域になる。</p>
-
-  <p>参考：<a href="../reference/thirty-volt-line.html">30Vライン早見表</a></p>
+  <div class="dialogue">
+    <div class="dialogue-turn student">
+      <div class="dialogue-avatar">💡</div>
+      <div class="dialogue-bubble">
+        <span class="dialogue-name">アンペアくん</span>
+        <p>じゃあArduinoの5V実験とか、豆電球を光らせるだけの回路は関係ないってことですね？</p>
+      </div>
+    </div>
+    <div class="dialogue-turn">
+      <div class="dialogue-avatar">⚡</div>
+      <div class="dialogue-bubble">
+        <span class="dialogue-name">ボルト先生</span>
+        <p>その通り、それは枠外。でも問題は<strong>オフグリッド・蓄電池・ソーラー</strong>だ。これらは大抵30Vを超えるし、しかも他の機器や系統とつながっている。つまり<strong>電気工作物</strong>に入って、原則<strong>資格のある人</strong>が工事することになる。</p>
+        <p>参考：<a href="../reference/thirty-volt-line.html">30Vライン早見表</a>にまとめてあるよ。</p>
+      </div>
+    </div>
+  </div>
 
   <h2>第2種がカバーする範囲</h2>
-  <p>第2種電気工事士は、<strong>600V以下の一般用電気工作物</strong>の電気工事ができる国家資格。具体例：</p>
-  <ul>
-    <li>家庭の100V配線（コンセント増設、分電盤まわり）</li>
-    <li>出力50kW未満の太陽電池発電設備（小出力発電設備）</li>
-    <li>600V以下の蓄電池への接続工事</li>
-  </ul>
-  <p>DIYで現実的に目指すオフグリッド設備の多くは、この「一般用電気工作物」の中に収まる。だから第2種は「試験のため」ではなく、<strong>自分のDIYを合法化するための最低ライン</strong>として機能する。</p>
+
+  <div class="dialogue">
+    <div class="dialogue-turn student">
+      <div class="dialogue-avatar">💡</div>
+      <div class="dialogue-bubble">
+        <span class="dialogue-name">アンペアくん</span>
+        <p>じゃあ第2種を取れば、そのあたり全部できるようになるんですか？</p>
+      </div>
+    </div>
+    <div class="dialogue-turn">
+      <div class="dialogue-avatar">⚡</div>
+      <div class="dialogue-bubble">
+        <span class="dialogue-name">ボルト先生</span>
+        <p>第2種電気工事士は、<strong>600V以下の一般用電気工作物</strong>の工事ができる国家資格。具体的には——</p>
+        <ul>
+          <li>家庭の100V配線（コンセント増設、分電盤まわり）</li>
+          <li>出力50kW未満の太陽電池発電設備（小出力発電設備）</li>
+          <li>600V以下の蓄電池への接続工事</li>
+        </ul>
+        <p>君が目指してるオフグリッド設備は、たいていこの「一般用電気工作物」の中に収まる。だから第2種は「試験のため」の資格じゃなくて、<strong>自分のDIYを合法化するための最低ライン</strong>なんだ。</p>
+      </div>
+    </div>
+  </div>
 
   <h2>「無資格でできる」は例外だけ</h2>
-  <p>経産省の資料では、資格不要の<strong>軽微な工事</strong>が施行令で限定列挙されている。代表例：</p>
-  <ul>
-    <li>600V以下の機器に<strong>コード</strong>（プラグ付き電線）を接続する</li>
-    <li>600V以下の<strong>蓄電池端子</strong>に電線をねじ止めする</li>
-  </ul>
-  <p>逆に、<strong>電線同士を接続する</strong>、<strong>配線器具（スイッチ・コンセント）に接続する</strong>作業は、原則として電気工事士が必要。ソーラーと蓄電池を直結する、分電盤にブレーカを追加する— こうした DIY の本丸は、軽微な工事の例外には入りにくい。</p>
+
+  <div class="dialogue">
+    <div class="dialogue-turn student">
+      <div class="dialogue-avatar">💡</div>
+      <div class="dialogue-bubble">
+        <span class="dialogue-name">アンペアくん</span>
+        <p>全部資格いるんですか？ ちょっとした作業でも？</p>
+      </div>
+    </div>
+    <div class="dialogue-turn">
+      <div class="dialogue-avatar">⚡</div>
+      <div class="dialogue-bubble">
+        <span class="dialogue-name">ボルト先生</span>
+        <p>例外はあるよ。経産省の資料で「<strong>軽微な工事</strong>」として限定列挙されているものだけ、無資格でもOK。代表例はこの2つ——</p>
+        <ul>
+          <li>600V以下の機器に<strong>コード</strong>（プラグ付き電線）を接続する</li>
+          <li>600V以下の<strong>蓄電池端子</strong>に電線をねじ止めする</li>
+        </ul>
+      </div>
+    </div>
+    <div class="dialogue-turn student">
+      <div class="dialogue-avatar">💡</div>
+      <div class="dialogue-bubble">
+        <span class="dialogue-name">アンペアくん</span>
+        <p>ということは、ソーラーと蓄電池を直結したり、分電盤にブレーカを足したりするのは……</p>
+      </div>
+    </div>
+    <div class="dialogue-turn">
+      <div class="dialogue-avatar">⚡</div>
+      <div class="dialogue-bubble">
+        <span class="dialogue-name">ボルト先生</span>
+        <p>それはアウト。<strong>電線同士の接続</strong>や<strong>配線器具（スイッチ・コンセント）への接続</strong>は原則、電気工事士が必要な「本丸」の作業。君が本当にやりたいことは、まさにここに入ってくる。</p>
+      </div>
+    </div>
+  </div>
 
   <figure>
     <table>
@@ -74,8 +175,17 @@
   </figure>
 
   <h2>試験との接続</h2>
-  <p>1年以内の合格を目指すなら、試験は<strong>学科（50問）→ 技能（候補13問から1問）</strong>の2段階。年2回（上期・下期）実施。</p>
-  <p>学科の7科目のうち、今日の内容は特に<strong>法令</strong>と<strong>保安</strong>の土台になる。技能では配線・接地・測定を実際の手で覚える— ソーラー設置でも同じ配線技術がそのまま活きる。</p>
+
+  <div class="dialogue">
+    <div class="dialogue-turn">
+      <div class="dialogue-avatar">⚡</div>
+      <div class="dialogue-bubble">
+        <span class="dialogue-name">ボルト先生</span>
+        <p>1年以内の合格を目指すなら、試験は<strong>学科（50問）→ 技能（候補13問から1問）</strong>の2段階。年2回（上期・下期）実施される。</p>
+        <p>今日話した内容は、学科7科目のうち<strong>法令</strong>の入り口。技能では配線・接地・測定を実際の手で覚えるから、ソーラー設置の作業にもそのまま活きるよ。</p>
+      </div>
+    </div>
+  </div>
 
   <h2>確認クイズ</h2>
 
@@ -115,15 +225,19 @@
     「うちの48V蓄電池構成だと資格要る？」「上期試験の申込はいつ？」など、具体例で聞くと答えやすいです。
   </div>
 
+  <h2>このレッスンで終わっていないこと</h2>
+  <p>法令科目（配点約8%）のうち、今日カバーしたのは「電気工作物の定義」だけ。残り3項目（電気工事士法・電気用品安全法・技術基準）はまだ手つかず。ただし<a href="../reference/exam-map.html">試験全体マップ</a>で見ると、法令科目より配点の大きい<strong>配線図（40%）</strong>や<strong>機器・材料（14%）</strong>を先に固める方が費用対効果が高い——法令の残りは中盤以降でまとめて回収する想定。</p>
+
   <h2>次にやること</h2>
   <ol>
     <li>上の primary source の「電圧30V以下」の節を読む（15分）</li>
     <li><a href="../reference/thirty-volt-line.html">30Vライン早見表</a>を印刷またはブックマーク</li>
-    <li>次のレッスンで「試験の全体像と1年スケジュール」に進む</li>
+    <li><a href="../reference/exam-map.html">試験全体マップ</a>で他の科目の位置づけも確認しておく</li>
   </ol>
 
   <nav class="lesson-nav">
     <a href="../lessons/0002-decode-cable-names.html">レッスン2 →</a>
+    <a href="../reference/exam-map.html">試験全体マップ</a>
     <a href="../reference/glossary.html">用語集</a>
     <a href="../reference/thirty-volt-line.html">30Vライン早見表</a>
     <a href="../MISSION.md">ミッション</a>

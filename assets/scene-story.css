@@ -120,3 +120,363 @@
     border: 1px solid var(--border);
   }
 }
+
+/* --- 進捗マップ（科目別カバー状況） --- */
+.progress-map {
+  margin: 1.25rem 0 2rem;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.7rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.85rem;
+}
+
+.progress-row .subject-name {
+  flex: 0 0 168px;
+}
+
+.progress-row .subject-weight {
+  flex: 0 0 52px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+.progress-track {
+  flex: 1;
+  background: #e9e7e0;
+  border-radius: 4px;
+  height: 11px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.progress-fill.not-started {
+  background: #d4d0c4;
+}
+
+.progress-fill.done {
+  background: var(--correct);
+}
+
+.progress-status {
+  flex: 0 0 88px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* --- ラインメーター（合格ライン・安心ラインの可視化） --- */
+.line-meter {
+  position: relative;
+  height: 40px;
+  background: linear-gradient(to right, #fee2e2 0%, #fef3c7 60%, #dcfce7 80%, #dcfce7 100%);
+  border-radius: 6px;
+  margin: 1.5rem 0 2.5rem;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.line-meter-marker {
+  position: absolute;
+  top: -1.6rem;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.line-meter-marker::after {
+  content: '';
+  position: absolute;
+  top: 1.9rem;
+  left: 50%;
+  width: 2px;
+  height: 40px;
+  background: var(--text);
+  transform: translateX(-50%);
+}
+
+.line-meter-marker strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+/* --- 最重要マーク --- */
+.must-know {
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  padding: 1.1rem 1.3rem;
+  margin: 1.5rem 0;
+  background: #fffbf5;
+  position: relative;
+}
+
+.must-know::before {
+  content: '★ 最優先';
+  position: absolute;
+  top: -0.75rem;
+  left: 1rem;
+  background: var(--accent);
+  color: white;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15rem 0.6rem;
+  border-radius: 3px;
+  letter-spacing: 0.03em;
+}
+
+.must-know h3 {
+  margin-top: 0.25rem;
+}
+
+/* --- レッスン冒頭：試験全体マップ上の位置づけ --- */
+.position-badge {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0 2rem;
+  border-radius: 0 4px 4px 0;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.position-badge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.position-badge-subject {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.position-badge-weight {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.position-badge .progress-track {
+  margin-top: 0.4rem;
+}
+
+.position-badge-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.position-badge-note a {
+  color: var(--accent);
+}
+
+/* --- 科目内の小項目チェックリスト --- */
+.subtopic-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0.65rem 0 0;
+  font-size: 0.85rem;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.subtopic-checklist li {
+  padding: 0.28rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.subtopic-checklist li.done {
+  color: var(--text);
+}
+
+.subtopic-checklist li.done::before {
+  content: '\2713';
+  color: var(--correct);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.subtopic-checklist li.todo {
+  color: var(--muted);
+}
+
+.subtopic-checklist li.todo::before {
+  content: '\25CB';
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+/* --- 会話劇（ゆっくり解説スタイル） --- */
+.cast-intro {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.9rem 1.2rem;
+  margin: 1.25rem 0 2rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.85rem;
+}
+
+.cast-member {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cast-avatar {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  background: var(--accent-light);
+  border: 2px solid var(--accent);
+}
+
+.cast-member.student .cast-avatar {
+  background: #e0f2fe;
+  border-color: #38bdf8;
+}
+
+.cast-member strong {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.cast-member span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.dialogue {
+  margin: 1.25rem 0;
+}
+
+.dialogue-turn {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+  align-items: flex-start;
+}
+
+.dialogue-turn.student {
+  flex-direction: row-reverse;
+}
+
+.dialogue-avatar {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  background: var(--accent-light);
+  border: 2px solid var(--accent);
+}
+
+.dialogue-turn.student .dialogue-avatar {
+  background: #e0f2fe;
+  border-color: #38bdf8;
+}
+
+.dialogue-bubble {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.75rem 1.1rem;
+  max-width: calc(100% - 70px);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.dialogue-turn.student .dialogue-bubble {
+  background: #f0f9ff;
+}
+
+.dialogue-bubble p {
+  margin: 0 0 0.6rem;
+}
+
+.dialogue-bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.dialogue-bubble ul,
+.dialogue-bubble ol {
+  margin: 0.4rem 0 0.2rem;
+  padding-left: 1.2rem;
+}
+
+.dialogue-name {
+  display: block;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.dialogue-turn.student .dialogue-name {
+  color: #0369a1;
+}
+
+.dialogue-bubble::before,
+.dialogue-bubble::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  border-style: solid;
+}
+
+.dialogue-turn:not(.student) .dialogue-bubble::before {
+  left: -9px;
+  border-width: 8px 9px 8px 0;
+  border-color: transparent var(--border) transparent transparent;
+}
+
+.dialogue-turn:not(.student) .dialogue-bubble::after {
+  left: -7.5px;
+  border-width: 8px 9px 8px 0;
+  border-color: transparent var(--card) transparent transparent;
+}
+
+.dialogue-turn.student .dialogue-bubble::before {
+  right: -9px;
+  border-width: 8px 0 8px 9px;
+  border-color: transparent transparent transparent var(--border);
+}
+
+.dialogue-turn.student .dialogue-bubble::after {
+  right: -7.5px;
+  border-width: 8px 0 8px 9px;
+  border-color: transparent transparent transparent #f0f9ff;
+}
+
+@media print {
+  .dialogue-bubble::before,
+  .dialogue-bubble::after {
+    display: none;
+  }
+}
