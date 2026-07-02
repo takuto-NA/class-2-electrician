@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>計算公式暗記表</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <h1>計算公式暗記表</h1>
+  <p class="lesson-meta">参照資料 · 学科の計算問題（約10〜12問）用 · レッスン12〜15とセット</p>
+
+  <p class="lead">V=IR、合成抵抗、電圧降下——<strong>公式と典型例を暗記</strong>すれば計算ブロックの大半は取れる。数字を当てはめる練習は各レッスンのクイズで。</p>
+
+  <div class="callout">
+    <strong>4表セットの4枚目</strong>
+    <a href="numbers-to-memorize.html">数値暗記表</a>・<a href="symbol-decoder.html">図記号</a>・<a href="cable-abbreviations.html">ケーブル</a>と合わせて暗記する。係数（35.6等）は数値表、ここでは<strong>計算のやり方</strong>に集中。
+  </div>
+
+  <h2>オームの法則（直流）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0012-ohms-law.html">レッスン12で解説</a></p>
+  <p class="reveal-mode-note">模試Q6相当。3つの形をすべて暗記。</p>
+
+  <div class="formula-box">
+    <span class="formula-label">基本</span>
+    V = I × R　　I = V ÷ R　　R = V ÷ I
+  </div>
+
+  <table class="reveal-table">
+    <thead><tr><th>問題の型</th><th>使う式</th><th>典型例</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>電流を求める</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">I = V ÷ R</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>100V・50Ω → I = 100÷50 = 2A</strong>（模試Q6）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>抵抗を求める</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R = V ÷ I</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">100V・2A → R = 50Ω</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>電圧を求める</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">V = I × R</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">2A・50Ω → V = 100V</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>合成抵抗</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0012-ohms-law.html">レッスン12で解説</a></p>
+  <table class="reveal-table">
+    <thead><tr><th>接続</th><th>公式</th><th>典型例</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>直列</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R = R1 + R2 + …</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">10Ω + 15Ω = <strong>25Ω</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>並列（2つ）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R = (R1 × R2) ÷ (R1 + R2)</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">10Ω∥15Ω = 150÷25 = <strong>6Ω</strong>（どちらより小さい＝検算）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>並列（一般）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">1/R = 1/R1 + 1/R2 + …</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">道が増えるほど合成抵抗は<strong>小さく</strong>なる</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>電力・電力量</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0012-ohms-law.html">レッスン12</a>・<a href="../lessons/0013-ac-circuit-basics.html">レッスン13</a></p>
+  <table class="reveal-table">
+    <thead><tr><th>項目</th><th>公式</th><th>メモ</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>直流の電力</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>P = V × I</strong> = I²R = V²/R</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">100V×10A = 1000W = 1kW</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>交流の電力</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>P = V × I × cosθ</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">力率cosθ — 数値表のACセクション参照</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>電力量</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">W = P × t（時間）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">1kWh = 1kWを1時間使った量</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>蓄電池換算</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>Wh = Ah × V</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">100Ah×12V = 1200Wh</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>電圧降下の計算</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0014-voltage-drop.html">レッスン14</a>（係数は<a href="numbers-to-memorize.html">数値暗記表</a>）</p>
+  <p class="reveal-mode-note">係数の選び方：単相2線→35.6、単相3線対地→17.8、三相3線→30.8</p>
+
+  <div class="formula-box">
+    <span class="formula-label">電圧降下 e [V]</span>
+    e = 係数 × L × I ÷ (1000 × A)
+    <span class="formula-label" style="margin-top:0.5rem;">L=こう長[m]　I=電流[A]　A=断面積[mm²]</span>
+  </div>
+
+  <table class="reveal-table">
+    <thead><tr><th>条件</th><th>計算</th><th>結果の見方</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>単相2線、15A、20m、2.0mm²</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">e = 35.6×20×15÷(1000×2.0) = <strong>約5.34V</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">100V回路なら5.34÷100≈5.3% → 許容2〜3%超の可能性</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>電力損失</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>P = I² × R</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">降下した分は電線の発熱＝無駄</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>計算の典型例12連（暗算で解く）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0012-ohms-law.html">レッスン12</a>〜<a href="../lessons/0014-voltage-drop.html">14</a>のクイズ</p>
+  <p class="reveal-mode-note">本番計算10〜12問はこの12型のバリエーション。答えだけでなく<strong>使った公式</strong>もセットで覚える。</p>
+  <table class="reveal-table">
+    <thead><tr><th>問題</th><th>公式</th><th>答え</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>100V・50Ωの電流</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">I = V÷R</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>2A</strong>（模試Q6）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>200V・50Ωの電流</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">I = V÷R</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>4A</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>100V・10Aの電力（直流）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">P = V×I</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>1000W = 1kW</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>100V・5A・cosθ=0.8の有効電力</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">P = V×I×cosθ</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>400W</strong>（500×0.8）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>三相200V・10A（力率1）の電力</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">P = √3×V×I×cosθ</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>約3464W</strong>（1.73×200×10）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>10Ωと15Ωを並列</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R = (R1×R2)÷(R1+R2)</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>6Ω</strong>（10より小さい＝検算）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>10Ωと15Ωを直列</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R = R1 + R2</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>25Ω</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>2A・25Ω直列の電圧</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">V = I×R</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>50V</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>単相2線・15A・20m・2.0mm²の電圧降下</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">e = 35.6×L×I÷(1000×A)</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>約5.34V</strong>（100Vの約5.3%）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>単相3線（対地）・15A・20m・2.0mm²</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">e = <strong>17.8</strong>×L×I÷(1000×A)</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>約2.67V</strong>（35.6の半分）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>三相3線・15A・20m・2.0mm²</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">e = <strong>30.8</strong>×L×I÷(1000×A)</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>約4.62V</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>1kW機器を3時間使用</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">W = P×t</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>3kWh</strong></span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>電圧降下係数の選び方（暗記表）</h2>
+  <p class="see-lesson">係数の数値は<a href="numbers-to-memorize.html">数値暗記表</a>が正本</p>
+  <table class="reveal-table">
+    <thead><tr><th>配線方式</th><th>係数</th><th>覚え方</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>単相2線式</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>35.6</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">100V一般住宅の基本</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>単相3線式（対地電圧）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>17.8</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">35.6の<strong>半分</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>三相3線式</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>30.8</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">技能No.4の三相200V</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>計算問題の解法手順（4ステップ）</h2>
+  <p class="see-lesson">わからなければ → 各レッスン12〜15のクイズで反復</p>
+  <ol>
+    <li>問題文から<strong>求める量</strong>（I? R? e? P?）を特定</li>
+    <li>使う<strong>公式</strong>を1つ選ぶ（上の表から）</li>
+    <li>単位をそろえる（m・A・mm²・V）</li>
+    <li>選択肢と<strong>桁・数量級</strong>で検算（並列Rは最小より小さい、等）</li>
+  </ol>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0012-ohms-law.html">レッスン12</a>
+    <a href="../lessons/0014-voltage-drop.html">レッスン14</a>
+    <a href="../lessons/0015-wire-sizing-breakers.html">レッスン15</a>
+    <a href="numbers-to-memorize.html">数値暗記表</a>
+    <a href="exam-map.html">試験全体マップ</a>
+  </nav>
+</article>
+<script src="../assets/reveal-answer.js"></script>
+</body>
+</html>

@@ -196,6 +196,18 @@
   margin-bottom: 1rem;
 }
 
+/* 暗記表・デコーダーの各見出し直下に置く「わからなければこのレッスンへ」導線 */
+.see-lesson {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: -0.5rem 0 1rem;
+}
+
+.see-lesson a {
+  font-weight: 600;
+}
+
 /* 印刷時は答えをすべて表示 */
 @media print {
   .flashcard-answer {

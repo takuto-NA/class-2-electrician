@@ -11,14 +11,185 @@
   <h1>数値暗記表</h1>
   <p class="lesson-meta">参照資料 · 丸暗記で得点する数値の一覧 · 電気設備技術基準第58条準拠</p>
 
-  <p class="lead">絶縁抵抗・接地抵抗・リングスリーブ——<strong>数字だけ覚えれば得点</strong>になる頻出値。ホバー暗記で試験直前まで反復する。</p>
+  <p class="lead">絶縁抵抗・接地抵抗・電圧降下係数・分岐回路・リングスリーブ——<strong>数字と暗記ルールだけ覚えれば得点</strong>になる頻出値を全科目分まとめた。各見出しの直下に「わからなければ→レッスンX」のリンクがあるので、理屈を忘れたらすぐ戻って確認する。</p>
+
+  <div class="callout">
+    <strong>暗記表4種セット（学科の核）</strong>
+    ①本ページ（施工細則・罰則・ひっかけ10連含む） ②<a href="symbol-decoder.html">図記号</a>（本数ドリル5連・頻出パターン10） ③<a href="cable-abbreviations.html">ケーブル</a> ④<a href="formulas-and-calculations.html">計算公式</a>（典型例12連）——<strong>4つ全部暗記＋模試10問で10/10</strong>なら学科の土台完成。本番50問は<strong>過去問で配線図の初見図形</strong>を仕上げる。
+  </div>
 
   <div class="callout">
     <strong>絶縁抵抗の覚え方（試験の核心）</strong>
     まず<strong>対地電圧</strong>を求める。単相100V→対地100V（150V以下→0.1MΩ）。単相200V・三相200V→対地116V超〜200V（150V超→0.2MΩ）。使用電圧300V超→0.4MΩ。
   </div>
 
+  <h2>30Vラインと第2種の施工範囲（法令）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0001-thirty-volt-line.html">レッスン1</a>・<a href="../lessons/0011-remaining-regulations.html">レッスン11</a>・<a href="thirty-volt-line.html">30V早見表</a></p>
+  <p class="reveal-mode-note">模試Q1相当。除外条件と施工範囲はセットで覚える。</p>
+  <table class="reveal-table">
+    <thead><tr><th>項目</th><th>内容</th><th>試験での典型</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>電気工作物から除外</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>30V未満</strong> かつ <strong>30V以上の設備と非接続</strong>（両方必要）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">Arduino 5V・独立12V LED ← 最頻出のひっかけ</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>第2種の施工範囲</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>600V以下</strong>の一般用電気工作物</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">家庭100V配線・50kW未満ソーラー</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>無資格でもOK（軽微工事の例）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">600V以下機器への<strong>コード接続</strong>／蓄電池端子への<strong>ねじ止め</strong>（列挙された例外のみ）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">配線器具への接続は原則<strong>資格必要</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>免状携帯義務</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">電気工事の<strong>作業中</strong>は免状を携帯</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">不携帯・無資格施工は罰則対象</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>36V以下変圧器の二次側</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">二次側が36V以下なら<strong>軽微工事の例外</strong>に該当しうる（模試Q2のひっかけ選択肢）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">48V蓄電池一式は除外条件を満たさない</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>工具の名前と用途（学科・技能共通）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0006-tools-and-materials.html">レッスン6で解説</a></p>
+  <table class="reveal-table">
+    <thead><tr><th>工具</th><th>用途</th><th>試験のひっかけ</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>電工ナイフ</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">IV/VVFの被覆剥き（心線を傷つけにくい）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">カッターは心線傷→技能で欠陥</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>電工ペンチ</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">電線切断・輪作り（pinch＝挟む）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">メガー・検電器とは別用途</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>圧着工具</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">リングスリーブをIVに圧着（ダイス刻印○/小/中/大）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">1.6mm×2本だけ刻印「○」</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>VVFストリッパー</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">VVF外装の一括剥き（現場主流）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">学科では「電工ナイフ」名称も現役</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>テスター</strong>（テストリード）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">電圧・導通の簡易測定（通電確認の補助）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">検電器＝触れずに通電確認。テスター＝端子に当てて測定</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>深型・浅型ボックス</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">電線本数が多いほど<strong>深型</strong>（圧着不良防止）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">3路・分岐が多いボックスは深型が定番</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>施工細則（支持点間隔・曲げ・継手）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0008-construction-methods.html">レッスン8で解説</a></p>
+  <p class="reveal-mode-note">支持点間隔はすべて「<strong>以下</strong>」、曲げ半径・継手の挿入深さは「<strong>以上</strong>」——選択肢のひっかけに注意。</p>
+  <table class="reveal-table">
+    <thead><tr><th>配線方式・項目</th><th>数値</th><th>試験のひっかけ</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>合成樹脂管（VE管等・PF/CD<strong>除く</strong>）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>1.5m以下</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">「PF管除く」と書かれたらVE管→1.5m</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>PF管・CD管（可とう管）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>1m以下</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">PFは1.5m<strong>ではない</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>金属管（E管等）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>2m以下</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">樹脂管より間隔を広げられる</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>ケーブル工事（水平）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>2m以下</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">垂直＋接触防護措置あり→<strong>6m以下</strong>可</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>金属ダクト工事</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>3m以下</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">「ダ・ク・ト＝3m」で覚える</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>管の曲げ半径（内側）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">管<strong>内径</strong>の<strong>6倍以上</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">「6倍未満」は×</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>管継手の挿入深さ（接着剤<strong>あり</strong>）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">管<strong>外径</strong>の<strong>0.8倍以上</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">接着剤なし→1.2倍以上（深い）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>管継手の挿入深さ（接着剤<strong>なし</strong>）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">管外径の<strong>1.2倍以上</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">0.8と1.2を逆に覚えない</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>電気工事士法・罰則（法令の条文レベル）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0011-remaining-regulations.html">レッスン11で解説</a></p>
+  <table class="reveal-table">
+    <thead><tr><th>違反・義務</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>無資格者の電気工事（第3条）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>3か月以下の拘禁刑又は3万円以下の罰金</strong>（第14条）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>免状不携帯（第5条第2項）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">電気工事の<strong>作業中</strong>は免状を携帯（義務）。違反は罰則対象</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>PSE無認可品の製造・輸入・販売</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">電気用品安全法違反→<strong>罰則対象</strong>（DIYで無PSE品を使うのも問題）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>登録電気工事業者</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">電気工事を<strong>業として</strong>請け負う→都道府県への<strong>登録</strong>が必要（免状とは別制度）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>第一種の定期講習</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">第1種は免状交付後<strong>5年以内</strong>に定期講習（第2種は不要——比較問題で出る）</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>配線器具のルール（金属製・定格）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0007-wiring-devices-and-equipment.html">レッスン7で解説</a></p>
+  <table class="reveal-table">
+    <thead><tr><th>ルール</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>金属製配線器具</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">原則<strong>接地極付差込接続器（アース付コンセント）</strong>を使用</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>自動点滅器（A）vs タイムスイッチ（TS）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">A＝<strong>周囲の明るさ</strong>でON/OFF。TS＝<strong>時刻</strong>でON/OFF</span></td>
+      </tr>
+    </tbody>
+  </table>
+
   <h2>絶縁抵抗の基準値（電技基準第58条）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0010-inspection-and-meters.html">レッスン10で解説</a></p>
   <p class="reveal-mode-note">条件を見て、基準値を思い出してからホバー（タップ）。</p>
   <table class="reveal-table">
     <thead><tr><th>使用電圧</th><th>対地電圧</th><th>絶縁抵抗（以上）</th><th>試験での典型</th></tr></thead>
@@ -45,6 +216,7 @@
   </table>
 
   <h2>漏えい電流の代替基準（電技解釈第14条）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0010-inspection-and-meters.html">レッスン10で解説</a></p>
   <p class="reveal-mode-note">停電させて絶縁抵抗を測るのが困難な場合の代替基準。学科で単独の設問として出ることがある。</p>
   <table class="reveal-table">
     <thead><tr><th>項目</th><th>基準</th></tr></thead>
@@ -56,14 +228,76 @@
     </tbody>
   </table>
 
+  <h2>漏電遮断器（ELB）の感度電流・動作時間</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0007-wiring-devices-and-equipment.html">レッスン7で解説</a></p>
+  <p class="reveal-mode-note">「人体保護＝ELB」「機器保護＝配線用遮断器」の区別とセットで覚える。</p>
+  <table class="reveal-table">
+    <thead><tr><th>設置場所</th><th>定格感度電流・動作時間</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>一般（最頻出）</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>30 mA 以下・0.1秒以内</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>プール等、水気のある場所</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>15 mA 以下・0.1秒以内</strong></span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>配線用遮断器 vs 漏電遮断器（何を守るか）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0007-wiring-devices-and-equipment.html">レッスン7で解説</a></p>
+  <p class="reveal-mode-note">模試Q9相当。「過電流＝MCB」「漏電＝ELB」の対比をセットで覚える。</p>
+  <table class="reveal-table">
+    <thead><tr><th>機器</th><th>検知する異常</th><th>守る対象</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>配線用遮断器（MCB）</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">過電流（電線の発熱しすぎ）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">電線・機器</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>漏電遮断器（ELB）</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">漏電（大地への漏れ電流）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">人体（感電防止）</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>コンセントの定格（15A125V / 20A250V）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0007-wiring-devices-and-equipment.html">レッスン7で解説</a></p>
+  <table class="reveal-table">
+    <thead><tr><th>定格</th><th>用途</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>15 A 125 V</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">一般住宅の標準コンセント（最頻出）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>20 A 250 V</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">エアコン等の大容量機器（技能No.5）。差込口形状が15A125Vと異なる</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <strong>この数値がD種接地の緩和条件にもつながる</strong>
+    「動作時間0.5秒以内の漏電遮断器」があればD種は500Ω以下に緩和される（下の接地の表）。ELB（30mA・0.1秒）はこの条件を余裕で満たす。
+  </div>
+
   <h2>接地工事の種類と接地抵抗（A〜D種）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0009-grounding-and-connections.html">レッスン9で解説</a></p>
   <p class="reveal-mode-note">第2種で頻出はD種。「D種＝100Ω」の丸暗記だけでなく、漏電遮断器による緩和もセットで覚える。</p>
   <table class="reveal-table">
     <thead><tr><th>種別</th><th>対象</th><th>接地抵抗（以下）</th></tr></thead>
     <tbody>
       <tr class="reveal-row" tabindex="0">
         <td>A種</td>
-        <td>高圧・特別高圧用の機器</td>
+        <td>特別高圧用の機器</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">10 Ω</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>B種</td>
+        <td>高圧用の機器</td>
         <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">10 Ω</span></td>
       </tr>
       <tr class="reveal-row" tabindex="0">
@@ -83,7 +317,219 @@
     地絡時に<strong>0.5秒以内に自動遮断する漏電遮断器</strong>を設置していれば、D種の接地抵抗は<strong>500Ω以下</strong>に緩和される。問題文に「動作時間◯秒」と出てきたら、0.5秒以内かどうかを必ずチェックする。
   </div>
 
+  <h2>電圧降下の近似計算係数（配線方式で変わる）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0014-voltage-drop.html">レッスン14で解説</a></p>
+  <p class="reveal-mode-note">計算問題の公式 e = 係数 × L × I ÷ (1000 × A)。係数だけ抜き出して暗記。</p>
+  <table class="reveal-table">
+    <thead><tr><th>配線方式</th><th>係数</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>単相2線式</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>35.6</strong>（3方式で最大）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>単相3線式（対地）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">17.8（35.6の半分）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>三相3線式</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">30.8（35.6 ÷ √3）</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <strong>電圧降下の許容目安（内線規程）</strong>
+    低圧配線の目安は<strong>2〜3%</strong>程度（条件により緩和あり）。計算結果がこれを超えるなら電線を太くするか距離を短くする——係数だけ暗記しても、許容%と比較する問題が出る。
+  </div>
+
+  <h2>VVF・IVの許容電流（断面積とAのペア）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0015-wire-sizing-breakers.html">レッスン15で解説</a></p>
+  <p class="reveal-mode-note">模試Q7相当。周囲温度30℃付近の目安。遮断器は許容電流以下で選ぶ。</p>
+  <table class="reveal-table">
+    <thead><tr><th>断面積</th><th>許容電流（目安）</th><th>遮断器（目安）</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>1.6 mm²</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>15 A</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">15 A以下</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>2.0 mm²</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>20 A</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">20 A以下</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>2.6 mm²（5.5mm²相当）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>約25 A</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">30A分岐回路の最小太さ（直径2.6mm）と対応</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <strong>直径mmと断面積mm²</strong>
+    分岐回路表は<strong>直径1.6mm・2.0mm・2.6mm</strong>、VVF表は<strong>断面積1.6・2.0・2.6mm²</strong>——同じ太さの別表記。1.6mm²≈直径1.6mm。
+  </div>
+
+  <h2>分岐回路：遮断器・電線太さ・コンセントの3点セット</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0015-wire-sizing-breakers.html">レッスン15で解説</a></p>
+  <p class="reveal-mode-note">遮断器の定格を見て、必要な電線の太さとコンセントの範囲を思い出してからホバー。</p>
+  <table class="reveal-table">
+    <thead><tr><th>分岐回路（遮断器の定格）</th><th>電線の太さ（軟銅線・以上）</th><th>接続できるコンセント</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>15A</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">直径1.6mm</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">15A以下</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>20A（配線用遮断器）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">直径1.6mm</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">20A以下</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>20A（ヒューズ）← ひっかけ</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>直径2.0mm</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">20A</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>30A</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">直径2.6mm（断面積5.5mm²）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">20A以上30A以下</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>40A</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">断面積8mm²</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">30A以上40A以下</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>50A</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">断面積14mm²</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">40A以上50A以下</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <strong>ひっかけ注意：「20Aだから2.0mm」は誤り</strong>
+    配線用遮断器の20A回路は<strong>1.6mmでOK</strong>。2.0mmが必要になるのは<strong>ヒューズの20A回路だけ</strong>——同じ20Aでも遮断器の種類で最小の電線太さが変わる。
+  </div>
+
+  <h2>竣工検査の順序（5ステップ）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0010-inspection-and-meters.html">レッスン10で解説</a></p>
+  <p class="reveal-mode-note">通電前に必ずこの順。順序を逆にする選択肢がひっかけになる。</p>
+  <table class="reveal-table">
+    <thead><tr><th>順番</th><th>検査内容</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0"><td>①</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">目視点検（外観・配線・器具の確認）</span></td></tr>
+      <tr class="reveal-row" tabindex="0"><td>②</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">絶縁抵抗測定</span></td></tr>
+      <tr class="reveal-row" tabindex="0"><td>③</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">接地抵抗測定</span></td></tr>
+      <tr class="reveal-row" tabindex="0"><td>④</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">導通試験（回路の接続確認）</span></td></tr>
+      <tr class="reveal-row" tabindex="0"><td>⑤</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">通電試験（最後に電気を流して動作確認）</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>測定器の使い分け</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0010-inspection-and-meters.html">レッスン10で解説</a></p>
+  <table class="reveal-table">
+    <thead><tr><th>器具</th><th>測定するもの</th><th>いつ使う</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>メガー</strong>（絶縁抵抗計）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">絶縁抵抗（MΩ）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">竣工検査②・通電前チェック</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>アーステスタ</strong>（接地抵抗計）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">接地抵抗（Ω）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">竣工検査③・アースの効き確認</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>検電器</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">通電の有無（触れずに確認）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>作業前に必ず</strong>（ブレーカOFF後も確認）</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>配線方式・電線管の使い分け（施工）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0006-tools-and-materials.html">レッスン6</a>・<a href="../lessons/0008-construction-methods.html">レッスン8で解説</a></p>
+  <p class="reveal-mode-note">科目④（施工12%）の定番暗記。場所×工法のマトリクス。</p>
+  <table class="reveal-table">
+    <thead><tr><th>方式・管種</th><th>主な使用場所</th><th>ひっかけ注意</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>E管</strong>（金属製電線管）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">店舗・工場・防火区画・危険場所（機械的保護が必要）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">可燃性ガス・粉じんの場所は金属管工事が義務</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>PF管</strong>（合成樹脂製可とう電線管）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">一般住宅の壁・天井内<strong>隠蔽配線</strong>（最頻出）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">技能候補No.12でも頻出</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>CD管</strong>（Combined Duct）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>コンクリート埋設専用</strong>（オレンジ色）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">露出配管・天井裏には使えない</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>ケーブル工事</strong>（VVF/CV這配）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">床下・天井裏・屋外・幹線</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">既存住宅追加工事で最も多い</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>金属可とう電線管</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">振動する機器（モーター等）への引込み部分</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">硬いE管だけだと振動で疲労破断のおそれ</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>がいし引き工事</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">乾燥し点検できる場所などに<strong>限定</strong>（新築の主力ではない）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">古い家の陶器状部品＝碍子（がいし）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>ねじなし電線管工事</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">技能候補<strong>No.11（最難関）</strong>。住宅一般隠蔽の定番ではない</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">「住宅壁内＝PF管」が正解の典型問題</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>バスダクト工事</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">大容量幹線・工場等。一般住宅の壁内隠蔽には<strong>使わない</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">レッスン8クイズのひっかけ選択肢</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>裸線コンクリート打込</strong></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">特殊工法。一般住宅PF管の選択肢としては<strong>誤り</strong></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">「壁内隠蔽＝PF管」と対比して覚える</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>交流・電圧区分（AC基礎の暗記数値）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0013-ac-circuit-basics.html">レッスン13で解説</a></p>
+  <table class="reveal-table">
+    <thead><tr><th>項目</th><th>数値・公式</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>実効値と最大値</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">最大値 ≈ 実効値 × <strong>1.41</strong>（√2）。100V実効値→最大約141V</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>交流の電力</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>P = V × I × cosθ</strong>（力率cosθ）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>単相三線式の電圧</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">A-N（対地）=<strong>100V</strong>、A-B（線間）=<strong>200V</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>三相200Vの対地電圧</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">約116V → 絶縁抵抗は<strong>0.2MΩ以上</strong>（150V超）</span></td>
+      </tr>
+    </tbody>
+  </table>
+
   <h2>リングスリーブのサイズと圧着マーク（技能で毎回出る）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0006-tools-and-materials.html">レッスン6</a>・<a href="../lessons/0017-defect-criteria.html">レッスン17で解説</a></p>
   <p class="reveal-mode-note">電線の太さ・本数を見て、スリーブのサイズと圧着マーク（刻印）を思い出してからホバー。</p>
   <table class="reveal-table">
     <thead><tr><th>電線の太さ・本数</th><th>スリーブ</th><th>圧着マーク（刻印）</th></tr></thead>
@@ -111,6 +557,7 @@
   </div>
 
   <h2>電線の色分け</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0003-wiring-symbols-outlets-switches.html">レッスン3で解説</a></p>
   <table class="reveal-table">
     <thead><tr><th>色</th><th>役割</th></tr></thead>
     <tbody>
@@ -120,7 +567,93 @@
     </tbody>
   </table>
 
+  <h2>PSEマーク（電気用品安全法）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0011-remaining-regulations.html">レッスン11で解説</a></p>
+  <table class="reveal-table">
+    <thead><tr><th>形</th><th>対象</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>菱形</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">特定電気用品（配線器具・コンセント・ヒューズ等）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>円形</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">特定以外の電気用品（多くの家電・インバーター等）</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>認定電気工事従事者になる条件</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0011-remaining-regulations.html">レッスン11で解説</a></p>
+  <table class="reveal-table">
+    <thead><tr><th>項目</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>取得条件</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">第2種取得後、<strong>3年以上の実務経験</strong> または <strong>認定講習（約6時間）</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>できるようになること</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">自家用電気工作物（500kW未満）のうち、電線路を除く<strong>600V以下の簡易電気工事</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>登録電気工事業者</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">電気工事を<strong>業として</strong>請け負う場合、都道府県への<strong>登録</strong>が必要（電気工事士免状とは別制度）</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>試験ひっかけ10連（4表暗記の総仕上げ）</h2>
+  <p class="see-lesson">各項目の詳細は上のセクションまたは<a href="symbol-decoder.html">図記号</a>・<a href="formulas-and-calculations.html">計算公式</a>へ</p>
+  <p class="reveal-mode-note">過去問で最も落としやすいパターン。正しい方を思い出してからホバー。</p>
+  <table class="reveal-table">
+    <thead><tr><th>ひっかけ</th><th>正解の型</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>「20Aだから2.0mm必須」</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">× — <strong>配線用遮断器</strong>の20Aは1.6mmでOK。<strong>ヒューズ</strong>20Aだけ2.0mm</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>「D種＝500Ωでいい」</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">× — 原則100Ω。<strong>0.5秒以内ELB</strong>があれば500Ω（模試Q8は「単独」→100Ω）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>「48V蓄電池は電気工作物から除外」</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">× — 30V未満<strong>かつ非接続</strong>だけ除外（模試Q1）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>「住宅壁内＝CD管」</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">× — 隠蔽は<strong>PF管</strong>。CD管はコンクリート埋設専用</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>「通電試験を最初に」</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">× — 竣工検査は<strong>⑤通電が最後</strong>。最初は目視</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>「漏電は配線用遮断器が検知」</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">× — 漏電は<strong>ELB</strong>。MCBは過電流（模試Q9）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>「三相200Vの絶縁0.1MΩ」</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">× — 対地116V超→<strong>0.2MΩ以上</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>「周囲の明るさで切替＝TS」</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">× — 明るさは<strong>自動点滅器(A)</strong>。TSは時刻</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>「1.6mm×2本の圧着刻印＝小」</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">× — 唯一の例外で<strong>○</strong></span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>「VCTとVCTFは同じ電圧区分」</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">× — VCT=<strong>600V</strong>、VCTF=<strong>300V以下</strong></span></td>
+      </tr>
+    </tbody>
+  </table>
+
   <h2>試験合格ライン</h2>
+  <p class="see-lesson">わからなければ → <a href="../reference/exam-map.html">試験全体マップで解説</a></p>
   <table class="reveal-table">
     <thead><tr><th>試験</th><th>基準</th></tr></thead>
     <tbody>
@@ -130,9 +663,20 @@
   </table>
 
   <nav class="lesson-nav">
+    <a href="../lessons/0001-thirty-volt-line.html">レッスン1</a>
+    <a href="../lessons/0006-tools-and-materials.html">レッスン6</a>
+    <a href="../lessons/0007-wiring-devices-and-equipment.html">レッスン7</a>
+    <a href="../lessons/0008-construction-methods.html">レッスン8</a>
+    <a href="../lessons/0009-grounding-and-connections.html">レッスン9</a>
     <a href="../lessons/0010-inspection-and-meters.html">レッスン10</a>
+    <a href="../lessons/0011-remaining-regulations.html">レッスン11</a>
+    <a href="../lessons/0013-ac-circuit-basics.html">レッスン13</a>
+    <a href="../lessons/0014-voltage-drop.html">レッスン14</a>
+    <a href="../lessons/0015-wire-sizing-breakers.html">レッスン15</a>
     <a href="../reference/exam-map.html">試験全体マップ</a>
     <a href="../reference/symbol-decoder.html">図記号デコーダー</a>
+    <a href="../reference/cable-abbreviations.html">ケーブルデコーダー</a>
+    <a href="formulas-and-calculations.html">計算公式暗記表</a>
   </nav>
 </article>
 <script src="../assets/reveal-answer.js"></script>

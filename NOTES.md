@@ -29,9 +29,16 @@
 ## 教材構成（2026-07-02 全課程完成・レッスン6〜17拡充済み）
 
 - **レッスン1〜17** + **模試9001**：学科7科目＋技能。全レッスンが会話劇・position-badge・scene-card・trivia-box・reveal暗記・クイズ2〜3問で統一された密度
-- **参照資料**：`exam-map.html`（地図）、`symbol-decoder.html`（図記号）、`cable-abbreviations.html`（ケーブル）、`numbers-to-memorize.html`（数値）、`candidate-problems.html`（技能13問）、`glossary.html`、`thirty-volt-line.html`
-- **推奨学習順**：exam-map のレッスン一覧に準拠。定着フェーズは模試10問→過去問50問→技能13問2周
+- **参照資料**：`exam-map.html`（地図）、`symbol-decoder.html`（図記号）、`cable-abbreviations.html`（ケーブル）、`numbers-to-memorize.html`（数値）、`formulas-and-calculations.html`（計算公式）、`candidate-problems.html`（技能13問）、`glossary.html`、`thirty-volt-line.html`
+- **推奨学習順**：exam-map のレッスン一覧に準拠。定着フェーズは**暗記表4種反復**→模試10問→過去問50問→技能13問2周
 - **共通CSSコンポーネント**：`.formula-box`・`.symbol-box`は`assets/scene-story.css`に集約済み（レッスン側で再定義しない）
+
+## 暗記表の設計ルール（2026-07-02 追加）
+
+- **暗記表4種セット**が学科の核：①`numbers-to-memorize.html` ②`symbol-decoder.html` ③`cable-abbreviations.html` ④`formulas-and-calculations.html`。レッスンを拡充したら、試験数値・公式・記号は必ずいずれかに追記する
+- `numbers-to-memorize.html` は数値・ルール・施工・法令のハブ。計算の「やり方」は `formulas-and-calculations.html` に分離
+- 各 `<h2>` の直下に `<p class="see-lesson">わからなければ → <a href="...">レッスンXで解説</a></p>` を必ず入れる（`assets/reveal-answer.css` の `.see-lesson`）。4表すべてこのパターンで統一
+- 数値だけ暗記して「なぜその数値か」を忘れた時に、無理なく該当レッスンに戻れる導線を常に確保する
 
 ## コミュニティ
 
