@@ -6,6 +6,8 @@
   試験の公式情報。学科7科目・技能9項目・免除条件・合格フロー。Use for: 試験日程、出題範囲、公式要件の確認。
 - [第二種電気工事士試験 — 電気技術者試験センター](https://www.shiken.or.jp/construction/second/)
   申込・日程・技能候補問題への入口。Use for: 受験申込、候補問題PDFの取得。
+- [第二種電気工事士試験の問題と解答（過去問PDF）— 電気技術者試験センター](https://www.shiken.or.jp/construction/second/qa/)
+  学科・技能の公式過去問PDF（無料・出典明記で利用可）。Use for: 本番形式の演習、カバレッジ監査の正本。
 - [電気設備技術基準・解釈の解説〔その1〕 — 日本電気技術者協会（JEEA）](https://www.jeea.or.jp/course/contents/11101/)
   電圧区分（30V / 150V / 300V 等）の一次解説。Use for: 30Vラインの根拠、低圧の定義。
 - [電気工事士等資格不要の「軽微な工事」とは — 経済産業省（PDF）](https://www.meti.go.jp/policy/safety_security/industrial_safety/sangyo/electric/files/1-3keibi.pdf)

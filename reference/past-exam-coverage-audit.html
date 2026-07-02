@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>過去問カバレッジ監査 — 令和7年度上期</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+  <style>
+    .verdict-box {
+      font-family: 'Source Sans 3', sans-serif;
+      border: 2px solid var(--accent);
+      border-radius: 4px;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      background: var(--accent-light);
+    }
+    .verdict-box .score {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    td.c-full { background: var(--correct-bg); }
+    td.c-partial { background: #fef9c3; }
+    td.c-gap { background: var(--wrong-bg); }
+    .legend span {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      margin-right: 0.5rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.8rem;
+      border-radius: 3px;
+    }
+    .legend .full { background: var(--correct-bg); }
+    .legend .partial { background: #fef9c3; }
+    .legend .gap { background: var(--wrong-bg); }
+  </style>
+</head>
+<body>
+<article>
+  <h1>過去問カバレッジ監査</h1>
+  <p class="lesson-meta">出典：<a href="https://www.shiken.or.jp/construction/upload/20250525_co_second_q01.pdf">令和7年度第二種電気工事士上期学科試験</a>（2025年5月25日実施）· 一般財団法人 電気技術者試験センター</p>
+
+  <p class="lead">公式過去問50問を、このサイトの<strong>暗記表4種＋レッスン1〜17＋模試9001</strong>だけで解けるかを1問ずつ判定した。合格ラインは30/50（60%）。</p>
+
+  <div class="verdict-box">
+    <p class="score">推定得点：31/50（62%）— 合格ラインギリギリ</p>
+    <p>内訳：一般30問 <strong>19/30</strong> · 配線図20問 <strong>12/20</strong>。暗記表だけでなくレッスンまで含めた「サイト全体」での推定。表4種のみなら <strong>27/50前後</strong>。</p>
+  </div>
+
+  <div class="legend">
+    <p><span class="full">◎ フル</span>表＋レッスンで到達可能　<span class="partial">△ 部分</span>知識はあるが手順・図・写真で不足　<span class="gap">× ギャップ</span>未収載</p>
+  </div>
+
+  <h2>問題1 — 一般問題（30問）</h2>
+  <table>
+    <thead><tr><th>問</th><th>内容（要約）</th><th>判定</th><th>サイト上の根拠 / 不足</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>スイッチ付き合成抵抗</td><td class="c-partial">△</td><td><a href="formulas-and-calculations.html">計算公式</a>（直列・並列）— 図付きスイッチ回路の当てはめ練習なし</td></tr>
+      <tr><td>2</td><td>軟銅線の直径（抵抗率・長さ）</td><td class="c-gap">×</td><td>R＝ρL/A の公式・直径計算が未収載</td></tr>
+      <tr><td>3</td><td>接触抵抗の発熱量（I²R×t）</td><td class="c-partial">△</td><td>P＝I²Rは<a href="formulas-and-calculations.html">計算公式</a>— kJ換算の演習なし</td></tr>
+      <tr><td>4</td><td>交流回路の力率（電圧三角形）</td><td class="c-partial">△</td><td>P＝VIcosθは<a href="formulas-and-calculations.html">計算公式</a>— 90V/48V/102Vからcosθを逆算する例なし</td></tr>
+      <tr><td>5</td><td>三相3線・並列負荷の電流</td><td class="c-partial">△</td><td>√3×V×Iは<a href="formulas-and-calculations.html">計算公式</a>— 複数負荷の分配計算なし</td></tr>
+      <tr><td>6</td><td>電圧降下（抵抗表方式）</td><td class="c-gap">×</td><td>係数法（35.6）はあるが、<strong>導体抵抗表</strong>から選ぶ問題形式が未収載</td></tr>
+      <tr><td>7</td><td>単相3線式のVs-Vr電圧</td><td class="c-gap">×</td><td>線抵抗による電圧差計算が未収載</td></tr>
+      <tr><td>8</td><td>PF管内許容電流×減少係数0.7</td><td class="c-gap">×</td><td>許容電流表は<a href="numbers-to-memorize.html">数値表</a>— <strong>電流減少係数</strong>の計算なし</td></tr>
+      <tr><td>9</td><td>幹線分岐区間の許容電流</td><td class="c-partial">△</td><td><a href="../lessons/0015-wire-sizing-breakers.html">レッスン15</a>— 100A幹線・6m分岐の具体例なし</td></tr>
+      <tr><td>10</td><td>分岐回路（遮断器・線径・コンセント）</td><td class="c-partial">△</td><td><a href="numbers-to-memorize.html">数値表</a>分岐回路— 選択肢4パターンの総合判定演習なし</td></tr>
+      <tr><td>11</td><td>ねじなしボックスコネクタ（誤り選択）</td><td class="c-gap">×</td><td>ねじなし管は言及あるが<strong>コネクタの構造</strong>未収載</td></tr>
+      <tr><td>12</td><td>ゴムコード1.25mm²と電熱器具</td><td class="c-gap">×</td><td>ゴムコードの許容電流・P＝VI逆算が未収載</td></tr>
+      <tr><td>13</td><td>工事種類×工具の組合せ</td><td class="c-partial">△</td><td><a href="../lessons/0006-tools-and-materials.html">レッスン6</a>— パイプベンダ・ボルトクリッパ等の対応表が薄い</td></tr>
+      <tr><td>14</td><td>6極誘導電動機の回転速度</td><td class="c-gap">×</td><td>N＝120f/p（同期速度）が未収載</td></tr>
+      <tr><td>15</td><td>機器の組合せ（誤り選択）</td><td class="c-partial">△</td><td>A/TS/ネオン変圧器等は<a href="symbol-decoder.html">図記号</a>— 零相変流器・スターデルタ等は薄い</td></tr>
+      <tr><td>16</td><td>写真：配管継手の用途</td><td class="c-gap">×</td><td><strong>写真識別</strong>問題 — 教材に写真なし</td></tr>
+      <tr><td>17</td><td>写真：器具の名称</td><td class="c-gap">×</td><td>写真識別 — ELB/MCB/電磁開閉器の実物見分けなし</td></tr>
+      <tr><td>18</td><td>写真：工具の用途</td><td class="c-gap">×</td><td>写真識別 — パイプベンダ等の実物なし</td></tr>
+      <tr><td>19</td><td>IV相互接続の適否（a〜d）</td><td class="c-gap">×</td><td>引張10%・抵抗5%等の<strong>接続品質基準</strong>未収載</td></tr>
+      <tr><td>20</td><td>VVFケーブル工事の施工</td><td class="c-partial">△</td><td><a href="numbers-to-memorize.html">数値表</a>支持点2m/垂直6m— 屈曲8倍・直接埋設等の選択問題なし</td></tr>
+      <tr><td>21</td><td>三相200Vルームエアコン施工</td><td class="c-partial">△</td><td>ELB・直接接続・2.5kWは<a href="numbers-to-memorize.html">ひっかけ10連</a>近辺— 選択肢4パターン総合判定なし</td></tr>
+      <tr><td>22</td><td>特殊場所×配線方式</td><td class="c-partial">△</td><td>可燃性ガス→金属管は<a href="numbers-to-memorize.html">数値表</a>— MIケーブル・VE28等の細目なし</td></tr>
+      <tr><td>23</td><td>三相200V金属管工事</td><td class="c-partial">△</td><td>D種接地100Ωは<a href="numbers-to-memorize.html">数値表</a>— 管径選定・曲げ5倍（誤り）の判定なし</td></tr>
+      <tr><td>24</td><td>アナログ回路計の抵抗測定手順</td><td class="c-gap">×</td><td>テスターは<a href="numbers-to-memorize.html">数値表</a>— <strong>ゼロ調整手順</strong>未収載</td></tr>
+      <tr><td>25</td><td>アナログ絶縁抵抗計の目盛</td><td class="c-partial">△</td><td><a href="../lessons/0010-inspection-and-meters.html">レッスン10</a>— 目盛板の図選問題なし</td></tr>
+      <tr><td>26</td><td>接地抵抗計の手順（誤り選択）</td><td class="c-partial">△</td><td><a href="../lessons/0010-inspection-and-meters.html">レッスン10</a>— 補助極配置等の詳細手順なし</td></tr>
+      <tr><td>27</td><td>電気計器の目盛板記号</td><td class="c-gap">×</td><td>永久磁石可動コイル形等が未収載</td></tr>
+      <tr><td>28</td><td>電気工事士法（誤り選択）</td><td class="c-full">◎</td><td><a href="numbers-to-memorize.html">数値表</a>免状<strong>作業中携帯</strong>— 正解「事務所保管は誤り」</td></tr>
+      <tr><td>29</td><td>特定電気用品の組合せ</td><td class="c-partial">△</td><td>PSE菱形は<a href="numbers-to-memorize.html">数値表</a>— 換気扇・PF管・VVFの特定/非特定の細目</td></tr>
+      <tr><td>30</td><td>一般用電気工作物の定義</td><td class="c-partial">△</td><td>600V・30Vは<a href="numbers-to-memorize.html">数値表</a>— 8kW発電・構外接続等の条文レベルは薄い</td></tr>
+    </tbody>
+  </table>
+
+  <h2>問題2 — 配線図（20問）</h2>
+  <p>集合住宅共用部の複合配線図（VVFケーブル工事）。図面はPDF 15ページ目。本サイトの<a href="symbol-decoder.html">本数ドリル5連</a>は住宅単回路向けで、<strong>本番の共用部複合図とは難度が異なる</strong>。</p>
+  <table>
+    <thead><tr><th>問</th><th>内容（要約）</th><th>判定</th><th>サイト上の根拠 / 不足</th></tr></thead>
+    <tbody>
+      <tr><td>31</td><td>引込線取付点の高さ</td><td class="c-gap">×</td><td>2.5m等の<strong>引込設備数値</strong>未収載</td></tr>
+      <tr><td>32</td><td>EM-EEF等の使用可否</td><td class="c-partial">△</td><td><a href="cable-abbreviations.html">ケーブル表</a>（EM/E/CE/IE）— EEFの詳細なし</td></tr>
+      <tr><td>33</td><td>点滅器（位置表示灯内蔵）</td><td class="c-partial">△</td><td><a href="symbol-decoder.html">図記号</a>PL— 遅延/確認表示灯の区別が薄い</td></tr>
+      <tr><td>34</td><td>電磁開閉器用押ボタン</td><td class="c-gap">×</td><td>技能向け記号はあるが学科配線図の<strong>押ボタン系</strong>未収載</td></tr>
+      <tr><td>35</td><td>電磁開閉器</td><td class="c-partial">△</td><td><a href="../lessons/0007-wiring-devices-and-equipment.html">レッスン7</a>— 図記号の暗記カードなし</td></tr>
+      <tr><td>36</td><td>機器の定格電流</td><td class="c-partial">△</td><td>図から読む — 本数ルールはあるが<strong>図面実習</strong>なし</td></tr>
+      <tr><td>37</td><td>接地抵抗許容値（100Ω）</td><td class="c-full">◎</td><td><a href="numbers-to-memorize.html">数値表</a>D種100Ω（ELBなし）</td></tr>
+      <tr><td>38</td><td>フロートスイッチ</td><td class="c-gap">×</td><td>図記号未収載</td></tr>
+      <tr><td>39</td><td>最少電線本数</td><td class="c-partial">△</td><td><a href="symbol-decoder.html">本数ドリル</a>— 共用部複合図の実践なし</td></tr>
+      <tr><td>40</td><td>引掛コンセント傍記（EL/H/T/LK）</td><td class="c-gap">×</td><td>コンセント<strong>傍記記号</strong>未収載</td></tr>
+      <tr><td>41</td><td>図記号の機器名</td><td class="c-partial">△</td><td>基本記号は<a href="symbol-decoder.html">図記号</a>— 共用部特有記号（BE等）薄い</td></tr>
+      <tr><td>42</td><td>Rスリーブ種類・個数・刻印</td><td class="c-partial">△</td><td><a href="numbers-to-memorize.html">数値表</a>圧着刻印— <strong>VVF1.6複数接点</strong>の図読み演習なし</td></tr>
+      <tr><td>43</td><td>ポンプ室内の器具</td><td class="c-partial">△</td><td>図から判定 — 過去問演習なし</td></tr>
+      <tr><td>44</td><td>必要ケーブル</td><td class="c-partial">△</td><td><a href="cable-abbreviations.html">ケーブル表</a>— 図からの選定演習なし</td></tr>
+      <tr><td>45</td><td>工事で使わないもの</td><td class="c-partial">△</td><td><a href="numbers-to-memorize.html">施工表</a>— 共用部の具体部位判定なし</td></tr>
+      <tr><td>46</td><td>工事で使わないもの</td><td class="c-partial">△</td><td>同上</td></tr>
+      <tr><td>47</td><td>Rスリーブ種類・最少個数</td><td class="c-partial">△</td><td>刻印ルールはある — 複合ボックスの図読みなし</td></tr>
+      <tr><td>48</td><td>差込コネクタ種類・個数</td><td class="c-partial">△</td><td>R2/R3/R4ルールは<a href="symbol-decoder.html">図記号</a>— 図読み演習なし</td></tr>
+      <tr><td>49</td><td>使用されているコンセント</td><td class="c-partial">△</td><td>基本記号はある — 図全体の走査演習なし</td></tr>
+      <tr><td>50</td><td>使用されていないスイッチ</td><td class="c-partial">△</td><td>3路/4路区別は<a href="symbol-decoder.html">図記号</a>— 接点構成写真問題なし</td></tr>
+    </tbody>
+  </table>
+
+  <h2>集計</h2>
+  <table>
+    <thead><tr><th>判定</th><th>一般30</th><th>配線図20</th><th>計</th></tr></thead>
+    <tbody>
+      <tr><td>◎ フル</td><td>1</td><td>1</td><td><strong>2</strong></td></tr>
+      <tr><td>△ 部分</td><td>16</td><td>15</td><td><strong>31</strong></td></tr>
+      <tr><td>× ギャップ</td><td>13</td><td>4</td><td><strong>17</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h2>ギャップ17問の分類（追加すべき優先度）</h2>
+  <table>
+    <thead><tr><th>優先度</th><th>テーマ</th><th>該当問</th><th>対策案</th></tr></thead>
+    <tbody>
+      <tr><td>高</td><td>写真識別（材料・器具・工具）</td><td>16,17,18</td><td>レッスン6/7/8に実物写真追加、または過去問PDF併用必須</td></tr>
+      <tr><td>高</td><td>計算の別形式（抵抗表・ρ・減少係数）</td><td>2,6,7,8</td><td>計算公式表に「抵抗表方式」「N=120f/p」追加</td></tr>
+      <tr><td>中</td><td>配線図の共用部・特殊記号</td><td>31,34,38,40</td><td>引込高さ・傍記記号・フロート等を図記号表に追加</td></tr>
+      <tr><td>中</td><td>施工・接続の細則</td><td>11,12,19,24,27</td><td>数値表に接続品質・測定手順・計器記号</td></tr>
+    </tbody>
+  </table>
+
+  <h2>結論</h2>
+  <div class="callout">
+    <strong>このサイトだけでは「合格ラインギリギリ」だが不安定。</strong>
+    暗記表4種＋レッスンで<strong>約62%</strong>（31/50）まで到達可能な設計。ただし△31問は「知識はあるが初見で落としやすい」領域。特に<strong>写真3問・計算別形式4問</strong>は表暗記ではカバー不能。
+    本番対策は①このサイトで土台固め → ②<a href="https://www.shiken.or.jp/construction/second/qa/">公式過去問PDF</a>を5年分解く、の2段構えが現実的。
+  </div>
+
+  <nav class="lesson-nav">
+    <a href="exam-map.html">試験全体マップ</a>
+    <a href="numbers-to-memorize.html">数値暗記表</a>
+    <a href="symbol-decoder.html">図記号</a>
+    <a href="https://www.shiken.or.jp/construction/second/qa/">公式過去問</a>
+    <a href="../lessons/9001-mock-exam.html">模試10問</a>
+  </nav>
+</article>
+</body>
+</html>
