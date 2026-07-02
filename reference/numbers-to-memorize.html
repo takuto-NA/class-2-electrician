@@ -9,29 +9,49 @@
 <body>
 <article>
   <h1>数値暗記表</h1>
-  <p class="lesson-meta">参照資料 · 丸暗記で得点する数値の一覧</p>
+  <p class="lesson-meta">参照資料 · 丸暗記で得点する数値の一覧 · 電気設備技術基準第58条準拠</p>
 
   <p class="lead">絶縁抵抗・接地抵抗・リングスリーブ——<strong>数字だけ覚えれば得点</strong>になる頻出値。ホバー暗記で試験直前まで反復する。</p>
 
-  <h2>絶縁抵抗の基準値（対地電圧別）</h2>
-  <p class="reveal-mode-note">対地電圧を見て、基準値を思い出してからホバー。</p>
+  <div class="callout">
+    <strong>絶縁抵抗の覚え方（試験の核心）</strong>
+    まず<strong>対地電圧</strong>を求める。単相100V→対地100V（150V以下→0.1MΩ）。単相200V・三相200V→対地116V超〜200V（150V超→0.2MΩ）。使用電圧300V超→0.4MΩ。
+  </div>
+
+  <h2>絶縁抵抗の基準値（電技基準第58条）</h2>
+  <p class="reveal-mode-note">条件を見て、基準値を思い出してからホバー（タップ）。</p>
   <table class="reveal-table">
-    <thead><tr><th>対地電圧</th><th>絶縁抵抗（以上）</th><th>備考</th></tr></thead>
+    <thead><tr><th>使用電圧</th><th>対地電圧</th><th>絶縁抵抗（以上）</th><th>試験での典型</th></tr></thead>
     <tbody>
       <tr class="reveal-row" tabindex="0">
+        <td>300V以下</td>
         <td>150V以下</td>
         <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">0.1 MΩ</span></td>
-        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">一般住宅100V/200V ← 最頻出</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">単相100V住宅 ← 最頻出</span></td>
       </tr>
       <tr class="reveal-row" tabindex="0">
         <td>300V以下</td>
+        <td>150V超</td>
         <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">0.2 MΩ</span></td>
-        <td></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">200V回路・三相200V（技能No.4）</span></td>
       </tr>
       <tr class="reveal-row" tabindex="0">
-        <td>400V以下</td>
-        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">0.3 MΩ</span></td>
-        <td></td>
+        <td>300V超</td>
+        <td>—</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">0.4 MΩ</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">400V級（第2種では出題少）</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>漏えい電流の代替基準（参考）</h2>
+  <p class="reveal-mode-note">絶縁抵抗の代わりに漏えい電流で判定する場合（1kWあたり1mA以下等）。学科で併記されることがある。</p>
+  <table class="reveal-table">
+    <thead><tr><th>項目</th><th>基準</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>漏えい電流（代表）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">1 mA / kW 以下（条件により異なる）</span></td>
       </tr>
     </tbody>
   </table>

@@ -100,7 +100,8 @@
   position: relative;
 }
 
-.reveal-cell .reveal-content {
+.reveal-cell .reveal-content,
+.reveal-cell .reveal-body {
   filter: blur(5px);
   user-select: none;
   transition: filter 0.2s ease;
@@ -126,9 +127,26 @@
 }
 
 .reveal-row:hover .reveal-content,
-.reveal-row:focus-within .reveal-content {
+.reveal-row:focus-within .reveal-content,
+.reveal-row:hover .reveal-body,
+.reveal-row:focus-within .reveal-body,
+.reveal-row.is-revealed .reveal-content,
+.reveal-row.is-revealed .reveal-body {
   filter: none;
   user-select: text;
+}
+
+.reveal-row.is-revealed .reveal-placeholder {
+  opacity: 0;
+}
+
+.reveal-letter-card.is-revealed .reveal-letter-body {
+  filter: none;
+  user-select: text;
+}
+
+.reveal-letter-card.is-revealed .reveal-letter-placeholder {
+  opacity: 0;
 }
 
 /* --- 文字辞典カード --- */
@@ -195,6 +213,7 @@
   }
 
   .reveal-content,
+  .reveal-body,
   .reveal-letter-body {
     filter: none !important;
   }

@@ -37,8 +37,12 @@
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p>対地電圧で段階が変わる。覚え方：<strong>150V以下→0.1MΩ</strong>、<strong>300V以下→0.2MΩ</strong>、<strong>400V以下→0.3MΩ</strong>。一般住宅（100V/200V）は<strong>0.1MΩ以上</strong>が試験の最頻値。</p>
-          <p>測定は<strong>メガー</strong>（絶縁抵抗計）。技能試験でも配線完了後に絶縁抵抗を測る工程がある。</p>
+          <p>基準は<strong>使用電圧</strong>と<strong>対地電圧</strong>の組み合わせで決まる（電気設備技術基準第58条）。</p>
+          <p><strong>300V以下・対地150V以下 → 0.1MΩ以上</strong>（単相100V住宅が典型）<br>
+          <strong>300V以下・対地150V超 → 0.2MΩ以上</strong>（200V回路・三相200V）<br>
+          <strong>300V超 → 0.4MΩ以上</strong></p>
+          <p>「400V以下→0.3MΩ」のような覚え方は<strong>誤り</strong>——試験では上の3段階を使う。詳細は<a href="../reference/numbers-to-memorize.html">数値暗記表</a>。</p>
+          <p>測定は<strong>メガー</strong>（絶縁抵抗計）。技能試験でも配線完了後に測定する。</p>
         </div>
       </div>
     </div>
@@ -65,8 +69,12 @@
   <h2>暗記練習</h2>
   <ol class="flashcard-list">
     <li class="flashcard" tabindex="0">
-      <div class="flashcard-prompt"><strong>対地150V以下</strong><span class="flashcard-question">絶縁抵抗の基準は？</span><span class="flashcard-hint">ホバー</span></div>
-      <div class="flashcard-answer"><div class="flashcard-answer-inner"><strong>0.1MΩ以上</strong></div></div>
+      <div class="flashcard-prompt"><strong>単相100V（対地100V）</strong><span class="flashcard-question">絶縁抵抗の基準は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner"><strong>0.1MΩ以上</strong>（300V以下・対地150V以下）</div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>三相200V</strong><span class="flashcard-question">絶縁抵抗の基準は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner"><strong>0.2MΩ以上</strong>（300V以下・対地150V超）</div></div>
     </li>
     <li class="flashcard" tabindex="0">
       <div class="flashcard-prompt"><strong>絶縁抵抗の測定</strong><span class="flashcard-question">使う測定器は？</span><span class="flashcard-hint">ホバー</span></div>
