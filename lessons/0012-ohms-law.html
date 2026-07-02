@@ -5,23 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>レッスン12 — オームの法則と合成抵抗</title>
   <link rel="stylesheet" href="../assets/lesson.css">
-  <style>
-    .formula-box {
-      font-family: 'Source Sans 3', sans-serif;
-      font-size: 1.3rem;
-      background: var(--accent-light);
-      padding: 1rem 1.5rem;
-      border-radius: 4px;
-      text-align: center;
-      margin: 1.5rem 0;
-      letter-spacing: 0.05em;
-    }
-  </style>
 </head>
 <body>
 <article>
   <h1>オームの法則と合成抵抗</h1>
-  <p class="lesson-meta">レッスン 0012 · 約30分 · 科目① 基礎理論</p>
+  <p class="lesson-meta">レッスン 0012 · 約35分 · 科目① 基礎理論</p>
 
   <p class="lead"><strong>V = I × R</strong>——電気理論の核。1つの公式から学科の計算問題が連鎖する。会話で公式の意味と使い方を体に入れる。</p>
 
@@ -63,6 +51,11 @@
 
     <div class="formula-box">V = I × R　　I = V / R　　R = V / I</div>
 
+    <div class="trivia-box">
+      <strong>うんちく：オームの法則は最初、信じてもらえなかった</strong>
+      <p>ドイツの物理学者<strong>ゲオルグ・オーム</strong>は1827年にこの関係を発表したが、当時のドイツ科学界からは「単純すぎる」「証明が粗い」と酷評され、大学を追われるように職を失った。認められたのは発表から10年以上後、イギリスの科学者たちが実験で追試してから。<strong>V=IR</strong>という今では当たり前の式にも、こういう不遇の歴史がある。</p>
+    </div>
+
     <div class="scene-card">
       <div class="scene-card-label">DIYとの接点</div>
       <p>12V蓄電池に<strong>100Wの負荷</strong>をつなぐとき、電流 I = P/V = 100/12 ≈ 8.3A。配線の許容電流を超えないか——オームの法則と電力公式のセットで判断できる。</p>
@@ -81,6 +74,11 @@
           <p>2つ並列の特例：<strong>R = (R1 × R2) / (R1 + R2)</strong>——試験の短時間計算用に覚えておく。</p>
         </div>
       </div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">計算例：10Ωと15Ωを並列にする</div>
+      <p>R = (10×15)/(10+15) = 150/25 = <strong>6Ω</strong>。並列にすると合成抵抗は<strong>必ず一番小さい抵抗より小さくなる</strong>——これは検算のコツでもある（計算結果が10Ωより大きければ計算ミス）。</p>
     </div>
   </section>
 
@@ -101,10 +99,50 @@
       <strong>うんちく：ワットとボルトアンペア</strong>
       <p>100V × 10A = 1000W = 1kW。電気代の「1kWh」はこの1kWを1時間使った量。オフグリッドの消費電力見積もりはこの計算の繰り返し。</p>
     </div>
+
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>蓄電池のスペック表って「Ah」って書いてあるじゃないですか。あれとWhってどう繋がるんですか？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>いい質問。<strong>Ah（アンペア時）は電圧を含まない「電気量」の単位</strong>——だから、そのままでは容量を比較できない。<strong>Wh（ワット時）＝Ah × V</strong>と覚えよう。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <span class="formula-label">蓄電池の容量換算（DIYで頻出）</span>
+      Wh（電力量）= Ah（電気量）× V（電圧）
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">計算例：12V 100Ahのバッテリー</div>
+      <p>Wh = 100 × 12 = <strong>1,200Wh</strong>。これを100Vインバーターで使うなら、Wh ÷ V(100) ≈ 12Ah相当——電圧が変わると同じWhでもAhの見た目の値が変わる。<strong>「Ahだけで容量比較しない」</strong>のがオフグリッド設計の鉄則だ。</p>
+    </div>
   </section>
 
+  <h2>暗記練習</h2>
+  <ol class="flashcard-list">
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>並列合成抵抗の特例</strong><span class="flashcard-question">2本のときの簡易式は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">R = (R1×R2)/(R1+R2)<span class="answer-trivia">検算：結果は必ず小さい方の抵抗値より小さくなる</span></div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>Wh と Ah</strong><span class="flashcard-question">変換式は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">Wh = Ah × V<span class="answer-scene">📍 蓄電池の容量比較は必ずWhに揃えてから行う</span></div></div>
+    </li>
+  </ol>
+
+  <h2>確認クイズ</h2>
   <div class="quiz" data-correct="2" data-feedback-correct="正解。V=IR → I=100/50=2A。" data-feedback-wrong="I = V/R = 100/50 = 2A。">
-    <p class="quiz-question">Q. 100V、50Ωの負荷に流れる電流は？</p>
+    <p class="quiz-question">Q1. 100V、50Ωの負荷に流れる電流は？</p>
     <div class="quiz-options">
       <button class="quiz-option" type="button">0.5 A</button>
       <button class="quiz-option" type="button">1 A</button>
@@ -114,6 +152,31 @@
     <div class="quiz-feedback"></div>
   </div>
 
+  <div class="quiz" data-correct="1" data-feedback-correct="正解。(10×15)/(10+15) = 6Ω。" data-feedback-wrong="並列2本の特例式 R=(R1×R2)/(R1+R2) に代入すると (10×15)/25=6Ω。">
+    <p class="quiz-question">Q2. 10Ωと15Ωの抵抗を並列にした合成抵抗は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">25 Ω</button>
+      <button class="quiz-option" type="button">6 Ω</button>
+      <button class="quiz-option" type="button">12.5 Ω</button>
+      <button class="quiz-option" type="button">150 Ω</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="0" data-feedback-correct="正解。Wh = Ah × V = 50 × 24 = 1,200Wh。" data-feedback-wrong="Wh = Ah × V。24V × 50Ah = 1,200Wh。">
+    <p class="quiz-question">Q3. 24V・50Ahのバッテリーの電力量[Wh]は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">1,200 Wh</button>
+      <button class="quiz-option" type="button">74 Wh</button>
+      <button class="quiz-option" type="button">50 Wh</button>
+      <button class="quiz-option" type="button">2.08 Wh</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <h2>このレッスンで終わっていないこと</h2>
+  <p>科目①の前半（直流・電力）は完了。残りは<strong>交流回路</strong>（レッスン13）。</p>
+
   <nav class="lesson-nav">
     <a href="../lessons/0011-remaining-regulations.html">← レッスン11</a>
     <a href="../lessons/0013-ac-circuit-basics.html">レッスン13 →</a>
@@ -121,5 +184,6 @@
   </nav>
 </article>
 <script src="../assets/quiz.js"></script>
+<script src="../assets/reveal-answer.js"></script>
 </body>
 </html>

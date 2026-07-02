@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>レッスン17 — 欠陥判定と工具準備</title>
+  <title>レッスン17 — 欠陥判定基準と工具準備</title>
   <link rel="stylesheet" href="../assets/lesson.css">
 </head>
 <body>
 <article>
   <h1>欠陥判定基準と工具・材料の準備</h1>
-  <p class="lesson-meta">レッスン 0017 · 約30分 · 技能試験 完了</p>
+  <p class="lesson-meta">レッスン 0017 · 約35分 · 技能試験 完了</p>
 
   <p class="lead">技能試験は<strong>加点方式ではない</strong>——1箇所の欠陥で不合格。「何が欠陥か」を事前に知っておくことが、候補13問2周の前提。</p>
 
@@ -37,37 +37,78 @@
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p>欠陥＝<strong>施工上の不備</strong>で、保安上問題があるもの。例：圧着不足、差込コネクタの心数間違い、被覆剥き長さ不足、色の取り違え、リングスリーブサイズ違い、絶縁抵抗基準未満。</p>
-          <p>「動いたからOK」ではない。検査員は実物を目視・測定で判定する。</p>
+          <p>欠陥＝<strong>施工上の不備</strong>で、保安上問題があるもの。「動いたからOK」ではない——検査員は実物を目視・測定で判定する。試験センターは「<strong>技能試験に係る欠陥の判断基準</strong>」を公式サイトで公開している。学習の入り口として、代表的な区分を会話で整理しよう。</p>
         </div>
       </div>
+    </div>
+
+    <div class="callout">
+      <strong>必ず公式資料も確認する</strong>
+      以下は学習しやすいよう区分を要約したもの。<strong>最終的な判定基準は、受験する年度の</strong><a href="https://www.shiken.or.jp/construction/second/defect/">試験センター公式ページ「技能試験に係る欠陥の判断基準等について」</a>で必ず確認すること。
     </div>
   </section>
 
   <section>
-    <h2>頻出欠陥チェックリスト</h2>
-    <p class="reveal-mode-note">項目を読んで、なぜ欠陥か思い出してからホバー。</p>
+    <h2>欠陥の12区分（学習用の要約）</h2>
+    <p class="reveal-mode-note">区分名を読んで、どんな不備が該当するか思い出してからホバー（タップ）。</p>
     <table class="reveal-table">
-      <thead><tr><th>項目</th><th>欠陥になる例</th></tr></thead>
+      <thead><tr><th>区分</th><th>代表的な不備の例</th></tr></thead>
       <tbody>
         <tr class="reveal-row" tabindex="0">
-          <td>圧着</td>
-          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">リングスリーブの圧着が不完全、心線がはみ出す</span></td>
+          <td>1. 未完成</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">結線の残り、器具の付け忘れ、時間切れで一部未接続</span></td>
         </tr>
         <tr class="reveal-row" tabindex="0">
-          <td>被覆剥き</td>
-          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">剥き長さが短すぎ/長すぎ、心線が露出しすぎ</span></td>
+          <td>2. 配置・寸法・接続方法の相違</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">施工条件に指定された器具位置・電線長と異なる</span></td>
         </tr>
         <tr class="reveal-row" tabindex="0">
-          <td>色</td>
-          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">黒白の取り違え、緑以外でアース接続</span></td>
+          <td>3. 誤接続・誤結線</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">回路が成立しない結線、指定と異なる接続</span></td>
         </tr>
         <tr class="reveal-row" tabindex="0">
-          <td>測定</td>
-          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">絶縁抵抗0.1MΩ未満（150V以下）</span></td>
+          <td>4. 電線の色別・極性の相違</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">接地側・非接地側の取り違え、指定色との不一致</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>5. 電線の損傷</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">心線の傷・素線切れ、被覆の剥きすぎ／不足</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>6. リングスリーブの圧着不良</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">サイズ・刻印の相違、圧着不完全で心線がはみ出す</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>7. 差込形コネクタの接続不良</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">心数違い、電線を引っ張って外れる、差込不足</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>8. 器具への結線不良</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">ねじの締め付け不足、心線の露出長さ超過</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>9. 金属管工事の不備</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">ボックスとの接続部の隙間、ねじ切り不良</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>10. 合成樹脂管工事の不備</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">PF管とボックスの接続不良、管の損傷</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>11. 取付枠部分の不良</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">埋込器具の取付枠の向き・固定不良</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>12. その他の不適切な施工</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">上記に当てはまらない保安上の不備全般</span></td>
         </tr>
       </tbody>
     </table>
+
+    <div class="scene-card">
+      <div class="scene-card-label">欠陥としない代表例（安心材料）</div>
+      <p>ランプレセプタクルや露出形コンセントの<strong>台座のわずかな破損</strong>は、原則として欠陥にならない（公式基準に基づく）。神経質になりすぎず、<strong>結線・寸法・色・圧着</strong>の4点を優先してチェックする習慣をつけよう。</p>
+    </div>
   </section>
 
   <section>
@@ -96,15 +137,29 @@
     </div>
   </section>
 
+  <h2>確認クイズ</h2>
   <div class="quiz" data-correct="2"
        data-feedback-correct="正解。1箇所でも欠陥があれば不合格。"
        data-feedback-wrong="技能は欠陥1つで不合格（加点方式ではない）。">
-    <p class="quiz-question">Q. 技能試験の合格条件は？</p>
+    <p class="quiz-question">Q1. 技能試験の合格条件は？</p>
     <div class="quiz-options">
       <button class="quiz-option" type="button">70点以上</button>
       <button class="quiz-option" type="button">80%以上の工程完了</button>
       <button class="quiz-option" type="button">欠陥がないこと</button>
       <button class="quiz-option" type="button">絶縁抵抗のみ合格</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="1"
+       data-feedback-correct="正解。リングスリーブのサイズ・刻印の相違は欠陥区分の代表例。"
+       data-feedback-wrong="サイズや刻印の相違はリングスリーブの圧着不良として欠陥になる。">
+    <p class="quiz-question">Q2. リングスリーブのサイズと刻印が対応していない場合は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">軽微なので問題ない</button>
+      <button class="quiz-option" type="button">欠陥になる</button>
+      <button class="quiz-option" type="button">動作すれば合格</button>
+      <button class="quiz-option" type="button">検査員の裁量で決まる</button>
     </div>
     <div class="quiz-feedback"></div>
   </div>

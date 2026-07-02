@@ -9,7 +9,7 @@
 <body>
 <article>
   <h1>配線設計：電線の太さと遮断器</h1>
-  <p class="lesson-meta">レッスン 0015 · 約30分 · 科目② 完了</p>
+  <p class="lesson-meta">レッスン 0015 · 約35分 · 科目② 完了</p>
 
   <p class="lead"><strong>許容電流</strong>と<strong>遮断器定格</strong>の組み合わせ——「この太さのVVFに何Aのブレーカー？」は試験もDIY設計も必須。</p>
 
@@ -38,7 +38,6 @@
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
           <p>試験頻出の暗記セット：<strong>1.6mm² → 15A</strong>、<strong>2.0mm² → 20A</strong>（周囲温度30℃付近）。遮断器は<strong>許容電流以下</strong>で選ぶ。</p>
-          <p>一般住宅の照明回路15A、エアコン200V回路20Aなど——太さとブレーカーのペアで覚える。</p>
         </div>
       </div>
     </div>
@@ -58,15 +57,90 @@
         </tr>
       </tbody>
     </table>
+  </section>
+
+  <section>
+    <h2>分岐回路の種類 — 遮断器・電線太さ・コンセントは3点セット</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>分電盤の1回路（分岐回路）って、遮断器・電線・コンセントを自由に組み合わせていいわけじゃないんですよね？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>その通り、内線規程で<strong>3点セット</strong>が決まっている。特に注意すべきは<strong>20A回路</strong>——<strong>配線用遮断器なら1.6mm以上でOK</strong>だが、<strong>ヒューズなら2.0mm以上</strong>が必要。同じ20Aでも遮断器の種類で最小の電線太さが変わる、試験の定番ひっかけだ。</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="reveal-mode-note">遮断器の定格を見て、必要な電線太さとコンセントの範囲を思い出してからホバー。</p>
+    <table class="reveal-table">
+      <thead><tr><th>分岐回路（遮断器の定格）</th><th>電線の太さ（軟銅線・以上）</th><th>接続できるコンセント</th></tr></thead>
+      <tbody>
+        <tr class="reveal-row" tabindex="0">
+          <td>15A</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">直径1.6mm</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">15A以下</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>20A（配線用遮断器）</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">直径1.6mm</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">20A以下</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>20A（ヒューズ）</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">直径2.0mm</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">20A</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>30A</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">直径2.6mm（断面積5.5mm²）</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">20A以上30A以下</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>40A</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">断面積8mm²</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">30A以上40A以下</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>50A</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">断面積14mm²</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">40A以上50A以下</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>覚え方：「ヒューズの20Aだけ太め」</strong>
+      配線用遮断器の20A回路は1.6mmでよいのに、ヒューズの20A回路だけ2.0mmが必要——理由はヒューズが配線用遮断器ほど精密に電流を遮断できず、電線側に余裕を持たせる必要があるため。この1点だけ意識すれば残りは規則的に増えていく（1.6→2.6→8mm²→14mm²）。
+    </div>
 
     <div class="scene-card">
       <div class="scene-card-label">DIYとの接点</div>
-      <p>オフグリッド分電盤で<strong>15A回路に2.0mm²</strong>を使うのは問題なし（余裕あり）。逆に<strong>1.6mm²に20Aブレーカー</strong>は危険——許容を超えると発熱・火災。資格知識＝安全設計。</p>
+      <p>オフグリッド分電盤で<strong>15A回路に2.0mm²</strong>を使うのは問題なし（余裕あり）。逆に<strong>1.6mm²に20Aヒューズ</strong>は<strong>電線太さ不足で危険</strong>——資格知識＝安全設計そのものだ。</p>
     </div>
   </section>
 
+  <h2>暗記練習</h2>
+  <ol class="flashcard-list">
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>20A分岐回路（配線用遮断器）</strong><span class="flashcard-question">必要な電線太さは？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">直径<strong>1.6mm以上</strong><span class="answer-trivia">同じ20Aでもヒューズなら2.0mm以上必要</span></div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>30A分岐回路</strong><span class="flashcard-question">電線太さとコンセントは？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">直径2.6mm（断面積5.5mm²）以上。コンセントは20A以上30A以下</div></div>
+    </li>
+  </ol>
+
+  <h2>確認クイズ</h2>
   <div class="quiz" data-correct="1" data-feedback-correct="正解。2.0mm²の許容は約20A。" data-feedback-wrong="2.0mm² VVFの許容電流は約20A。">
-    <p class="quiz-question">Q. VVF 2.0mm²に適切な遮断器定格は？</p>
+    <p class="quiz-question">Q1. VVF 2.0mm²に適切な遮断器定格は？</p>
     <div class="quiz-options">
       <button class="quiz-option" type="button">30 A</button>
       <button class="quiz-option" type="button">20 A</button>
@@ -75,6 +149,20 @@
     </div>
     <div class="quiz-feedback"></div>
   </div>
+
+  <div class="quiz" data-correct="2" data-feedback-correct="正解。20Aヒューズ分岐回路は2.0mm以上が必要。" data-feedback-wrong="20A回路でも遮断器がヒューズの場合は、配線用遮断器（1.6mm）より太い2.0mm以上が必要。">
+    <p class="quiz-question">Q2. 20Aのヒューズを使った分岐回路に必要な電線の太さは？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">直径1.6mm以上</button>
+      <button class="quiz-option" type="button">断面積5.5mm²以上</button>
+      <button class="quiz-option" type="button">直径2.0mm以上</button>
+      <button class="quiz-option" type="button">断面積8mm²以上</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <h2>このレッスンで終わっていないこと</h2>
+  <p>科目②（配電理論・配線設計）は完了。学科の一般問題（暗記＋計算）は一通りカバーした。次は<a href="../lessons/9001-mock-exam.html">模試10問</a>で確認しよう。</p>
 
   <nav class="lesson-nav">
     <a href="../lessons/0014-voltage-drop.html">← レッスン14</a>

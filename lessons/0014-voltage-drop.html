@@ -9,7 +9,7 @@
 <body>
 <article>
   <h1>配電理論：電圧降下と電力損失</h1>
-  <p class="lesson-meta">レッスン 0014 · 約30分 · 科目② 配電理論</p>
+  <p class="lesson-meta">レッスン 0014 · 約35分 · 科目② 配電理論</p>
 
   <p class="lead">細い電線・長い配線ほど<strong>電圧が落ちる</strong>——オフグリッドの小屋配線で体感する問題が、試験では計算問題になる。</p>
 
@@ -31,21 +31,55 @@
   </div>
 
   <section>
-    <h2>電圧降下の公式</h2>
+    <h2>電圧降下の近似式 — 配線方式で係数が変わる</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>電圧降下の計算式、35.6とか17.8とか数字がいろいろあって覚えられません…</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>丸暗記じゃなくて理屈を押さえよう。まず基本は<strong>単相2線式の35.6</strong>——電流は<strong>行きと帰りの2本</strong>を流れるから、抵抗による電圧降下も2本分。<strong>単相3線式は中性線を基準にした片道（大地間）</strong>だから、ちょうど<strong>半分の17.8</strong>。<strong>三相3線式</strong>はベクトル的な関係で<strong>35.6 × (1/√3) ≈ 30.8</strong>になる。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <span class="formula-label">電圧降下の近似式　e = 係数 × L × I ÷ (1000 × A)</span>
+      単相2線式：35.6　　単相3線式（対地）：17.8　　三相3線式：30.8
+    </div>
+
+    <div class="callout">
+      <strong>覚え方のコツ</strong>
+      「単相2線の35.6が基準」→「単相3線は半分の17.8（中性線基準だから）」→「三相3線は35.6を√3で割った30.8」。数字を丸暗記せず、<strong>2線式が一番大きい</strong>という関係だけ覚えておけば、選択肢から逆算しやすい。
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">計算例：単相2線式、電流15A・こう長20m・断面積2.0mm²</div>
+      <p>e = 35.6 × 20 × 15 ÷ (1000 × 2.0) = 10,680 ÷ 2,000 = <strong>約5.34V</strong>。100V回路なら5.34/100 ≈ 5.3%の降下——一般的な許容値（内線規程の目安で2〜3%程度、条件により緩和）を超える可能性があり、より太い電線への変更を検討することになる。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>電圧降下が大きくなる条件</h2>
     <div class="dialogue">
       <div class="dialogue-turn">
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p>電圧降下 e ≈ <strong>K × I × L × ρ / A</strong>（係数Kは配線方式による）。試験では簡略化された形や、許容電圧降下（一般に<strong>3%以下</strong>）との比較問題が出る。</p>
-          <p>覚え方：<strong>電流Iが大きい</strong>、<strong>距離Lが長い</strong>、<strong>断面Aが小さい（細い線）</strong>ほど降下が大きい。</p>
+          <p>公式を見れば条件は明らか。<strong>電流Iが大きい</strong>、<strong>距離Lが長い</strong>、<strong>断面Aが小さい（細い線）</strong>ほど、eが大きくなる（分子が大きく／分母が小さくなる）。</p>
         </div>
       </div>
     </div>
 
     <div class="scene-card">
       <div class="scene-card-label">DIYとの接点</div>
-      <p>離れた小屋に<strong>2.0mm² VVF</strong>で50m引いたら、大電流負荷（ヒーター等）で端子電圧が90V台に——電圧降下の計算で「2.6mm²に上げるべき」と判断できる。ソーラー発電所からの<strong>引込距離</strong>も同じ理論。</p>
+      <p>離れた小屋に<strong>2.0mm² VVF</strong>で50m引いたら、大電流負荷（ヒーター等）で端子電圧が90V台に落ちることがある——電圧降下の計算で「2.6mm²に上げるべき」と判断できる。ソーラー発電所からの<strong>引込距離</strong>も同じ理論で検討する。</p>
     </div>
   </section>
 
@@ -56,19 +90,47 @@
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p>配線の<strong>電力損失</strong> P = I²R。降下した分は電線が熱になる——無駄な発熱・火災リスク。太い線＝抵抗が小さい＝損失が少ない。</p>
+          <p>配線の<strong>電力損失</strong> P = I²R。降下した分は電線が熱になる——無駄な発熱・火災リスク。太い線＝抵抗が小さい＝損失が少ない。電圧降下と電力損失はコインの表裏の関係だと覚えておこう。</p>
         </div>
       </div>
     </div>
   </section>
 
+  <h2>暗記練習</h2>
+  <ol class="flashcard-list">
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>単相2線式の係数</strong><span class="flashcard-question">数値と理由は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner"><strong>35.6</strong>。行き帰り2本分の抵抗を考慮した係数で、3方式の中で最大</div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>単相3線式の係数</strong><span class="flashcard-question">数値と理由は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner"><strong>17.8</strong>。中性線を基準にした片道（対地間）なので35.6の半分</div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>三相3線式の係数</strong><span class="flashcard-question">数値と理由は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner"><strong>30.8</strong>。35.6 × (1/√3) ≈ 30.8（線間電圧と相電流のベクトル関係）</div></div>
+    </li>
+  </ol>
+
+  <h2>確認クイズ</h2>
   <div class="quiz" data-correct="3" data-feedback-correct="正解。細い線・長い距離・大電流で降下増。" data-feedback-wrong="電圧降下は電流↑・距離↑・断面↓で大きくなる。">
-    <p class="quiz-question">Q. 電圧降下が大きくなる条件は？</p>
+    <p class="quiz-question">Q1. 電圧降下が大きくなる条件は？</p>
     <div class="quiz-options">
       <button class="quiz-option" type="button">太い線・短距離</button>
       <button class="quiz-option" type="button">小電流・長距離</button>
       <button class="quiz-option" type="button">太い線・大電流</button>
       <button class="quiz-option" type="button">細い線・長距離・大電流</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="1" data-feedback-correct="正解。単相3線式は対地間なので17.8。" data-feedback-wrong="単相3線式（対地間）の係数は17.8。単相2線式の35.6の半分。">
+    <p class="quiz-question">Q2. 単相3線式（対地間）の電圧降下計算に使う係数は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">35.6</button>
+      <button class="quiz-option" type="button">17.8</button>
+      <button class="quiz-option" type="button">30.8</button>
+      <button class="quiz-option" type="button">10.0</button>
     </div>
     <div class="quiz-feedback"></div>
   </div>
@@ -79,5 +141,6 @@
   </nav>
 </article>
 <script src="../assets/quiz.js"></script>
+<script src="../assets/reveal-answer.js"></script>
 </body>
 </html>

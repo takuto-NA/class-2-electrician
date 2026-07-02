@@ -9,7 +9,7 @@
 <body>
 <article>
   <h1>配線器具と電気機器</h1>
-  <p class="lesson-meta">レッスン 0007 · 約25分 · 科目③ 完了</p>
+  <p class="lesson-meta">レッスン 0007 · 約30分 · 科目③ 完了</p>
 
   <p class="lead">スイッチ・コンセントの<strong>種類と定格</strong>、分電盤まわりの<strong>電気機器</strong>。配線図の記号と現物の名前を、ここで完全に結びつける。</p>
 
@@ -32,64 +32,102 @@
   </div>
 
   <section>
-    <h2>配線器具 — スイッチ・コンセントの種類</h2>
+    <h2>配線器具 — スイッチ・コンセントの定格</h2>
     <div class="dialogue">
       <div class="dialogue-turn">
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p>レッスン3で<strong>図記号</strong>を、今日は<strong>実物の規格名</strong>を押さえる。片切・3路・4路はそのまま。加えて<strong>定格</strong>：一般住宅は<strong>15A 125V</strong>が標準。</p>
-          <p><strong>接地付コンセント</strong>は新築の必須。金属製配線器具を使う場合は<strong>アース付き</strong>が原則。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>電気機器 — 分電盤まわり</h2>
-    <div class="dialogue">
-      <div class="dialogue-turn student">
-        <div class="dialogue-avatar">💡</div>
-        <div class="dialogue-bubble">
-          <span class="dialogue-name">アンペアくん</span>
-          <p>ソーラーと蓄電池をつなぐとき、分電盤とブレーカーの話よく出てきます。</p>
-        </div>
-      </div>
-      <div class="dialogue-turn">
-        <div class="dialogue-avatar">⚡</div>
-        <div class="dialogue-bubble">
-          <span class="dialogue-name">ボルト先生</span>
-          <p><strong>配線用遮断器</strong>（ブレーカー）：過電流で自動遮断。<strong>漏電遮断器</strong>（ELB）：漏電で人体保護。<strong>配線用遮断器付漏電遮断器</strong>（AFCI/ELB一体型もあり）——試験では略称と機能の組み合わせが出る。</p>
-          <p><strong>単相モーター</strong>：換気扇など。起動時に大電流——専用回路のブレーカー容量に関係する。</p>
+          <p>レッスン3で<strong>図記号</strong>を、今日は<strong>実物の規格名</strong>を押さえる。片切・3路・4路はそのまま。加えて<strong>定格</strong>：一般住宅は<strong>15A 125V</strong>が標準コンセント。技能候補No.5には<strong>20A 250V</strong>コンセントも登場する——差込口の形が違うので実物を見ておくと安心。</p>
+          <p><strong>接地極付コンセント</strong>は新築の必須。金属製配線器具を使う場合は<strong>アース付き</strong>が原則だ。</p>
         </div>
       </div>
     </div>
 
     <div class="scene-card">
-      <div class="scene-card-label">DIYとの接点</div>
-      <p>オフグリッドで<strong>インバーター出力→分電盤</strong>を自分で組む場合、各回路のブレーカー容量（15A/20A）と配線太さ（VVF 2.0mm²等）の組み合わせが重要。資格の知識がそのまま設計に活きる。</p>
+      <div class="scene-card-label">こんな場所で見かける</div>
+      <p><strong>15A 125V</strong>：一般家庭のほぼ全コンセント。<strong>20A 250V</strong>：エアコン専用、業務用厨房機器。20A250Vのコンセントは差込口の形状が横向きになっているものが多く、15A125Vのプラグは物理的に挿さらない——電圧・電流の違いを誤配線しないための安全設計だ。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>配線用遮断器と漏電遮断器 — 何を守るかが違う</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>ソーラーと蓄電池をつなぐとき、分電盤とブレーカーの話よく出てきます。全部同じものじゃないんですか？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>守るものが違う。<strong>配線用遮断器</strong>（MCB）は<strong>過電流</strong>（電線が発熱しすぎる異常）から<strong>電線・機器</strong>を守る。<strong>漏電遮断器</strong>（ELB = Earth Leakage Breaker）は<strong>漏電</strong>から<strong>人体</strong>を守る——目的がまったく別だから、住宅では両方を組み合わせて設置する。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <span class="formula-label">感電防止用ELBの標準仕様</span>
+      定格感度電流 30 mA 以下　動作時間 0.1 秒以内
+    </div>
+
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>人体の心室細動が起きる限界は約50mA——<strong>30mA・0.1秒</strong>はそれよりずっと手前で確実に切る設計値だ。プールや水気のある場所ではさらに厳しい<strong>15mA</strong>が使われる。この数値はレッスン9の接地抵抗の緩和条件にもつながるから覚えておこう。</p>
+        </div>
+      </div>
     </div>
 
     <div class="trivia-box">
-      <strong>略称の由来：ELB</strong>
-      <p>ELB = Earth Leakage Breaker（漏電遮断器）。「アース漏れ＝漏電」を検知して切る。2005年以降、住宅の幹線に設置が義務化された——試験の法令・機器両方で頻出。</p>
+      <strong>うんちく：ELBの前はヒューズだった</strong>
+      <p>配線用遮断器が普及する前は<strong>ヒューズ</strong>（電流が流れすぎると溶けて切れる金属線）が主流だった。ヒューズは1回切れると交換が必要——今の配線用遮断器は<strong>スイッチを上げるだけで復帰</strong>できる点が最大の進化。ただし漏電遮断器は「感電を防ぐ」役割のため、ヒューズには代替できない機能だった。</p>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">DIYとの接点</div>
+      <p>オフグリッドで<strong>インバーター出力→分電盤</strong>を自分で組む場合、各回路のブレーカー容量（15A/20A）と配線太さ（VVF 2.0mm²等）の組み合わせが重要（レッスン15で詳しく計算する）。<strong>ELBは必ず設置</strong>——過電流と漏電は別々に対策が必要だと覚えておこう。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>特殊器具 — リレー・タイムスイッチ・自動点滅器</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>技能候補問題には、住宅にあまりない特殊器具も登場する。<strong>リモコンリレー</strong>（弱電操作で強電回路を開閉、ホテル・施設の照明制御に多い）、<strong>タイムスイッチ</strong>（時刻で自動ON/OFF、外灯や換気設備）、<strong>自動点滅器</strong>（周囲の明るさで自動ON/OFF、街路灯・防犯灯）。図記号はレッスン4・13で確認したね。</p>
+          <p><strong>単相モーター</strong>：換気扇など。起動時に大電流が流れる（始動電流）——専用回路のブレーカー容量を決めるときに考慮が必要な要素だ。</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <h2>暗記練習</h2>
   <ol class="flashcard-list">
     <li class="flashcard" tabindex="0">
-      <div class="flashcard-prompt"><strong>ELB</strong><span class="flashcard-question">正式名称と機能は？</span><span class="flashcard-hint">ホバー</span></div>
-      <div class="flashcard-answer"><div class="flashcard-answer-inner">漏電遮断器。漏電を検知して回路を遮断（人体保護）</div></div>
+      <div class="flashcard-prompt"><strong>ELB</strong><span class="flashcard-question">正式名称と感度電流・動作時間は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">漏電遮断器（Earth Leakage Breaker）。<strong>30mA以下・0.1秒以内</strong>で人体保護<span class="answer-scene">📍 心室細動の限界（約50mA）より十分手前で遮断</span></div></div>
     </li>
     <li class="flashcard" tabindex="0">
-      <div class="flashcard-prompt"><strong>15A 125V</strong><span class="flashcard-question">何の定格？</span><span class="flashcard-hint">ホバー</span></div>
-      <div class="flashcard-answer"><div class="flashcard-answer-inner">一般住宅の配線器具（スイッチ・コンセント）の標準定格</div></div>
+      <div class="flashcard-prompt"><strong>15A 125V / 20A 250V</strong><span class="flashcard-question">それぞれ何のコンセント？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">15A125V＝一般住宅の標準。20A250V＝エアコン等の大容量機器（技能No.5）</div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>配線用遮断器 vs 漏電遮断器</strong><span class="flashcard-question">何を守る？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">配線用遮断器＝過電流から電線・機器を保護。漏電遮断器＝漏電から人体を保護</div></div>
     </li>
   </ol>
 
-  <div class="quiz" data-correct="2" data-feedback-correct="正解。漏電遮断はELB。" data-feedback-wrong="漏電を検知するのはELB（漏電遮断器）。">
-    <p class="quiz-question">Q. 漏電を検知して遮断する機器は？</p>
+  <h2>確認クイズ</h2>
+  <div class="quiz" data-correct="2" data-feedback-correct="正解。漏電を検知して遮断するのは漏電遮断器（ELB）。" data-feedback-wrong="漏電を検知するのはELB（漏電遮断器）。配線用遮断器は過電流を検知する。">
+    <p class="quiz-question">Q1. 漏電を検知して遮断する機器は？</p>
     <div class="quiz-options">
       <button class="quiz-option" type="button">配線用遮断器</button>
       <button class="quiz-option" type="button">タイムスイッチ</button>
@@ -99,13 +137,36 @@
     <div class="quiz-feedback"></div>
   </div>
 
+  <div class="quiz" data-correct="1" data-feedback-correct="正解。感電防止用ELBの標準は30mA以下・0.1秒以内。" data-feedback-wrong="標準は定格感度電流30mA以下、動作時間0.1秒以内（水気のある場所は15mA）。">
+    <p class="quiz-question">Q2. 感電防止用の漏電遮断器（高感度・高速形）の標準的な仕様は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">100mA以下・0.5秒以内</button>
+      <button class="quiz-option" type="button">30mA以下・0.1秒以内</button>
+      <button class="quiz-option" type="button">500mA以下・1秒以内</button>
+      <button class="quiz-option" type="button">感度電流の規定はない</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="0" data-feedback-correct="正解。街路灯や防犯灯は周囲の明るさで自動点灯する自動点滅器を使う。" data-feedback-wrong="周囲の明るさで自動ON/OFFするのは自動点滅器。時刻で切り替えるのはタイムスイッチ。">
+    <p class="quiz-question">Q3. 周囲の明るさに応じて自動でON/OFFする器具は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">自動点滅器</button>
+      <button class="quiz-option" type="button">タイムスイッチ</button>
+      <button class="quiz-option" type="button">リモコンリレー</button>
+      <button class="quiz-option" type="button">配線用遮断器</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
   <h2>このレッスンで終わっていないこと</h2>
-  <p><strong>科目③は完了</strong>。次は施工方法（レッスン8・9）。</p>
+  <p><strong>科目③は完了</strong>。次は施工方法（レッスン8・9）。ELBの感度電流・動作時間は<a href="../lessons/0009-grounding-and-connections.html">レッスン9</a>のD種接地の緩和条件で再登場する。</p>
 
   <nav class="lesson-nav">
     <a href="../lessons/0006-tools-and-materials.html">← レッスン6</a>
     <a href="../lessons/0008-construction-methods.html">レッスン8 →</a>
     <a href="../reference/cable-abbreviations.html">ケーブルデコーダー</a>
+    <a href="../reference/exam-map.html">試験全体マップ</a>
   </nav>
 </article>
 <script src="../assets/quiz.js"></script>

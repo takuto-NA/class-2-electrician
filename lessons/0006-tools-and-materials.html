@@ -9,9 +9,9 @@
 <body>
 <article>
   <h1>工具と材料の名前</h1>
-  <p class="lesson-meta">レッスン 0006 · 約20分 · 科目③ 続き</p>
+  <p class="lesson-meta">レッスン 0006 · 約25分 · 科目③ 続き</p>
 
-  <p class="lead">レッスン2で電線を押さえた。次は<strong>工具・電線管・ボックス</strong>——技能試験の卓上にも並ぶ「名前と用途」を、略称の由来つきで覚える。</p>
+  <p class="lead">レッスン2で電線を押さえた。次は<strong>工具・電線管・ボックス</strong>——技能試験の卓上にも並ぶ「名前と用途」を、由来と現場感つきで覚える。</p>
 
   <div class="position-badge">
     <div class="position-badge-header">
@@ -25,6 +25,7 @@
       <li class="todo">配線器具（スイッチ・コンセントの種類）</li>
       <li class="todo">電気機器（変圧器・開閉器・ブレーカ等）</li>
     </ul>
+    <p class="position-badge-note">技能試験の候補13問すべてで、このレッスンの工具を実際に手に取ることになる。<a href="../reference/exam-map.html">試験全体マップ</a>参照。</p>
   </div>
 
   <div class="cast-intro">
@@ -33,20 +34,21 @@
   </div>
 
   <section>
-    <h2>基本工具 — 技能試験の相棒</h2>
+    <h2>電工ナイフとペンチ — なぜ「ナイフ」なのか</h2>
     <div class="dialogue">
       <div class="dialogue-turn student">
         <div class="dialogue-avatar">💡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">アンペアくん</span>
-          <p>技能試験、自分の工具を持っていくんですよね？　何を揃えればいいですか？</p>
+          <p>技能試験、自分の工具を持っていくんですよね？　カッターじゃダメなんですか？</p>
         </div>
       </div>
       <div class="dialogue-turn">
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p>学科でも名前が出る定番セットがある。<strong>電工ナイフ</strong>（被覆剥き）、<strong>ペンチ</strong>、<strong>ドライバー</strong>、<strong>圧着工具</strong>（リングスリーブ用）、<strong>テスタ</strong>。試験会場では電線・器具は支給、工具は持参が基本だ。</p>
+          <p><strong>電工ナイフ</strong>は片刃で、ケーブルのシースだけを浅く一周切って<strong>心線を傷つけずに剥く</strong>ための専用刃物。カッターは刃が薄く角度が不安定で、心線に傷が入りやすい——技能試験では<strong>心線の傷は即欠陥</strong>だから、専用工具を使う。</p>
+          <p>今はケーブル外装専用の<strong>VVFストリッパー</strong>（握るだけで長さを合わせて剥ける）が主流。ただし学科・技能とも「電工ナイフ」の名前は今も現役だよ。</p>
         </div>
       </div>
     </div>
@@ -54,6 +56,58 @@
     <div class="scene-card">
       <div class="scene-card-label">DIYとの接点</div>
       <p>オフグリッド小屋の100V配線でも同じ工具セット。DC側は端子台・MC4コネクタ用の工具が別途必要だが、<strong>資格試験と屋内AC配線</strong>はこの基本セットで足りる。</p>
+    </div>
+
+    <div class="trivia-box">
+      <strong>うんちく：ペンチの語源</strong>
+      <p>「ペンチ」は英語の <em>pinch</em>（挟む）から。電線を切る<strong>刃</strong>と、曲げて輪を作る<strong>丸い顎</strong>の両方を持つのが電工ペンチの特徴——ランプレセプタクルへの結線で電線を輪っか状にする「輪作り」は、この丸い顎を使う。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>圧着工具とダイスの刻印 — サイズ違いは即欠陥</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>圧着工具って、ペンチと形が似てますよね。何がそんなに大事なんですか？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>圧着工具のハンドル近くには<strong>「○」「小」「中」「大」</strong>の刻印がついた<strong>ダイス（型）</strong>がある。リングスリーブのサイズに合わせてダイスを選ばないと、圧着が緩すぎたり潰れすぎたりして<strong>断線・発熱</strong>の原因になる——技能試験では「刻印の相違」がそのまま欠陥になる、超頻出ポイントだ。</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="reveal-mode-note">電線の太さ・本数を見て、ダイスの刻印を思い出してからホバー（タップ）。</p>
+    <table class="reveal-table">
+      <thead><tr><th>電線の太さ・本数</th><th>リングスリーブ</th><th>ダイスの刻印</th></tr></thead>
+      <tbody>
+        <tr class="reveal-row" tabindex="0">
+          <td>1.6mm × 2本</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">小</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">○（唯一の例外）</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>1.6mm × 3〜4本</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">小</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">小</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>1.6mm × 5〜6本</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">中</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">中</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>唯一の例外を覚える：1.6mm×2本だけ「○」</strong>
+      それ以外はスリーブのサイズ名がそのまま刻印になる（小→小、中→中）。詳しい早見表は<a href="../reference/numbers-to-memorize.html">数値暗記表</a>を参照。
     </div>
   </section>
 
@@ -64,32 +118,71 @@
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p><strong>電線管（ダクト）</strong>：IVを保護して通す。金属管は<strong>E管</strong>、合成樹脂は<strong>PF管</strong>（Plastic Flexible）。<strong>ボックス</strong>はスイッチ・コンセントの取付ベース——<strong>深型</strong>と<strong>浅型</strong>で深さが違う。</p>
-          <p><strong>ねじなし電線管</strong>は技能の「やや難」候補に登場。管にねじを切らず、接続金具でつなぐ方式だ。</p>
+          <p><strong>電線管（ダクト）</strong>はIVを保護して通す管。試験・現場で出会うのは主に3種類。</p>
+          <ul>
+            <li><strong>E管</strong>（金属製電線管）：Electric Metallic Conduitの略。機械的に最も強いが、火災時の熱で内部の電線が傷まないよう配慮が必要な場所（防火区画・店舗の露出配管等）で活躍</li>
+            <li><strong>PF管</strong>（合成樹脂製可とう電線管）：Plastic Flexible。軽くて曲げやすく、住宅の隠蔽配線で主流</li>
+            <li><strong>CD管</strong>：Combined Duct。PF管よりさらに柔らかく安価だが、機械的な強さが低いため<strong>コンクリート埋設専用</strong>——直接コンクリートで囲われて初めて使える</li>
+          </ul>
         </div>
       </div>
     </div>
 
     <div class="trivia-box">
-      <strong>うんちく：PF管の F</strong>
-      <p>F = Flexible（可とう）。金属のE管より軽く、住宅の隠蔽配線で主流。屋外や引込には<strong>CD管</strong>（Conduit Duct）など別種類を使う——試験では「どの工事にどの管が使えるか」も問われる。</p>
+      <strong>うんちく：CD管はなぜオレンジ色？</strong>
+      <p>CD管は業界内で<strong>オレンジ色に統一</strong>されている。これは「コンクリートに埋まっている＝重機で掘削すると管を傷つける危険がある」ことを、色で一目でわかるようにするための業界慣行。工事現場で見かけるオレンジの波打った管は、まさにこの警告色だ。</p>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">DIYとの接点</div>
+      <p>オフグリッド小屋の基礎にケーブルを埋設するなら、直接埋めるのではなく<strong>CD管に通してからコンクリート打設</strong>するのが安全。地上に露出する部分はPF管やE管——「地中はCD、露出はPF/E」と覚えると設計が早い。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>ボックス類 — 器具の土台</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>スイッチやコンセントの裏側にある箱、あれもちゃんと名前と種類があるんですか？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p><strong>アウトレットボックス</strong>（金属製）と<strong>スイッチボックス</strong>（樹脂製、埋込連用器具用）が代表格。深さで<strong>深型・浅型</strong>を使い分ける——電線の本数が多いボックスほど深型が必要（電線が窮屈だと圧着不良の原因になる）。</p>
+          <p>金属製ボックスには打ち抜き可能な<strong>ノックアウト（ノックアウト打抜き穴）</strong>があり、電線管をつなぐときはここを打ち抜いて使う。</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <h2>暗記練習</h2>
   <ol class="flashcard-list">
     <li class="flashcard" tabindex="0">
-      <div class="flashcard-prompt"><strong>圧着工具</strong><span class="flashcard-question">何に使う？</span><span class="flashcard-hint">ホバー</span></div>
-      <div class="flashcard-answer"><div class="flashcard-answer-inner">リングスリーブをIVに<strong>圧着</strong>する。技能・学科両方で必須。</div></div>
+      <div class="flashcard-prompt"><strong>圧着工具</strong><span class="flashcard-question">何に使う？　サイズを間違えると？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">リングスリーブをIVに<strong>圧着</strong>する。ダイス（○/小/中/大）を間違えると圧着不良で欠陥になる<span class="answer-scene">📍 技能試験で毎回出題される最重要ポイント</span></div></div>
     </li>
     <li class="flashcard" tabindex="0">
-      <div class="flashcard-prompt"><strong>PF管</strong><span class="flashcard-question">PとFの意味は？</span><span class="flashcard-hint">ホバー</span></div>
-      <div class="flashcard-answer"><div class="flashcard-answer-inner">Plastic Flexible＝可とう性の合成樹脂製電線管</div></div>
+      <div class="flashcard-prompt"><strong>PF管</strong><span class="flashcard-question">PとFの意味・使う場所は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">Plastic Flexible＝可とう性の合成樹脂製電線管。住宅の壁・天井内の隠蔽配線が主戦場</div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>CD管</strong><span class="flashcard-question">色と使う場所は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner"><strong>オレンジ色</strong>。強度が低いため<strong>コンクリート埋設専用</strong><span class="answer-trivia">露出配管には使えない——試験のひっかけポイント</span></div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>電工ナイフ</strong><span class="flashcard-question">カッターと何が違う？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">片刃でシースだけを浅く切れる形状。<strong>心線を傷つけにくい</strong>専用刃物</div></div>
     </li>
   </ol>
 
-  <div class="quiz" data-correct="0" data-feedback-correct="正解。被覆剥きは電工ナイフ。" data-feedback-wrong="IVの被覆を剥くのは電工ナイフ。">
-    <p class="quiz-question">Q. IVの被覆を剥く工具は？</p>
+  <h2>確認クイズ</h2>
+  <div class="quiz" data-correct="0" data-feedback-correct="正解。被覆剥きは電工ナイフ（またはVVFストリッパー）。" data-feedback-wrong="IVの被覆を剥くのは電工ナイフ。カッターは心線を傷つけるリスクがある。">
+    <p class="quiz-question">Q1. IVの被覆を剥く専用工具は？</p>
     <div class="quiz-options">
       <button class="quiz-option" type="button">電工ナイフ</button>
       <button class="quiz-option" type="button">ハンダごて</button>
@@ -99,12 +192,40 @@
     <div class="quiz-feedback"></div>
   </div>
 
+  <div class="quiz" data-correct="2" data-feedback-correct="正解。1.6mm×2本だけ圧着マークは○になる。" data-feedback-wrong="1.6mm×2本の圧着マークは例外的に「○」。それ以外はスリーブのサイズ名と同じ。">
+    <p class="quiz-question">Q2. 1.6mm電線2本をリングスリーブ「小」で圧着したときの正しい刻印は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">小</button>
+      <button class="quiz-option" type="button">中</button>
+      <button class="quiz-option" type="button">○</button>
+      <button class="quiz-option" type="button">大</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="1" data-feedback-correct="正解。CD管はコンクリート埋設専用。" data-feedback-wrong="CD管は機械的強度が低く、コンクリート埋設専用。露出配管にはPF管かE管を使う。">
+    <p class="quiz-question">Q3. オレンジ色のCD管が使える場所は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">屋外の露出配管</button>
+      <button class="quiz-option" type="button">コンクリート埋設のみ</button>
+      <button class="quiz-option" type="button">天井裏の隠蔽配線</button>
+      <button class="quiz-option" type="button">防火区画の配管</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
   <h2>このレッスンで終わっていないこと</h2>
-  <p>科目③の「工具・材料」は完了。残りは<strong>配線器具</strong>（レッスン7）と<strong>電気機器</strong>（レッスン7）。</p>
+  <p>科目③の「工具・材料」は完了。残りは<strong>配線器具・電気機器</strong>（レッスン7）。</p>
+
+  <div class="source-box">
+    <strong>今回の primary source（必読）</strong>
+    <a href="https://www.jesc.gr.jp/">日本電設工業協会</a>や各メーカーの電線管カタログ——E管・PF管・CD管の使用場所の違いは、内線規程に基づいて整理されている。
+  </div>
 
   <nav class="lesson-nav">
     <a href="../lessons/0005-wiring-diagram-problems.html">← レッスン5</a>
     <a href="../lessons/0007-wiring-devices-and-equipment.html">レッスン7 →</a>
+    <a href="../reference/numbers-to-memorize.html">数値暗記表</a>
     <a href="../reference/exam-map.html">試験全体マップ</a>
   </nav>
 </article>

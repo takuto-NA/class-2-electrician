@@ -9,9 +9,9 @@
 <body>
 <article>
   <h1>複線図の描き方</h1>
-  <p class="lesson-meta">レッスン 0016 · 約35分 · 技能試験の土台</p>
+  <p class="lesson-meta">レッスン 0016 · 約40分 · 技能試験の土台</p>
 
-  <p class="lead">技能試験は<strong>単線結線図</strong>が与えられ、<strong>複線結線図</strong>を描いて実際に配線する。単線→複線の変換手順を会話でマスターする。</p>
+  <p class="lead">技能試験は<strong>単線結線図</strong>が与えられ、<strong>複線結線図</strong>を描いて実際に配線する。単線→複線の変換手順を、片切の基本形と3路の応用形で会話でマスターする。</p>
 
   <div class="position-badge">
     <div class="position-badge-header">
@@ -44,8 +44,8 @@
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p><strong>単線図</strong>：1本の線で回路全体を表す（学科20問）。<strong>複線図</strong>：各器具ボックス内で<strong>実際のIVの本数と接続</strong>を描く（技能で提出・配線の設計図）。</p>
-          <p>技能の流れ：①複線図を描く → ②その通りに配線 → ③絶縁抵抗測定 → ④動作確認。40分の大半は配線作業。</p>
+          <p><strong>単線図</strong>：1本の線で回路全体を表す（学科20問）。<strong>複線図</strong>：各器具ボックス内で<strong>実際のIVの本数と接続</strong>を描く（技能で自分で描き、その通りに配線する設計図）。</p>
+          <p>技能の流れ：①複線図を描く → ②その通りに配線 → ③絶縁抵抗測定 → ④動作確認。40分の大半は配線作業で、複線図は<strong>最初の5分</strong>で正確に仕上げるのが理想。</p>
         </div>
       </div>
     </div>
@@ -63,7 +63,7 @@
             <li>各ボックスに入る<strong>IVの本数</strong>を数える（レッスン5）</li>
             <li><strong>黒・白・緑</strong>の役割を各線に割り当て</li>
             <li>スイッチ・コンセント内の<strong>端子接続</strong>を描く</li>
-            <li><strong>リングスリーブ</strong>（R2/R3等）の位置を記入</li>
+            <li><strong>リングスリーブ</strong>（小/中/大とその刻印）の位置を記入</li>
           </ol>
         </div>
       </div>
@@ -85,10 +85,59 @@
     </div>
   </section>
 
+  <section>
+    <h2>応用編：3路スイッチ回路の複線図</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>片切はイメージできたんですけど、技能候補No.6の「3路スイッチ」がまだよくわからないです。</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>3路は<strong>2つのスイッチ間を結ぶ「渡り線」が2本追加される</strong>のがポイント。電源からの黒は片方の3路スイッチの<strong>共通端子</strong>に入り、そこから2本の渡り線（travellers）がもう片方の3路スイッチへ。もう片方の3路スイッチの共通端子から照明へ白線とセットでつながる。</p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="wire-diagram">
+      <figcaption>3路スイッチ回路の複線図（概念）</figcaption>
+      <pre>  [分電盤]    [3路S-1]         [3路S-2]     [照明]
+   黒 ●────────●(共通)
+                ├──渡り線1──●
+                └──渡り線2──●
+                             ●(共通)────────●
+   白 ●──────────────────────────────────────●
+
+  3路S-1・S-2それぞれのボックスに3本のIVが入る（共通1本＋渡り線2本）</pre>
+    </figure>
+
+    <div class="trivia-box">
+      <strong>うんちく：「3路」の混乱を避けるコツ</strong>
+      <p>「3路＝3本のIV」と覚えると4路で混乱する。正しくは<strong>「3路スイッチ1個に3つの接続端子（共通＋渡り線2本）」</strong>。ボックス内の本数は回路構成次第——本番は必ず<strong>与えられた単線図を辿って数える</strong>のが正確だ。</p>
+    </div>
+  </section>
+
   <div class="trivia-box">
     <strong>技能試験の時間配分の目安</strong>
-    <p>複線図<strong>5分</strong>、配線<strong>25分</strong>、測定・確認<strong>10分</strong>。複線図を急がず正確に——ここを間違えると配線全部やり直し。候補13問は事前に複線図を<strong>2周</strong>描く練習が定石。</p>
+    <p>複線図<strong>5分</strong>、配線<strong>25分</strong>、測定・確認<strong>10分</strong>。複線図を急がず正確に——ここを間違えると配線全部やり直しになる。候補13問は事前に複線図を<strong>2周</strong>描く練習が定石。</p>
   </div>
+
+  <h2>暗記練習</h2>
+  <ol class="flashcard-list">
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>片切スイッチのボックス</strong><span class="flashcard-question">入るIVは何本？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner"><strong>2本</strong>（電源側の黒・照明側の黒）</div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>3路スイッチ1個のボックス</strong><span class="flashcard-question">入るIVは何本？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">通常<strong>3本</strong>（共通線1本＋渡り線2本）<span class="answer-trivia">回路構成によって変わるため、必ず図を辿って確認する</span></div></div>
+    </li>
+  </ol>
 
   <nav class="lesson-nav">
     <a href="../lessons/9001-mock-exam.html">← 模試</a>
@@ -96,5 +145,6 @@
     <a href="../reference/candidate-problems.html">候補13問マップ</a>
   </nav>
 </article>
+<script src="../assets/reveal-answer.js"></script>
 </body>
 </html>

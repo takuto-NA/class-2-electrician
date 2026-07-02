@@ -9,7 +9,7 @@
 <body>
 <article>
   <h1>施工方法：工事の種類と場所のルール</h1>
-  <p class="lesson-meta">レッスン 0008 · 約25分 · 科目④ 施工方法</p>
+  <p class="lesson-meta">レッスン 0008 · 約30分 · 科目④ 施工方法</p>
 
   <p class="lead">「この場所に、この配線方式で施工してよいか」——<strong>金属管・PF管・ケーブル工事</strong>の使い分けは暗記科目の定番。DIYの配線方式選びにも直結する。</p>
 
@@ -37,7 +37,7 @@
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p>低圧屋内配線の代表は3つ。<strong>金属管工事</strong>（E管にIV）、<strong>合成樹脂管工事</strong>（PF管にIV）、<strong>ケーブル工事</strong>（VVF等を這わせる）。</p>
+          <p>低圧屋内配線の代表は3つ。<strong>金属管工事</strong>（E管にIV）、<strong>合成樹脂管工事</strong>（PF管・CD管にIV）、<strong>ケーブル工事</strong>（VVF等を直接這わせる）。</p>
           <p>試験は「どの場所にどれが使える／使えない」の<strong>マトリクス暗記</strong>。隠蔽・露出、可燃物近傍、湿気の有無で変わる。</p>
         </div>
       </div>
@@ -48,18 +48,23 @@
       <tbody>
         <tr class="reveal-row" tabindex="0">
           <td>金属管工事</td>
-          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">店舗・公共・防火区画など</span></td>
-          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">機械的保護が強い。施工コスト高</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">店舗・工場・防火区画など機械的保護が必要な場所</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">機械的保護が強く不燃。施工コスト・手間は高い</span></td>
         </tr>
         <tr class="reveal-row" tabindex="0">
           <td>PF管工事</td>
-          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">一般住宅の隠蔽配線</span></td>
-          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">壁・天井内。技能試験でも頻出</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">一般住宅の壁・天井内隠蔽配線</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">軽くて曲げやすい。技能試験でも頻出（候補No.12）</span></td>
         </tr>
         <tr class="reveal-row" tabindex="0">
           <td>ケーブル工事</td>
-          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">床下・天井裏・Outdoor配線</span></td>
-          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">VVF/CV等。支払方法に制限あり</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">床下・天井裏・屋外・幹線</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">VVF/CV等をそのまま這わせる。最も一般的で施工が速い</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>金属可とう電線管工事</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">振動する機器（モーター等）への引込み部分</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">金属管より柔軟。E管とモーター間の「継ぎ手」として使う</span></td>
         </tr>
       </tbody>
     </table>
@@ -70,8 +75,66 @@
     </div>
   </section>
 
+  <section>
+    <h2>がいし引き工事 — 最も歴史ある配線方式</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>古い家で、電線が陶器みたいな部品で壁から浮いてるの見たことあります。あれも配線方式なんですか？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>それが<strong>がいし引き工事</strong>。電線を裸のまま<strong>がいし（磁器製の絶縁体）</strong>で空間に固定する、日本で最も古い配線方式の1つ。今の新築ではほぼ使われないが、<strong>乾燥した点検できる場所で低圧のもの</strong>など限定的に認められており、試験にもたまに登場する。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trivia-box">
+      <strong>うんちく：なぜ「がいし」？</strong>
+      <p>「がいし」は漢字で<strong>碍子</strong>。「碍（さまたげる＝絶縁する）」＋「子（小さな部品）」——電気を通さない素材（磁器やガラス）でできた、電線を空中に固定するための絶縁部品を指す。電柱の上で電線を支えている白い陶器状の部品も同じ「がいし」の仲間だ。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>場所ごとの制限 — なぜ制限があるのか</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>ガソリンスタンドとか、爆発しそうな場所では特別な工事方法があるって聞きました。</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>その通り。可燃性ガス・粉じんが滞留する場所（ガソリンスタンドの給油設備周辺など）では、電気火花が引火源にならないよう<strong>金属管工事</strong>など、より厳格な施工方法が義務付けられる。逆に一般住宅の乾燥した部屋では、コストと施工性を優先してPF管やケーブル工事が主流になる——<strong>「危険度に応じて工法が厳しくなる」</strong>という理屈で覚えると迷わない。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h2>暗記練習</h2>
+  <ol class="flashcard-list">
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>金属可とう電線管</strong><span class="flashcard-question">どこで使う？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">振動する機器（モーター等）へ電線管を接続する「継ぎ手」部分。硬い金属管だけだと振動で疲労破断するため<span class="answer-scene">📍 換気扇・ポンプなど振動源の直前で使用</span></div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>がいし引き工事</strong><span class="flashcard-question">今も認められる条件は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">乾燥し、かつ点検できる隠蔽場所などに限定。新築住宅の主力方式ではない</div></div>
+    </li>
+  </ol>
+
+  <h2>確認クイズ</h2>
   <div class="quiz" data-correct="1" data-feedback-correct="正解。一般住宅の隠蔽配線はPF管が主流。" data-feedback-wrong="住宅の壁内隠蔽はPF管工事が典型。">
-    <p class="quiz-question">Q. 一般住宅の壁内隠蔽配線に最も多い方式は？</p>
+    <p class="quiz-question">Q1. 一般住宅の壁内隠蔽配線に最も多い方式は？</p>
     <div class="quiz-options">
       <button class="quiz-option" type="button">裸線コンクリート打込</button>
       <button class="quiz-option" type="button">PF管工事</button>
@@ -80,6 +143,31 @@
     </div>
     <div class="quiz-feedback"></div>
   </div>
+
+  <div class="quiz" data-correct="2" data-feedback-correct="正解。振動する機器への接続部分は金属可とう電線管を使う。" data-feedback-wrong="振動を吸収できるのは金属可とう電線管。硬い金属管だけだと疲労破断のおそれがある。">
+    <p class="quiz-question">Q2. モーターなど振動する機器への電線管の接続部分に適した工事は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">がいし引き工事</button>
+      <button class="quiz-option" type="button">CD管工事</button>
+      <button class="quiz-option" type="button">金属可とう電線管工事</button>
+      <button class="quiz-option" type="button">バスダクト工事</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="0" data-feedback-correct="正解。碍子は絶縁のための部品。" data-feedback-wrong="「碍」は絶縁する（さまたげる）の意。がいしは絶縁のために電線を空中に固定する磁器製部品。">
+    <p class="quiz-question">Q3. 「がいし（碍子）」の役割として正しいのは？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">電線を絶縁して固定する</button>
+      <button class="quiz-option" type="button">電流を増幅する</button>
+      <button class="quiz-option" type="button">漏電を検知する</button>
+      <button class="quiz-option" type="button">電線を圧着する</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <h2>このレッスンで終わっていないこと</h2>
+  <p>配線方式の使い分けを一通りカバー。残りは<strong>接地・電線接続のルール</strong>（レッスン9）。</p>
 
   <nav class="lesson-nav">
     <a href="../lessons/0007-wiring-devices-and-equipment.html">← レッスン7</a>

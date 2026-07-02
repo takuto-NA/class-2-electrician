@@ -9,7 +9,7 @@
 <body>
 <article>
   <h1>交流回路の基礎</h1>
-  <p class="lesson-meta">レッスン 0013 · 約25分 · 科目① 完了</p>
+  <p class="lesson-meta">レッスン 0013 · 約30分 · 科目① 完了</p>
 
   <p class="lead"><strong>実効値</strong>・<strong>力率</strong>・<strong>単相三線</strong>——住宅配電（100V/200V）の前提知識。計算問題の応用編。</p>
 
@@ -31,15 +31,47 @@
   </div>
 
   <section>
+    <h2>なぜ家庭の電気は交流なのか</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>そもそも、なんでコンセントは直流（DC）じゃなくて交流（AC）なんですか？　蓄電池もソーラーもDCなのに。</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>それは19世紀末の「<strong>電流戦争</strong>」の結末なんだ。<strong>エジソン</strong>はDC送電を推進したが、DCは電圧を変えるのが難しく、遠くまで送ると電圧降下が大きすぎた。一方<strong>テスラとウェスティングハウス</strong>が推した<strong>AC</strong>は<strong>変圧器で電圧を自在に変換</strong>できる——高電圧で送って損失を減らし、家庭手前で下げられる。この優位性でACが世界標準になった。</p>
+          <p>だから今、ソーラー・蓄電池（DC）から家庭のAC家電を動かすには<strong>インバーター</strong>でDC→ACに変換する必要がある——19世紀の技術選択が今のDIYにも影響しているわけだ。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trivia-box">
+      <strong>うんちく：電流戦争の後日談</strong>
+      <p>エジソンはDCの優位性を主張するため、ACの危険性を印象づけるデモンストレーション（動物への感電実験）まで行ったと言われる。それでも技術的合理性でACが勝った——今の電力網がほぼ全てAC送電なのはこの歴史の結果だ。</p>
+    </div>
+  </section>
+
+  <section>
     <h2>実効値 — 100Vの正体</h2>
     <div class="dialogue">
       <div class="dialogue-turn">
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p>コンセントの<strong>100V</strong>は交流の<strong>実効値</strong>。瞬時最大値（約141V）ではない。試験の計算はすべて実効値でOK。</p>
+          <p>コンセントの<strong>100V</strong>は交流の<strong>実効値（RMS）</strong>。波形は正弦波で刻々と変化しており、瞬時の最大値（波の頂点）は実効値の約1.41倍——つまり約141Vにも達している。</p>
+          <p>「実効値」という名前は、<strong>「同じ発熱・仕事をする直流に換算した値」</strong>という意味。試験の計算はすべてこの実効値で行えばOKだ。</p>
         </div>
       </div>
+    </div>
+
+    <div class="formula-box">
+      <span class="formula-label">実効値と最大値の関係</span>
+      最大値 ≈ 実効値 × 1.41（√2）
     </div>
   </section>
 
@@ -96,14 +128,39 @@
       </div>
     </div>
 
+    <figure class="wire-diagram">
+      <figcaption>単相三線式の概念図</figcaption>
+      <pre>  電圧線A ●───100V───┐
+                       │
+  中性線N ●────0V──── 基準点
+                       │
+  電圧線B ●───100V───┘
+
+  A-B間（線間）= 200V
+  A-N間・B-N間（対地）= 各100V</pre>
+    </figure>
+
     <div class="scene-card">
       <div class="scene-card-label">DIYとの接点</div>
       <p>オフグリッドの<strong>単相100Vインバーター</strong>は2線（L+N）。200V機器を動かすなら単相三線対応インバーターか、変圧器が必要——単三の理解は設計の前提。</p>
     </div>
   </section>
 
+  <h2>暗記練習</h2>
+  <ol class="flashcard-list">
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>実効値と最大値</strong><span class="flashcard-question">関係式は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">最大値 ≈ 実効値 × 1.41（√2）<span class="answer-trivia">100Vコンセントの瞬時最大値は約141V</span></div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>単相三線式</strong><span class="flashcard-question">A-B間・A-N間の電圧は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">A-B間（線間）＝200V、A-N間（対地）＝100V</div></div>
+    </li>
+  </ol>
+
+  <h2>確認クイズ</h2>
   <div class="quiz" data-correct="0" data-feedback-correct="正解。P = VIcosθ。" data-feedback-wrong="有効電力は P = V × I × cosθ（力率）。">
-    <p class="quiz-question">Q. 交流の有効電力の式は？</p>
+    <p class="quiz-question">Q1. 交流の有効電力の式は？</p>
     <div class="quiz-options">
       <button class="quiz-option" type="button">P = V × I × cosθ</button>
       <button class="quiz-option" type="button">P = V × I × sinθ</button>
@@ -113,11 +170,37 @@
     <div class="quiz-feedback"></div>
   </div>
 
+  <div class="quiz" data-correct="1" data-feedback-correct="正解。AC送電はエジソンのDCに変圧器の柔軟性で勝った。" data-feedback-wrong="電流戦争でACが勝ったのは、変圧器で電圧を自在に変換でき送電損失を抑えられたため。">
+    <p class="quiz-question">Q2. 家庭のコンセントが直流ではなく交流である歴史的な理由は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">直流の方が発明が早かったから</button>
+      <button class="quiz-option" type="button">交流は変圧器で電圧を変換でき送電損失を抑えられたから</button>
+      <button class="quiz-option" type="button">直流は危険なため法律で禁止されたから</button>
+      <button class="quiz-option" type="button">交流の方が安価な電線で済むから</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="2" data-feedback-correct="正解。三相200V回路は対地150V超なので0.2MΩ以上。" data-feedback-wrong="対地150V超の回路は絶縁抵抗0.2MΩ以上が基準。">
+    <p class="quiz-question">Q3. 三相3線200V回路（対地116V超）の絶縁抵抗の基準は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">0.05MΩ以上</button>
+      <button class="quiz-option" type="button">0.1MΩ以上</button>
+      <button class="quiz-option" type="button">0.2MΩ以上</button>
+      <button class="quiz-option" type="button">0.4MΩ以上</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <h2>このレッスンで終わっていないこと</h2>
+  <p>科目①（基礎理論）は完了。次は<strong>配電理論：電圧降下</strong>（レッスン14）——ここからは配線設計の計算に入る。</p>
+
   <nav class="lesson-nav">
     <a href="../lessons/0012-ohms-law.html">← レッスン12</a>
     <a href="../lessons/0014-voltage-drop.html">レッスン14 →</a>
   </nav>
 </article>
 <script src="../assets/quiz.js"></script>
+<script src="../assets/reveal-answer.js"></script>
 </body>
 </html>

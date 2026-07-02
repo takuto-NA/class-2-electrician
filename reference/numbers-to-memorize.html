@@ -44,42 +44,71 @@
     </tbody>
   </table>
 
-  <h2>漏えい電流の代替基準（参考）</h2>
-  <p class="reveal-mode-note">絶縁抵抗の代わりに漏えい電流で判定する場合（1kWあたり1mA以下等）。学科で併記されることがある。</p>
+  <h2>漏えい電流の代替基準（電技解釈第14条）</h2>
+  <p class="reveal-mode-note">停電させて絶縁抵抗を測るのが困難な場合の代替基準。学科で単独の設問として出ることがある。</p>
   <table class="reveal-table">
     <thead><tr><th>項目</th><th>基準</th></tr></thead>
     <tbody>
       <tr class="reveal-row" tabindex="0">
-        <td>漏えい電流（代表）</td>
-        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">1 mA / kW 以下（条件により異なる）</span></td>
+        <td>漏えい電流（活線状態で測定）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">1 mA 以下（電圧区分に関わらず一律）</span></td>
       </tr>
     </tbody>
   </table>
 
-  <h2>接地抵抗（D種接地）</h2>
+  <h2>接地工事の種類と接地抵抗（A〜D種）</h2>
+  <p class="reveal-mode-note">第2種で頻出はD種。「D種＝100Ω」の丸暗記だけでなく、漏電遮断器による緩和もセットで覚える。</p>
   <table class="reveal-table">
-    <thead><tr><th>種別</th><th>接地抵抗（以下）</th></tr></thead>
+    <thead><tr><th>種別</th><th>対象</th><th>接地抵抗（以下）</th></tr></thead>
     <tbody>
       <tr class="reveal-row" tabindex="0">
-        <td>D種（単独接地）</td>
-        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">100 Ω</span></td>
+        <td>A種</td>
+        <td>高圧・特別高圧用の機器</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">10 Ω</span></td>
       </tr>
       <tr class="reveal-row" tabindex="0">
-        <td>D種（共同接地）</td>
-        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">2 Ω</span></td>
+        <td>C種</td>
+        <td>300V超の低圧用機器</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">10 Ω（漏電遮断器0.5秒以内なら500Ω）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td><strong>D種（最頻出）</strong></td>
+        <td>300V以下の低圧用機器</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>100 Ω</strong>（漏電遮断器0.5秒以内なら<strong>500Ω</strong>）</span></td>
       </tr>
     </tbody>
   </table>
+  <div class="callout">
+    <strong>ひっかけ注意：D種は「100Ω」だけじゃない</strong>
+    地絡時に<strong>0.5秒以内に自動遮断する漏電遮断器</strong>を設置していれば、D種の接地抵抗は<strong>500Ω以下</strong>に緩和される。問題文に「動作時間◯秒」と出てきたら、0.5秒以内かどうかを必ずチェックする。
+  </div>
 
-  <h2>リングスリーブ・接続</h2>
+  <h2>リングスリーブのサイズと圧着マーク（技能で毎回出る）</h2>
+  <p class="reveal-mode-note">電線の太さ・本数を見て、スリーブのサイズと圧着マーク（刻印）を思い出してからホバー。</p>
   <table class="reveal-table">
-    <thead><tr><th>接続心線数</th><th>リングスリーブ</th></tr></thead>
+    <thead><tr><th>電線の太さ・本数</th><th>スリーブ</th><th>圧着マーク（刻印）</th></tr></thead>
     <tbody>
-      <tr class="reveal-row" tabindex="0"><td>2本</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R2</span></td></tr>
-      <tr class="reveal-row" tabindex="0"><td>3本</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R3</span></td></tr>
-      <tr class="reveal-row" tabindex="0"><td>4本</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R4</span></td></tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>1.6mm × 2本</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">小</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">○（唯一の例外）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>1.6mm × 3〜4本 / 2.0mm × 2本</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">小</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">小</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>1.6mm × 5〜6本 / 2.0mm×1本+1.6mm×3〜5本</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">中</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">中</span></td>
+      </tr>
     </tbody>
   </table>
+  <div class="callout">
+    <strong>覚え方：「○」が出るのは1.6mm×2本だけ</strong>
+    それ以外はスリーブのサイズ＝刻印の文字がそのまま一致する（小なら「小」、中なら「中」）。試験で一番ひっかかるのがこの「○の例外」。
+  </div>
 
   <h2>電線の色分け</h2>
   <table class="reveal-table">

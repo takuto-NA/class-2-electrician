@@ -9,7 +9,7 @@
 <body>
 <article>
   <h1>接地と電線接続のルール</h1>
-  <p class="lesson-meta">レッスン 0009 · 約25分 · 科目④ 完了</p>
+  <p class="lesson-meta">レッスン 0009 · 約30分 · 科目④ 完了</p>
 
   <p class="lead"><strong>D種接地</strong>、<strong>リングスリーブ</strong>、<strong>差込コネクタ</strong>——施工方法科目の後半。技能試験の「欠陥」にも直結する接続ルールを固める。</p>
 
@@ -31,7 +31,7 @@
   </div>
 
   <section>
-    <h2>接地の種類 — D種接地</h2>
+    <h2>接地の種類 — A〜D種と、D種のひっかけ</h2>
     <div class="dialogue">
       <div class="dialogue-turn student">
         <div class="dialogue-avatar">💡</div>
@@ -44,14 +44,41 @@
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p>ある。A〜Dまで接地抵抗の厳しさが段階的。<strong>一般住宅の低圧はD種</strong>——接地抵抗<strong>100Ω以下</strong>（単独接地）、または<strong>2Ω以下</strong>（共同接地）。試験は数値暗記がそのまま得点になる。</p>
+          <p>ある。A〜Dまで接地抵抗の厳しさが段階的。<strong>一般住宅の低圧機器はD種</strong>——原則<strong>接地抵抗100Ω以下</strong>。ここまでは知ってる人も多いけど、試験でよくひっかかるのがこの先だ。</p>
         </div>
       </div>
     </div>
 
+    <p class="reveal-mode-note">接地の種別と条件を見て、抵抗値を思い出してからホバー（タップ）。</p>
+    <table class="reveal-table">
+      <thead><tr><th>接地工事</th><th>対象</th><th>接地抵抗（以下）</th></tr></thead>
+      <tbody>
+        <tr class="reveal-row" tabindex="0">
+          <td>A種</td>
+          <td>高圧・特別高圧用の機器</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">10 Ω</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>C種</td>
+          <td>300V超の低圧用機器</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">10 Ω（漏電遮断器0.5秒以内設置なら500Ω）</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td><strong>D種（住宅で最頻出）</strong></td>
+          <td>300V以下の低圧用機器</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>100 Ω</strong>（漏電遮断器0.5秒以内設置なら<strong>500Ω</strong>）</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>試験のひっかけ：「D種＝100Ω」だけで即答しない</strong>
+      問題文に「<strong>動作時間0.5秒以内</strong>の漏電遮断器を設置している」という条件があれば、D種の接地抵抗は<strong>500Ω以下</strong>まで緩和される。レッスン7で扱ったELB（30mA・0.1秒）はこの条件を余裕で満たすので、ELBが付いていれば500Ωでよいと判断できる。
+    </div>
+
     <div class="trivia-box">
       <strong>DIY：オフグリッド小屋の接地</strong>
-      <p>インバーター・蓄電池・100V配線の<strong>アース</strong>は、D種接地の考え方に沿って設計する。接地棒の本数・抵抗値は別途計算するが、試験で覚える<strong>100Ω / 2Ω</strong>の基準は実務の目安にもなる。</p>
+      <p>インバーター・蓄電池・100V配線の<strong>アース</strong>は、D種接地の考え方に沿って設計する。接地棒の本数・材質は土壌の抵抗率次第で変わるが、試験で覚える<strong>100Ω / 500Ω</strong>の基準は実務の合格ラインの目安にもなる。</p>
     </div>
   </section>
 
@@ -62,23 +89,64 @@
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p>IV同士の接続は<strong>圧着</strong>が原則。リングスリーブの<strong>R2/R3/R4</strong>はレッスン5で押さえたね。</p>
+          <p>IV同士の接続は<strong>圧着</strong>か<strong>差込コネクタ</strong>が原則。リングスリーブのサイズ・刻印の対応はレッスン6で押さえたね。</p>
           <p>技能試験の欠陥例：圧着不足、差込コネクタの心数間違い、被覆の剥き長さ不足——学科でルールを知っておくと、実技で「なぜダメか」が説明できる。</p>
         </div>
       </div>
     </div>
+
+    <div class="trivia-box">
+      <strong>うんちく：差込コネクタの通称「ワゴ」</strong>
+      <p>差込コネクタは現場で「<strong>ワゴ</strong>」と呼ばれることが多い。これはドイツの電気機器メーカー<strong>WAGO（ヴァーゴ）社</strong>のレバー式コネクタが世界的に普及し、いつしか商品名がそのまま器具全体の通称になったパターン——「ホッチキス」や「宅急便」と同じ<strong>商標の一般名詞化</strong>だ。試験問題文では正式名称の「差込形コネクタ」が使われる。</p>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">DIYとの接点</div>
+      <p>差込コネクタはリングスリーブと違い<strong>工具不要・再利用可能</strong>——ソーラー・蓄電池のDC配線でも端子台やレバー式コネクタは重宝する。ただしAC100V屋内配線での接続方法は、心数・電線の太さに応じた<strong>指定サイズの差込コネクタ</strong>を使うのがルールだ。</p>
+    </div>
   </section>
 
-  <div class="quiz" data-correct="0" data-feedback-correct="正解。D種単独接地は100Ω以下。" data-feedback-wrong="D種単独接地の接地抵抗は100Ω以下。">
-    <p class="quiz-question">Q. 一般住宅のD種接地（単独）の接地抵抗は？</p>
+  <h2>暗記練習</h2>
+  <ol class="flashcard-list">
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>D種接地（原則）</strong><span class="flashcard-question">接地抵抗は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner"><strong>100Ω以下</strong>（300V以下の低圧用機器）</div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>D種接地（ELB設置時）</strong><span class="flashcard-question">緩和される条件と抵抗値は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">動作時間<strong>0.5秒以内</strong>の漏電遮断器があれば<strong>500Ω以下</strong>に緩和<span class="answer-trivia">「D種＝100Ω」の丸暗記は半分だけ正解</span></div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>ワゴ</strong><span class="flashcard-question">正式名称と由来は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">正式名称は<strong>差込形コネクタ</strong>。ドイツWAGO社の製品名が一般名詞化した通称</div></div>
+    </li>
+  </ol>
+
+  <h2>確認クイズ</h2>
+  <div class="quiz" data-correct="0" data-feedback-correct="正解。D種単独接地の原則は100Ω以下。" data-feedback-wrong="D種接地の原則は100Ω以下（漏電遮断器0.5秒以内設置なら500Ω以下に緩和）。">
+    <p class="quiz-question">Q1. 一般住宅のD種接地の接地抵抗値（原則）は？</p>
     <div class="quiz-options">
       <button class="quiz-option" type="button">100Ω以下</button>
       <button class="quiz-option" type="button">10Ω以下</button>
-      <button class="quiz-option" type="button">500Ω以下</button>
-      <button class="quiz-option" type="button">2Ω以下のみ</button>
+      <button class="quiz-option" type="button">2Ω以下</button>
+      <button class="quiz-option" type="button">500Ω以下（常に）</button>
     </div>
     <div class="quiz-feedback"></div>
   </div>
+
+  <div class="quiz" data-correct="2" data-feedback-correct="正解。動作時間0.5秒以内のELBがあればD種は500Ω以下でよい。" data-feedback-wrong="動作時間0.5秒以内の漏電遮断器が設置されていれば、D種接地抵抗は500Ω以下に緩和される。">
+    <p class="quiz-question">Q2. D種接地の抵抗値が500Ω以下まで緩和される条件は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">配線用遮断器を設置している</button>
+      <button class="quiz-option" type="button">接地極を2本以上打っている</button>
+      <button class="quiz-option" type="button">動作時間0.5秒以内の漏電遮断器を設置している</button>
+      <button class="quiz-option" type="button">絶縁抵抗が0.4MΩ以上ある</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <h2>このレッスンで終わっていないこと</h2>
+  <p>科目④（施工方法）は完了。<a href="../reference/numbers-to-memorize.html">数値暗記表</a>で接地抵抗・リングスリーブの数値を反復しよう。次は<strong>検査と測定器</strong>（レッスン10）。</p>
 
   <nav class="lesson-nav">
     <a href="../lessons/0008-construction-methods.html">← レッスン8</a>

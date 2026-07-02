@@ -9,7 +9,7 @@
 <body>
 <article>
   <h1>検査と測定器</h1>
-  <p class="lesson-meta">レッスン 0010 · 約25分 · 科目⑤ 検査方法</p>
+  <p class="lesson-meta">レッスン 0010 · 約30分 · 科目⑤ 検査方法</p>
 
   <p class="lead"><strong>絶縁抵抗</strong>と<strong>接地抵抗</strong>の基準値、<strong>メガー</strong>と<strong>アーステスタ</strong>——数値暗記で確実に得点できる科目。技能試験の測定工程にも直結。</p>
 
@@ -31,6 +31,31 @@
   </div>
 
   <section>
+    <h2>竣工検査の順序 — 何をどの順に確認するか</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>配線が終わったら、いきなり電気を流していいんですか？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>ダメ。決まった順番で検査する。<strong>①目視点検</strong>（配線・器具の外観確認）→ <strong>②絶縁抵抗測定</strong>（電線同士・電線と大地間の絶縁を確認）→ <strong>③接地抵抗測定</strong>（アースがちゃんと効くか）→ <strong>④導通試験</strong>（回路が正しくつながっているか）→ <strong>⑤通電試験</strong>（最後に電気を流して動作確認）。この順を守るのは、<strong>異常があるまま通電して事故を起こさない</strong>ためだ。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">DIYとの接点</div>
+      <p>オフグリッド小屋の配線でも、この5ステップは省略しないほうがいい。特に①目視と②絶縁抵抗は数分でできる——通電後の発火事故のほとんどは、この2つを飛ばしたことが原因になりやすい。</p>
+    </div>
+  </section>
+
+  <section>
     <h2>絶縁抵抗の基準値</h2>
     <div class="dialogue">
       <div class="dialogue-turn">
@@ -42,27 +67,40 @@
           <strong>300V以下・対地150V超 → 0.2MΩ以上</strong>（200V回路・三相200V）<br>
           <strong>300V超 → 0.4MΩ以上</strong></p>
           <p>「400V以下→0.3MΩ」のような覚え方は<strong>誤り</strong>——試験では上の3段階を使う。詳細は<a href="../reference/numbers-to-memorize.html">数値暗記表</a>。</p>
-          <p>測定は<strong>メガー</strong>（絶縁抵抗計）。技能試験でも配線完了後に測定する。</p>
+          <p>停電させて測定するのが難しい場合の代替基準もある：<strong>活線状態で漏えい電流を測り、1mA以下ならOK</strong>（電圧区分に関わらず一律の基準）。</p>
         </div>
       </div>
     </div>
 
     <div class="scene-card">
       <div class="scene-card-label">DIYとの接点</div>
-      <p>自作配線の<strong>通電前チェック</strong>にメガーは必須級。0.1MΩ未満なら絶縁破損・接線ミスの疑い——通電前に測れば火災リスクを大幅に下げられる。</p>
+      <p>自作配線の<strong>通電前チェック</strong>にメガーは必須級。0.1MΩ未満なら絶縁破損・接続ミスの疑い——通電前に測れば火災リスクを大幅に下げられる。</p>
     </div>
   </section>
 
   <section>
-    <h2>接地抵抗の測定</h2>
+    <h2>測定器 — メガーとアーステスタ、検電器</h2>
     <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>「メガー」って変わった名前ですよね。何かの略ですか？</p>
+        </div>
+      </div>
       <div class="dialogue-turn">
         <div class="dialogue-avatar">⚡</div>
         <div class="dialogue-bubble">
           <span class="dialogue-name">ボルト先生</span>
-          <p>接地抵抗は<strong>アーステスタ</strong>（接地抵抗計）で測定。D種の基準（100Ω/2Ω）はレッスン9で押さえた。<a href="../reference/numbers-to-memorize.html">数値暗記表</a>でまとめて反復しよう。</p>
+          <p>実は<strong>Megger</strong>はもともと商標だったんだ。イギリスの<strong>Evershed & Vignoles社</strong>が1889年に開発した絶縁抵抗計に「Meg（メガオームのMeg）」＋「-er（測る機械）」を組み合わせて名付けた——今では一般名詞のように「絶縁抵抗計＝メガー」と呼ばれるようになった。差込コネクタの「ワゴ」と同じ、商標の一般名詞化のパターンだね。</p>
+          <p>接地抵抗を測るのは<strong>アーステスタ</strong>（接地抵抗計）。もう1つ現場で欠かせないのが<strong>検電器</strong>——電線に触れず「通電しているかどうか」だけを検知するペン型の器具で、<strong>作業前に必ず使う安全確認の第一歩</strong>だ。</p>
         </div>
       </div>
+    </div>
+
+    <div class="trivia-box">
+      <strong>安全習慣：検電なくして作業なし</strong>
+      <p>ブレーカーを切ったつもりでも、配線ミスや別回路との混触で電気が来ていることがある。触る前に<strong>検電器で「本当に電気が来ていないか」を確認する</strong>のがプロの鉄則——DIYでも同じ習慣をつけると感電事故を大きく減らせる。</p>
     </div>
   </section>
 
@@ -77,10 +115,51 @@
       <div class="flashcard-answer"><div class="flashcard-answer-inner"><strong>0.2MΩ以上</strong>（300V以下・対地150V超）</div></div>
     </li>
     <li class="flashcard" tabindex="0">
-      <div class="flashcard-prompt"><strong>絶縁抵抗の測定</strong><span class="flashcard-question">使う測定器は？</span><span class="flashcard-hint">ホバー</span></div>
-      <div class="flashcard-answer"><div class="flashcard-answer-inner"><strong>メガー</strong>（絶縁抵抗計）</div></div>
+      <div class="flashcard-prompt"><strong>漏えい電流の代替基準</strong><span class="flashcard-question">停電できない場合の基準は？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">活線状態で測定して<strong>1mA以下</strong>（電圧区分に関わらず一律）</div></div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt"><strong>検電器</strong><span class="flashcard-question">何のための道具？</span><span class="flashcard-hint">ホバー</span></div>
+      <div class="flashcard-answer"><div class="flashcard-answer-inner">触れずに通電の有無を確認する安全確認器具。<strong>作業前に必ず使う</strong></div></div>
     </li>
   </ol>
+
+  <h2>確認クイズ</h2>
+  <div class="quiz" data-correct="1" data-feedback-correct="正解。絶縁抵抗を測るのはメガー。" data-feedback-wrong="絶縁抵抗の測定器はメガー（絶縁抵抗計）。アーステスタは接地抵抗用。">
+    <p class="quiz-question">Q1. 絶縁抵抗の測定に使う器具は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">アーステスタ</button>
+      <button class="quiz-option" type="button">メガー</button>
+      <button class="quiz-option" type="button">検電器</button>
+      <button class="quiz-option" type="button">クランプメーター</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="2" data-feedback-correct="正解。停電困難時の代替基準は1mA以下（一律）。" data-feedback-wrong="絶縁抵抗測定が困難な場合、漏えい電流1mA以下（電圧区分に関わらず一律）であれば絶縁性能ありと判定できる。">
+    <p class="quiz-question">Q2. 絶縁抵抗測定が困難な場合の漏えい電流の代替基準は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">10mA以下</button>
+      <button class="quiz-option" type="button">30mA以下</button>
+      <button class="quiz-option" type="button">1mA以下</button>
+      <button class="quiz-option" type="button">100mA以下</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="0" data-feedback-correct="正解。作業前は検電器で通電の有無を確認する。" data-feedback-wrong="触れずに通電を確認する安全器具は検電器。ブレーカーを切っただけで安心せず必ず確認する。">
+    <p class="quiz-question">Q3. 配線作業の前に「本当に電気が来ていないか」を確認する器具は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">検電器</button>
+      <button class="quiz-option" type="button">メガー</button>
+      <button class="quiz-option" type="button">アーステスタ</button>
+      <button class="quiz-option" type="button">圧着工具</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <h2>このレッスンで終わっていないこと</h2>
+  <p>科目⑤（検査方法）は完了。数値の反復は<a href="../reference/numbers-to-memorize.html">数値暗記表</a>で。次は<strong>法令の残り</strong>（レッスン11）。</p>
 
   <nav class="lesson-nav">
     <a href="../lessons/0009-grounding-and-connections.html">← レッスン9</a>
@@ -88,6 +167,7 @@
     <a href="../reference/numbers-to-memorize.html">数値暗記表</a>
   </nav>
 </article>
+<script src="../assets/quiz.js"></script>
 <script src="../assets/reveal-answer.js"></script>
 </body>
 </html>
