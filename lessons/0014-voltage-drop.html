@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン14 — 配電理論：電圧降下</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <h1>配電理論：電圧降下と電力損失</h1>
+  <p class="lesson-meta">レッスン 0014 · 約30分 · 科目② 配電理論</p>
+
+  <p class="lead">細い電線・長い配線ほど<strong>電圧が落ちる</strong>——オフグリッドの小屋配線で体感する問題が、試験では計算問題になる。</p>
+
+  <div class="position-badge">
+    <div class="position-badge-header">
+      <span class="position-badge-subject">📍 科目② 配電理論及び配線設計</span>
+      <span class="position-badge-weight">学科50問中 約5〜7問（配点 約12%）</span>
+    </div>
+    <span class="progress-track"><span class="progress-fill" style="width:50%"></span></span>
+    <ul class="subtopic-checklist">
+      <li class="done">電圧降下・電力損失（このレッスン）</li>
+      <li class="todo">電線の太さ・遮断器選定</li>
+    </ul>
+  </div>
+
+  <div class="cast-intro">
+    <div class="cast-member"><div class="cast-avatar">⚡</div><div><strong>ボルト先生</strong><span>解説役</span></div></div>
+    <div class="cast-member student"><div class="cast-avatar">💡</div><div><strong>アンペアくん</strong><span>聞き手</span></div></div>
+  </div>
+
+  <section>
+    <h2>電圧降下の公式</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>電圧降下 e ≈ <strong>K × I × L × ρ / A</strong>（係数Kは配線方式による）。試験では簡略化された形や、許容電圧降下（一般に<strong>3%以下</strong>）との比較問題が出る。</p>
+          <p>覚え方：<strong>電流Iが大きい</strong>、<strong>距離Lが長い</strong>、<strong>断面Aが小さい（細い線）</strong>ほど降下が大きい。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">DIYとの接点</div>
+      <p>離れた小屋に<strong>2.0mm² VVF</strong>で50m引いたら、大電流負荷（ヒーター等）で端子電圧が90V台に——電圧降下の計算で「2.6mm²に上げるべき」と判断できる。ソーラー発電所からの<strong>引込距離</strong>も同じ理論。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>電力損失</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>配線の<strong>電力損失</strong> P = I²R。降下した分は電線が熱になる——無駄な発熱・火災リスク。太い線＝抵抗が小さい＝損失が少ない。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quiz" data-correct="3" data-feedback-correct="正解。細い線・長い距離・大電流で降下増。" data-feedback-wrong="電圧降下は電流↑・距離↑・断面↓で大きくなる。">
+    <p class="quiz-question">Q. 電圧降下が大きくなる条件は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">太い線・短距離</button>
+      <button class="quiz-option" type="button">小電流・長距離</button>
+      <button class="quiz-option" type="button">太い線・大電流</button>
+      <button class="quiz-option" type="button">細い線・長距離・大電流</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0013-ac-circuit-basics.html">← レッスン13</a>
+    <a href="../lessons/0015-wire-sizing-breakers.html">レッスン15 →</a>
+  </nav>
+</article>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

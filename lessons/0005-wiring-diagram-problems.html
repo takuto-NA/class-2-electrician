@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン5 — 配線図問題の解き方</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <h1>配線図問題の解き方：電線本数と接続</h1>
+  <p class="lesson-meta">レッスン 0005 · 約30分 · 科目⑥ 配線図 完了</p>
+
+  <p class="lead">図記号が読めても、試験の本丸は<strong>「この器具に何本の電線が来るか」</strong>。片切・3路・コンセントの接続ルールを会話で整理し、配線図20問の解法パターンを身につける。</p>
+
+  <div class="position-badge">
+    <div class="position-badge-header">
+      <span class="position-badge-subject">📍 科目⑥ 配線図</span>
+      <span class="position-badge-weight">学科50問中 20問（配点 約40%）</span>
+    </div>
+    <span class="progress-track"><span class="progress-fill" style="width:100%"></span></span>
+    <ul class="subtopic-checklist">
+      <li class="done">コンセント・スイッチの図記号</li>
+      <li class="done">照明・機器・分電盤の図記号</li>
+      <li class="done">配線図問題の解き方（このレッスン）</li>
+    </ul>
+    <p class="position-badge-note">配線図科目の3レッスンが完了。暗記の定着は<a href="../reference/symbol-decoder.html">図記号デコーダー</a>で反復。</p>
+  </div>
+
+  <div class="cast-intro">
+    <div class="cast-member">
+      <div class="cast-avatar">⚡</div>
+      <div><strong>ボルト先生</strong><span>解説役</span></div>
+    </div>
+    <div class="cast-member student">
+      <div class="cast-avatar">💡</div>
+      <div><strong>アンペアくん</strong><span>DIYでオフグリッドを目指す聞き手</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>電線本数の数え方 — 基本ルール</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>配線図の問題、「スイッチにIVが何本？」みたいなのが難しいんです。数え方にコツありますか？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>あるよ。器具に<strong>実際に接続する心線の本数</strong>を数える。被覆ごと1本のIVが来たら「1本」と数える。</p>
+          <p>色のルールもセットで覚えよう：<strong>黒＝電源側（非接地側）</strong>、<strong>白＝中性線（接地側）</strong>、<strong>緑＝アース</strong>。配線図では色までは書かないことが多いが、技能試験では色違いのIVを使う。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">DIYとの接点</div>
+      <p>オフグリッドの100V配線でも、分電盤から出る<strong>黒・白・緑</strong>の3本セットは同じ。DC12V系統は別色規則だが、資格試験・屋内AC配線はこの色分けが命綱。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>片切スイッチ＋照明の典型回路</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>片切で照明1灯の基本形：<strong>分電盤→スイッチ→照明</strong>。スイッチには電源側（黒）と照明側（黒）の<strong>2本</strong>。照明には電源（白＝中性線）とスイッチから来た黒、計<strong>2本</strong>（+アースは別）。</p>
+          <p>試験では「スイッチボックス内の接続本数」「リングスリーブのサイズ」をセットで問うことが多い。</p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="wire-diagram">
+      <figcaption>片切＋照明（概念図）</figcaption>
+      <pre>  分電盤 ──黒── 片切S ──黒── 照明
+         └──白──────────────── 照明（中性線）
+
+  片切S: IV 2本（黒・黒）
+  照明:  白1本 + 黒1本（+緑アース）</pre>
+    </figure>
+  </section>
+
+  <section>
+    <h2>3路スイッチ回路の電線本数</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>3路は接続点3つって話でしたけど、ボックス内のIVは何本になるんですか？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>3路スイッチ1個のボックスには通常<strong>3本</strong>のIV（黒系）。3路×2個の回路では、スイッチ間に<strong>3路接続用のIV 2本</strong>（ travellers と呼ばれる）が追加される。合計の数え方は、図を辿って<strong>各ボックスに入る線を1本ずつ</strong>数えるのが確実だ。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trivia-box">
+      <strong>うんちく：「3路」の混乱を避けるコツ</strong>
+      <p>「3路＝3本のIV」と覚えると4路で混乱する。正しくは<strong>「3路スイッチ1個に3接続点」</strong>。ボックス内の本数は回路構成次第。試験問題は図が与えられるので、<strong>図をなぞって数える</strong>習慣をつけよう。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>リングスリーブと差込コネクタの選び方</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>配線図問題では「適切なリングスリーブ」も頻出。IV 2本なら<strong>R2</strong>、3本なら<strong>R3</strong>、4本なら<strong>R4</strong>——数字＝<strong>接続する心線の本数</strong>。</p>
+          <p>差込コネクタも同様。<strong>2心用・3心用</strong>を間違えると技能試験では欠陥になる。学科で先に覚えておくと技能が楽。</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="reveal-mode-note">接続本数→リングスリーブの対応を思い出してから確認。</p>
+    <table class="reveal-table">
+      <thead>
+        <tr><th>接続する心線</th><th>リングスリーブ</th><th>差込コネクタ（代表）</th></tr>
+      </thead>
+      <tbody>
+        <tr class="reveal-row" tabindex="0">
+          <td>2本</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R2</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">2心用</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>3本</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R3</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">3心用</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>4本</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R4</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">4心用</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>配線図問題の解法手順（4ステップ）</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>本番用の手順をまとめるね。</p>
+          <ol>
+            <li><strong>記号を名前に変換</strong>（レッスン3・4の復習）</li>
+            <li><strong>電源（分電盤）から先へ</strong>、各器具ボックスに入る線を数える</li>
+            <li><strong>色・極性</strong>（黒/白/緑）を頭の中で割り当てる</li>
+            <li><strong>接続器具</strong>（R2/R3、差込コネクタ）を本数から選ぶ</li>
+          </ol>
+          <p>20問全部にこの手順。1問90秒ペースを目標に、過去問演習で慣れよう。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h2>確認クイズ</h2>
+
+  <div class="quiz" data-correct="1"
+       data-feedback-correct="正解。白＝中性線（接地側）。"
+       data-feedback-wrong="白は中性線（接地側）。黒が非接地側（電源からスイッチへ）。">
+    <p class="quiz-question">Q1. 屋内配線で中性線（接地側）の色は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">黒</button>
+      <button class="quiz-option" type="button">白</button>
+      <button class="quiz-option" type="button">緑</button>
+      <button class="quiz-option" type="button">赤</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="2"
+       data-feedback-correct="正解。3本接続ならR3。"
+       data-feedback-wrong="Rの数字＝接続心線の本数。3本ならR3。">
+    <p class="quiz-question">Q2. IV 3本を1か所で接続するときのリングスリーブは？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">R2</button>
+      <button class="quiz-option" type="button">R2.5</button>
+      <button class="quiz-option" type="button">R3</button>
+      <button class="quiz-option" type="button">R4</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <h2>暗記練習</h2>
+  <ol class="flashcard-list">
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt">
+        <strong>黒・白・緑</strong>
+        <span class="flashcard-question">それぞれの役割は？</span>
+        <span class="flashcard-hint">ホバーで答え</span>
+      </div>
+      <div class="flashcard-answer">
+        <div class="flashcard-answer-inner">
+          <strong>黒</strong>＝非接地側（電源側）<br>
+          <strong>白</strong>＝接地側（中性線）<br>
+          <strong>緑</strong>＝接地（アース）
+        </div>
+      </div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt">
+        <strong>IV 4本を1接点で接続</strong>
+        <span class="flashcard-question">リングスリーブは？</span>
+        <span class="flashcard-hint">ホバーで答え</span>
+      </div>
+      <div class="flashcard-answer">
+        <div class="flashcard-answer-inner">
+          <strong>R4</strong><br>
+          数字＝接続心線の本数
+        </div>
+      </div>
+    </li>
+  </ol>
+
+  <h2>このレッスンで終わっていないこと</h2>
+  <p>配線図科目の<strong>レッスン3本は完了</strong>。定着には過去問演習が必須——<a href="../reference/symbol-decoder.html">図記号デコーダー</a>で毎日5分の反復を。次は暗記科目（工具・機器・施工・検査・法令）のレッスン6以降へ。</p>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0004-wiring-symbols-lighting-panel.html">← レッスン4</a>
+    <a href="../lessons/0006-tools-and-materials.html">レッスン6 →</a>
+    <a href="../reference/symbol-decoder.html">図記号デコーダー</a>
+    <a href="../reference/exam-map.html">試験全体マップ</a>
+  </nav>
+</article>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/reveal-answer.js"></script>
+</body>
+</html>

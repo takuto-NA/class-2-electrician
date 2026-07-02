@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン4 — 図記号：照明・機器・分電盤</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <h1>図記号：照明・機器・分電盤</h1>
+  <p class="lesson-meta">レッスン 0004 · 約25分 · <a href="../reference/symbol-decoder.html">図記号デコーダー</a>とセット</p>
+
+  <p class="lead">コンセントとスイッチの次は、<strong>照明器具・電気機器・分電盤</strong>の記号。配線図20問の後半はここが絡む。現場の「あの箱」「あの扇」が図の中のどの記号か、会話で結びつける。</p>
+
+  <div class="position-badge">
+    <div class="position-badge-header">
+      <span class="position-badge-subject">📍 科目⑥ 配線図</span>
+      <span class="position-badge-weight">学科50問中 20問（配点 約40%）</span>
+    </div>
+    <span class="progress-track"><span class="progress-fill" style="width:66%"></span></span>
+    <ul class="subtopic-checklist">
+      <li class="done">コンセント・スイッチの図記号</li>
+      <li class="done">照明・機器・分電盤の図記号（このレッスン）</li>
+      <li class="todo">配線図問題の解き方（電線本数・接続）</li>
+    </ul>
+  </div>
+
+  <div class="cast-intro">
+    <div class="cast-member">
+      <div class="cast-avatar">⚡</div>
+      <div><strong>ボルト先生</strong><span>解説役</span></div>
+    </div>
+    <div class="cast-member student">
+      <div class="cast-avatar">💡</div>
+      <div><strong>アンペアくん</strong><span>DIYでオフグリッドを目指す聞き手</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>照明器具の図記号</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>天井の照明って、配線図ではどう書くんですか？　×印とか見たことある気が…</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>よく見てるね。<strong>引掛シーリング</strong>（天井から吊るす照明の取付座）は<strong>×印</strong>。シーリングライト本体は<strong>円に×</strong>。直付け蛍光灯は<strong>細長い長方形</strong>に斜線。</p>
+          <p>覚え方：×＝「天井に<strong>引っ掛ける</strong>」イメージ。直付けは×がない——壁や天井に<strong>直接付ける</strong>から。</p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="wire-diagram">
+      <figcaption>照明記号（模式）</figcaption>
+      <pre>  引掛シーリング    シーリングライト    直付け蛍光灯
+        ×               ⊙×              ┌────┐
+       ╱ ╲              ╱ ╲             │ ╱╱ │
+                                      └────┘</pre>
+    </figure>
+
+    <div class="scene-card">
+      <div class="scene-card-label">DIYとの接点</div>
+      <p>オフグリッド小屋の12V LED照明は配線図の対象外だが、<strong>100V AC配線</strong>（インバーター出力→分電盤→照明）を引くなら同じ記号を使う。DCとACの回路は図上で分けて描くのが原則。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>換気扇・その他機器</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p><strong>換気扇</strong>は円の中に<strong>M</strong>（Motor）。<strong>ベル</strong>は<strong>B</strong>、<strong>ブザー</strong>は<strong>Bz</strong>。文字1つで機器の種類を表す——略称の考え方はケーブル名と同じだね。</p>
+        </div>
+      </div>
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>MはMotor、BはBell… 英語の頭文字パターンですね！</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trivia-box">
+      <strong>うんちく：なぜモーターはM？</strong>
+      <p>JIS図記号は1960年代から整備され、多くが<strong>英語略語</strong>ベース。Motor, Bell, Timer（T）, Relay（K）など。試験で「この記号は何？」と聞かれたら、まず<strong>中の文字</strong>を読む習慣をつけよう。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>分電盤・遮断器・電線表記</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p><strong>分電盤</strong>は四角形の中に斜線が入った記号。<strong>配線用遮断器</strong>（ブレーカー）は四角に<strong>○</strong>。試験では「分電盤から何本出ているか」も問われる。</p>
+          <p>電線そのものは<strong>単線</strong>で表し、太さや種類は<strong>傍記</strong>（線の横の文字）で書く。例：<code>2.0-2C</code>＝2.0mm²の2心ケーブル（VVF2.0-2C）。</p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="wire-diagram">
+      <figcaption>分電盤まわり（模式）</figcaption>
+      <pre>  分電盤              配線用遮断器
+  ┌───┐               ┌─○─┐
+  │ ╱ │  ← 斜線        └───┘
+  └───┘
+
+  電線の傍記例: ─── 2.0-2C（VVF 2.0mm² 2心）</pre>
+    </figure>
+
+    <div class="scene-card">
+      <div class="scene-card-label">こんな場所で見かける</div>
+      <p>一般住宅の<strong>分電盤</strong>は玄関横や屋外。ソーラー＋蓄電池システムでは、<strong>系統連系点</strong>と<strong>分電盤</strong>の関係を単線図で把握する。第2種試験の配線図は住宅規模が中心だが、分電盤の記号はそのまま応用できる。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>タイムスイッチ・自動点滅器（技能試験でも重要）</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>技能試験の候補問題で「タイムスイッチ」とか出てくるって聞きました。図記号は？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p><strong>タイムスイッチ</strong>は<strong>TS</strong>または時計マーク付きのS。<strong>自動点滅器</strong>は<strong>AE</strong>（Auto Flasher）。技能の「やや難」問題に登場する——学科の配線図でも同じ記号が出る。先に名前だけ覚えておくと、技能の単線図が読みやすくなるよ。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h2>確認クイズ</h2>
+
+  <div class="quiz" data-correct="0"
+       data-feedback-correct="正解。×印は引掛シーリング（天井取付座）。"
+       data-feedback-wrong="×印は引掛シーリング。円に×はシーリングライト本体。">
+    <p class="quiz-question">Q1. 天井から照明を吊るすための取付座の記号は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">×印</button>
+      <button class="quiz-option" type="button">円の中のM</button>
+      <button class="quiz-option" type="button">四角に斜線</button>
+      <button class="quiz-option" type="button">円に平行2線</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="3"
+       data-feedback-correct="正解。2.0-2Cは2.0mm²の2心ケーブル（VVF等）。"
+       data-feedback-wrong="傍記の形式：太さ-心数C。2.0-2C＝2.0mm²・2心。">
+    <p class="quiz-question">Q2. 電線傍記「2.0-2C」の意味は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">2.0mm 直径1心</button>
+      <button class="quiz-option" type="button">2本の0.2mm²線</button>
+      <button class="quiz-option" type="button">200V 2回路</button>
+      <button class="quiz-option" type="button">2.0mm² 2心ケーブル</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <h2>暗記練習</h2>
+  <ol class="flashcard-list">
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt">
+        <strong>円の中に M</strong>
+        <span class="flashcard-question">この機器は？</span>
+        <span class="flashcard-hint">ホバーで答え</span>
+      </div>
+      <div class="flashcard-answer">
+        <div class="flashcard-answer-inner">
+          <strong>換気扇</strong>（モーター付機器）<br>
+          M = Motor
+        </div>
+      </div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt">
+        <strong>四角形＋斜線</strong>
+        <span class="flashcard-question">この器具は？</span>
+        <span class="flashcard-hint">ホバーで答え</span>
+      </div>
+      <div class="flashcard-answer">
+        <div class="flashcard-answer-inner">
+          <strong>分電盤</strong><br>
+          <span class="answer-scene">📍 住宅の電気の「起点」。ブレーカーが並ぶ箱</span>
+        </div>
+      </div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt">
+        <strong>四角形＋○</strong>
+        <span class="flashcard-question">この器具は？</span>
+        <span class="flashcard-hint">ホバーで答え</span>
+      </div>
+      <div class="flashcard-answer">
+        <div class="flashcard-answer-inner">
+          <strong>配線用遮断器</strong>（ブレーカー）<br>
+          過電流で自動的に回路を切る
+        </div>
+      </div>
+    </li>
+  </ol>
+
+  <h2>このレッスンで終わっていないこと</h2>
+  <p>配線図科目の記号はほぼ網羅。残りは<strong>レッスン5：電線本数の数え方と配線図問題の解法</strong>。記号が読めても「何本のIVが必要？」でつまずく人が多い——次でそこを攻略する。</p>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0003-wiring-symbols-outlets-switches.html">← レッスン3</a>
+    <a href="../lessons/0005-wiring-diagram-problems.html">レッスン5 →</a>
+    <a href="../reference/symbol-decoder.html">図記号デコーダー</a>
+    <a href="../reference/exam-map.html">試験全体マップ</a>
+  </nav>
+</article>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/reveal-answer.js"></script>
+</body>
+</html>

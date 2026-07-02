@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>図記号デコーダー</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+  <style>
+    .symbol-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 0.5rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      margin: 1rem 0 2rem;
+    }
+    .symbol-card {
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.75rem;
+      background: var(--card);
+      min-height: 4rem;
+    }
+    .symbol-card .glyph {
+      font-family: monospace;
+      font-size: 1.2rem;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+    td:first-child {
+      font-family: monospace;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+<article>
+  <h1>図記号デコーダー</h1>
+  <p class="lesson-meta">参照資料 · 配線図20問の暗記用 · レッスン3〜5とセット</p>
+
+  <p class="lead">第2種学科の<strong>配点40%</strong>はこの図記号の読み取り。形を見て名前が反射的に出るまで、ホバー暗記で反復する。</p>
+
+  <h2>使い方</h2>
+  <ol>
+    <li>記号（形）だけ見て、器具名を口に出す</li>
+    <li>カードまたは表の行にホバー（タップ）で正解確認</li>
+    <li>間違えたものだけ印をつけ、翌日再挑戦</li>
+  </ol>
+
+  <h2>コンセント・スイッチ（頻出）</h2>
+  <p class="reveal-mode-note">形だけ見えています。名前を思い出してからホバー（タップ）。</p>
+  <div class="symbol-grid">
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">○║║</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">差込接続器（2極）</span>
+    </div>
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">○║║⊥</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">差込接続器（接地付）</span>
+    </div>
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">S──○</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">片切スイッチ</span>
+    </div>
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">S──○──</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">3路スイッチ</span>
+    </div>
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">S──○──○</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">4路スイッチ</span>
+    </div>
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">⊥⊥⊥</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">接地（アース）</span>
+    </div>
+  </div>
+
+  <h2>照明・機器・分電盤</h2>
+  <div class="symbol-grid">
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">×</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">引掛シーリング</span>
+    </div>
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">⊙×</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">シーリングライト</span>
+    </div>
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">○M</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">換気扇（Motor）</span>
+    </div>
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">□╱</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">分電盤</span>
+    </div>
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">□○</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">配線用遮断器</span>
+    </div>
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">TS</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">タイムスイッチ</span>
+    </div>
+    <div class="symbol-card reveal-letter-card" tabindex="0">
+      <span class="glyph">AE</span>
+      <span class="reveal-letter-placeholder">ホバーで答え</span>
+      <span class="reveal-letter-body">自動点滅器</span>
+    </div>
+  </div>
+
+  <h2>電線色・接続器具（配線図問題とセット）</h2>
+  <table class="reveal-table">
+    <thead>
+      <tr><th>項目</th><th>内容</th></tr>
+    </thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>黒</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">非接地側（電源側）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>白</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">接地側（中性線）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>緑</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">接地（アース）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>IV 2本接続</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">リングスリーブ R2 / 差込2心</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>IV 3本接続</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">リングスリーブ R3 / 差込3心</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>2.0-2C</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">2.0mm² 2心ケーブル（VVF等）</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="scene-card">
+    <div class="scene-card-label">学習の目安</div>
+    <p>全記号を<strong>1周5分×7日</strong>で見れば、配線図問題の半分は記号読みが自動化される。安心ライン（40問）を目指すなら、過去5年分の配線図問題（100問）をこのデコーダーと併用して2周する。</p>
+  </div>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0003-wiring-symbols-outlets-switches.html">レッスン3</a>
+    <a href="../lessons/0005-wiring-diagram-problems.html">レッスン5</a>
+    <a href="../reference/exam-map.html">試験全体マップ</a>
+    <a href="../reference/cable-abbreviations.html">ケーブルデコーダー</a>
+  </nav>
+</article>
+<script src="../assets/reveal-answer.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン9 — 接地と電線接続のルール</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <h1>接地と電線接続のルール</h1>
+  <p class="lesson-meta">レッスン 0009 · 約25分 · 科目④ 完了</p>
+
+  <p class="lead"><strong>D種接地</strong>、<strong>リングスリーブ</strong>、<strong>差込コネクタ</strong>——施工方法科目の後半。技能試験の「欠陥」にも直結する接続ルールを固める。</p>
+
+  <div class="position-badge">
+    <div class="position-badge-header">
+      <span class="position-badge-subject">📍 科目④ 電気工事の施工方法</span>
+      <span class="position-badge-weight">学科50問中 約5〜7問（配点 約12%）</span>
+    </div>
+    <span class="progress-track"><span class="progress-fill" style="width:100%"></span></span>
+    <ul class="subtopic-checklist">
+      <li class="done">配線方式の種類と使用場所</li>
+      <li class="done">接地・電線接続のルール（このレッスン）</li>
+    </ul>
+  </div>
+
+  <div class="cast-intro">
+    <div class="cast-member"><div class="cast-avatar">⚡</div><div><strong>ボルト先生</strong><span>解説役</span></div></div>
+    <div class="cast-member student"><div class="cast-avatar">💡</div><div><strong>アンペアくん</strong><span>聞き手</span></div></div>
+  </div>
+
+  <section>
+    <h2>接地の種類 — D種接地</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>一般住宅って「D種接地」って聞きます。A種B種C種もあるんですか？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>ある。A〜Dまで接地抵抗の厳しさが段階的。<strong>一般住宅の低圧はD種</strong>——接地抵抗<strong>100Ω以下</strong>（単独接地）、または<strong>2Ω以下</strong>（共同接地）。試験は数値暗記がそのまま得点になる。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trivia-box">
+      <strong>DIY：オフグリッド小屋の接地</strong>
+      <p>インバーター・蓄電池・100V配線の<strong>アース</strong>は、D種接地の考え方に沿って設計する。接地棒の本数・抵抗値は別途計算するが、試験で覚える<strong>100Ω / 2Ω</strong>の基準は実務の目安にもなる。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>電線接続 — リングスリーブと差込コネクタ</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>IV同士の接続は<strong>圧着</strong>が原則。リングスリーブの<strong>R2/R3/R4</strong>はレッスン5で押さえたね。</p>
+          <p>技能試験の欠陥例：圧着不足、差込コネクタの心数間違い、被覆の剥き長さ不足——学科でルールを知っておくと、実技で「なぜダメか」が説明できる。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quiz" data-correct="0" data-feedback-correct="正解。D種単独接地は100Ω以下。" data-feedback-wrong="D種単独接地の接地抵抗は100Ω以下。">
+    <p class="quiz-question">Q. 一般住宅のD種接地（単独）の接地抵抗は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">100Ω以下</button>
+      <button class="quiz-option" type="button">10Ω以下</button>
+      <button class="quiz-option" type="button">500Ω以下</button>
+      <button class="quiz-option" type="button">2Ω以下のみ</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0008-construction-methods.html">← レッスン8</a>
+    <a href="../lessons/0010-inspection-and-meters.html">レッスン10 →</a>
+    <a href="../reference/numbers-to-memorize.html">数値暗記表</a>
+  </nav>
+</article>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/reveal-answer.js"></script>
+</body>
+</html>

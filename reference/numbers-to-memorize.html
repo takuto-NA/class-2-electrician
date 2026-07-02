@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数値暗記表</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <h1>数値暗記表</h1>
+  <p class="lesson-meta">参照資料 · 丸暗記で得点する数値の一覧</p>
+
+  <p class="lead">絶縁抵抗・接地抵抗・リングスリーブ——<strong>数字だけ覚えれば得点</strong>になる頻出値。ホバー暗記で試験直前まで反復する。</p>
+
+  <h2>絶縁抵抗の基準値（対地電圧別）</h2>
+  <p class="reveal-mode-note">対地電圧を見て、基準値を思い出してからホバー。</p>
+  <table class="reveal-table">
+    <thead><tr><th>対地電圧</th><th>絶縁抵抗（以上）</th><th>備考</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>150V以下</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">0.1 MΩ</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">一般住宅100V/200V ← 最頻出</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>300V以下</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">0.2 MΩ</span></td>
+        <td></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>400V以下</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">0.3 MΩ</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>接地抵抗（D種接地）</h2>
+  <table class="reveal-table">
+    <thead><tr><th>種別</th><th>接地抵抗（以下）</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0">
+        <td>D種（単独接地）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">100 Ω</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>D種（共同接地）</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">2 Ω</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>リングスリーブ・接続</h2>
+  <table class="reveal-table">
+    <thead><tr><th>接続心線数</th><th>リングスリーブ</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0"><td>2本</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R2</span></td></tr>
+      <tr class="reveal-row" tabindex="0"><td>3本</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R3</span></td></tr>
+      <tr class="reveal-row" tabindex="0"><td>4本</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R4</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>電線の色分け</h2>
+  <table class="reveal-table">
+    <thead><tr><th>色</th><th>役割</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0"><td>黒</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">非接地側（電源側）</span></td></tr>
+      <tr class="reveal-row" tabindex="0"><td>白</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">接地側（中性線）</span></td></tr>
+      <tr class="reveal-row" tabindex="0"><td>緑</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">接地（アース）</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>試験合格ライン</h2>
+  <table class="reveal-table">
+    <thead><tr><th>試験</th><th>基準</th></tr></thead>
+    <tbody>
+      <tr class="reveal-row" tabindex="0"><td>学科</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">50問中30問正解（60%）合格 / 38〜40問（76〜80%）安心ライン</span></td></tr>
+      <tr class="reveal-row" tabindex="0"><td>技能</td><td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">欠陥0（1つでも欠陥で不合格）</span></td></tr>
+    </tbody>
+  </table>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0010-inspection-and-meters.html">レッスン10</a>
+    <a href="../reference/exam-map.html">試験全体マップ</a>
+    <a href="../reference/symbol-decoder.html">図記号デコーダー</a>
+  </nav>
+</article>
+<script src="../assets/reveal-answer.js"></script>
+</body>
+</html>

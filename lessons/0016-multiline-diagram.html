@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン16 — 複線図の描き方</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <h1>複線図の描き方</h1>
+  <p class="lesson-meta">レッスン 0016 · 約35分 · 技能試験の土台</p>
+
+  <p class="lead">技能試験は<strong>単線結線図</strong>が与えられ、<strong>複線結線図</strong>を描いて実際に配線する。単線→複線の変換手順を会話でマスターする。</p>
+
+  <div class="position-badge">
+    <div class="position-badge-header">
+      <span class="position-badge-subject">📍 技能試験（候補13問）</span>
+      <span class="position-badge-weight">40分 · 欠陥0で合格</span>
+    </div>
+    <span class="progress-track"><span class="progress-fill" style="width:50%"></span></span>
+    <ul class="subtopic-checklist">
+      <li class="done">単線図→複線図の手順（このレッスン）</li>
+      <li class="todo">欠陥判定・工具準備・候補13問の攻略</li>
+    </ul>
+  </div>
+
+  <div class="cast-intro">
+    <div class="cast-member"><div class="cast-avatar">⚡</div><div><strong>ボルト先生</strong><span>解説役</span></div></div>
+    <div class="cast-member student"><div class="cast-avatar">💡</div><div><strong>アンペアくん</strong><span>聞き手</span></div></div>
+  </div>
+
+  <section>
+    <h2>単線図と複線図の違い</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>学科で覚えた配線図と、技能の複線図って何が違うんですか？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p><strong>単線図</strong>：1本の線で回路全体を表す（学科20問）。<strong>複線図</strong>：各器具ボックス内で<strong>実際のIVの本数と接続</strong>を描く（技能で提出・配線の設計図）。</p>
+          <p>技能の流れ：①複線図を描く → ②その通りに配線 → ③絶縁抵抗測定 → ④動作確認。40分の大半は配線作業。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>複線図を描く5ステップ</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <ol>
+            <li>単線図から<strong>分電盤</strong>を起点に、各器具ボックスを配置</li>
+            <li>各ボックスに入る<strong>IVの本数</strong>を数える（レッスン5）</li>
+            <li><strong>黒・白・緑</strong>の役割を各線に割り当て</li>
+            <li>スイッチ・コンセント内の<strong>端子接続</strong>を描く</li>
+            <li><strong>リングスリーブ</strong>（R2/R3等）の位置を記入</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <figure class="wire-diagram">
+      <figcaption>片切＋照明の複線図（概念）</figcaption>
+      <pre>  [分電盤]     [片切S]      [照明]
+   黒 ●────────●────────●
+   白 ●─────────────────●
+   緑 ●──⊥────────────────●
+
+  各 ● = 差込コネクタ or リングスリーブ接点</pre>
+    </figure>
+
+    <div class="scene-card">
+      <div class="scene-card-label">DIYとの接点</div>
+      <p>オフグリッド小屋の分電盤から照明まで、施工前に複線図を描く習慣は<strong>ミス防止</strong>に直結。資格試験で40分以内に描ける訓練は、実務の設計図スケッチにもなる。</p>
+    </div>
+  </section>
+
+  <div class="trivia-box">
+    <strong>技能試験の時間配分の目安</strong>
+    <p>複線図<strong>5分</strong>、配線<strong>25分</strong>、測定・確認<strong>10分</strong>。複線図を急がず正確に——ここを間違えると配線全部やり直し。候補13問は事前に複線図を<strong>2周</strong>描く練習が定石。</p>
+  </div>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/9001-mock-exam.html">← 模試</a>
+    <a href="../lessons/0017-defect-criteria.html">レッスン17 →</a>
+    <a href="../reference/candidate-problems.html">候補13問マップ</a>
+  </nav>
+</article>
+</body>
+</html>

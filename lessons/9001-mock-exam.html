@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>模擬確認 — 学科総仕上げ</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+  <style>
+    .mock-score {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
+    .mock-section-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 2rem 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+<article>
+  <h1>模擬確認 — 学科総仕上げ</h1>
+  <p class="lesson-meta">レッスン 9001 · 全科目横断 · 安心ライン確認用</p>
+
+  <p class="lead">全17レッスン完了後の<strong>総仕上げ</strong>。本番形式の四肢択一10問（各科目から代表問題）。<strong>8問以上正解</strong>なら安心ラインのペース。本番は50問・120分。</p>
+
+  <div class="mock-score">
+    <strong>使い方</strong>：1問ずつ答えてフィードバックを確認。間違えた問題は該当レッスンに戻る。本番前は過去問5年分（250問）で38〜40問正解を目標に。
+  </div>
+
+  <p class="mock-section-label">科目⑦ 法令 · レッスン1, 11</p>
+  <div class="quiz" data-correct="0"
+       data-feedback-correct="正解。30V未満かつ非接続で電気工作物から除外。"
+       data-feedback-wrong="除外は30V未満かつ他設備と非接続の両方。">
+    <p class="quiz-question">Q1. 電気工作物の定義から除外されるのは？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">30V未満で他設備と非接続</button>
+      <button class="quiz-option" type="button">48V系蓄電池一式</button>
+      <button class="quiz-option" type="button">100V屋内配線</button>
+      <button class="quiz-option" type="button">600V以下太陽光</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <p class="mock-section-label">科目⑥ 配線図 · レッスン3〜5</p>
+  <div class="quiz" data-correct="2"
+       data-feedback-correct="正解。3路スイッチは3接続点。"
+       data-feedback-wrong="2か所操作は3路スイッチ。">
+    <p class="quiz-question">Q2. 2か所から同じ照明を操作するスイッチは？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">片切スイッチ</button>
+      <button class="quiz-option" type="button">4路スイッチ</button>
+      <button class="quiz-option" type="button">3路スイッチ</button>
+      <button class="quiz-option" type="button">タイムスイッチ</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="1"
+       data-feedback-correct="正解。白＝中性線。"
+       data-feedback-wrong="白＝接地側（中性線）。">
+    <p class="quiz-question">Q3. 中性線（接地側）の色は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">黒</button>
+      <button class="quiz-option" type="button">白</button>
+      <button class="quiz-option" type="button">緑</button>
+      <button class="quiz-option" type="button">赤</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <p class="mock-section-label">科目③ 機器 · レッスン2, 6, 7</p>
+  <div class="quiz" data-correct="3"
+       data-feedback-correct="正解。VVF = Vinyl + Vinyl + Flat。"
+       data-feedback-wrong="V=Vinyl, F=Flat。600Vビニル平形。">
+    <p class="quiz-question">Q4. VVFの正しい分解は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">Vinyl Flat Flat</button>
+      <button class="quiz-option" type="button">Vinyl Vinyl Round</button>
+      <button class="quiz-option" type="button">Indoor Vinyl Flat</button>
+      <button class="quiz-option" type="button">Vinyl Vinyl Flat</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <p class="mock-section-label">科目⑤ 検査 · レッスン10</p>
+  <div class="quiz" data-correct="0"
+       data-feedback-correct="正解。150V以下は0.1MΩ以上。"
+       data-feedback-wrong="150V以下→0.1MΩ以上。">
+    <p class="quiz-question">Q5. 対地150V以下の絶縁抵抗基準は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">0.1 MΩ以上</button>
+      <button class="quiz-option" type="button">0.2 MΩ以上</button>
+      <button class="quiz-option" type="button">1 MΩ以上</button>
+      <button class="quiz-option" type="button">100 Ω以上</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <p class="mock-section-label">科目① 基礎理論 · レッスン12</p>
+  <div class="quiz" data-correct="2"
+       data-feedback-correct="正解。I = 100/50 = 2A。"
+       data-feedback-wrong="I = V/R = 2A。">
+    <p class="quiz-question">Q6. 100V・50Ωの電流は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">0.5 A</button>
+      <button class="quiz-option" type="button">1 A</button>
+      <button class="quiz-option" type="button">2 A</button>
+      <button class="quiz-option" type="button">5 A</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <p class="mock-section-label">科目② 配電理論 · レッスン15</p>
+  <div class="quiz" data-correct="1"
+       data-feedback-correct="正解。2.0mm²→約20A。"
+       data-feedback-wrong="2.0mm²の許容約20A。">
+    <p class="quiz-question">Q7. VVF 2.0mm²の許容電流（目安）は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">15 A</button>
+      <button class="quiz-option" type="button">20 A</button>
+      <button class="quiz-option" type="button">30 A</button>
+      <button class="quiz-option" type="button">10 A</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <p class="mock-section-label">科目④ 施工 · レッスン8, 9</p>
+  <div class="quiz" data-correct="0"
+       data-feedback-correct="正解。D種単独接地100Ω以下。"
+       data-feedback-wrong="D種単独は100Ω以下。">
+    <p class="quiz-question">Q8. D種接地（単独）の接地抵抗は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">100 Ω以下</button>
+      <button class="quiz-option" type="button">2 Ω以下</button>
+      <button class="quiz-option" type="button">500 Ω以下</button>
+      <button class="quiz-option" type="button">10 Ω以下</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <p class="mock-section-label">科目③ 機器 · レッスン7</p>
+  <div class="quiz" data-correct="2"
+       data-feedback-correct="正解。ELB＝漏電遮断器。"
+       data-feedback-wrong="漏電検知はELB。">
+    <p class="quiz-question">Q9. 漏電を検知して遮断する機器は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">配線用遮断器</button>
+      <button class="quiz-option" type="button">自動点滅器</button>
+      <button class="quiz-option" type="button">漏電遮断器</button>
+      <button class="quiz-option" type="button">タイムスイッチ</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <p class="mock-section-label">科目⑥ 配線図 · レッスン5</p>
+  <div class="quiz" data-correct="3"
+       data-feedback-correct="正解。IV 3本→R3。"
+       data-feedback-wrong="Rの数字＝接続本数。">
+    <p class="quiz-question">Q10. IV 3本接続のリングスリーブは？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">R2</button>
+      <button class="quiz-option" type="button">R4</button>
+      <button class="quiz-option" type="button">R2.5</button>
+      <button class="quiz-option" type="button">R3</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="callout">
+    <strong>次のステップ</strong>
+    この10問で8問以上ならレッスン内容は概ね定着。本番対策は試験センター公開の<strong>過去問題</strong>を50問×複数回。配線図20問は<a href="../reference/symbol-decoder.html">図記号デコーダー</a>で毎日反復。技能は<a href="../lessons/0016-multiline-diagram.html">レッスン16</a>以降へ。
+  </div>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0015-wire-sizing-breakers.html">← レッスン15</a>
+    <a href="../lessons/0016-multiline-diagram.html">技能レッスン16 →</a>
+    <a href="../reference/exam-map.html">試験全体マップ</a>
+  </nav>
+</article>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

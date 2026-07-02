@@ -26,6 +26,12 @@
 - **マクロな地図を欲しがる**：合格ライン／全体範囲／現在地／安心ライン／最重要暗記の5点セットで納得したい（2026-07-02）
   → `reference/exam-map.html` が正。レッスンが増えるたびに進捗バーを更新すること
 
+## 教材構成（2026-07-02 全課程完成）
+
+- **レッスン1〜17** + **模試9001**：学科7科目＋技能。各レッスンは会話劇・position-badge・reveal暗記・クイズ形式で統一
+- **参照資料**：`exam-map.html`（地図）、`symbol-decoder.html`（図記号）、`cable-abbreviations.html`（ケーブル）、`numbers-to-memorize.html`（数値）、`candidate-problems.html`（技能13問）、`glossary.html`、`thirty-volt-line.html`
+- **推奨学習順**：exam-map のレッスン一覧に準拠。定着フェーズは模試10問→過去問50問→技能13問2周
+
 ## コミュニティ
 
 - 特に opt-out の申告なし

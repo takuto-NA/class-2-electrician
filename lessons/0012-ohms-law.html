@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン12 — オームの法則と合成抵抗</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+  <style>
+    .formula-box {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.3rem;
+      background: var(--accent-light);
+      padding: 1rem 1.5rem;
+      border-radius: 4px;
+      text-align: center;
+      margin: 1.5rem 0;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+<article>
+  <h1>オームの法則と合成抵抗</h1>
+  <p class="lesson-meta">レッスン 0012 · 約30分 · 科目① 基礎理論</p>
+
+  <p class="lead"><strong>V = I × R</strong>——電気理論の核。1つの公式から学科の計算問題が連鎖する。会話で公式の意味と使い方を体に入れる。</p>
+
+  <div class="position-badge">
+    <div class="position-badge-header">
+      <span class="position-badge-subject">📍 科目① 電気に関する基礎理論</span>
+      <span class="position-badge-weight">学科50問中 約4〜6問（配点 約10%）</span>
+    </div>
+    <span class="progress-track"><span class="progress-fill" style="width:50%"></span></span>
+    <ul class="subtopic-checklist">
+      <li class="done">オームの法則・合成抵抗・電力（このレッスン）</li>
+      <li class="todo">交流回路（実効値・力率）</li>
+    </ul>
+  </div>
+
+  <div class="cast-intro">
+    <div class="cast-member"><div class="cast-avatar">⚡</div><div><strong>ボルト先生</strong><span>解説役</span></div></div>
+    <div class="cast-member student"><div class="cast-avatar">💡</div><div><strong>アンペアくん</strong><span>聞き手</span></div></div>
+  </div>
+
+  <section>
+    <h2>オームの法則</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>V=IRは聞いたことあるんですけど、暗記するだけじゃ使えない気が…</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>意味を押さえよう。<strong>電圧V</strong>＝押す力、<strong>電流I</strong>＝流れる量、<strong>抵抗R</strong>＝流れにくさ。同じ電圧なら抵抗が大きいほど電流は小さくなる。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="formula-box">V = I × R　　I = V / R　　R = V / I</div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">DIYとの接点</div>
+      <p>12V蓄電池に<strong>100Wの負荷</strong>をつなぐとき、電流 I = P/V = 100/12 ≈ 8.3A。配線の許容電流を超えないか——オームの法則と電力公式のセットで判断できる。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>合成抵抗</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p><strong>直列</strong>：R = R1 + R2 + …（抵抗が増えるほど流れにくい）<br>
+          <strong>並列</strong>：1/R = 1/R1 + 1/R2 + …（道が増えるほど流れやすい）</p>
+          <p>2つ並列の特例：<strong>R = (R1 × R2) / (R1 + R2)</strong>——試験の短時間計算用に覚えておく。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>電力と電力量</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p><strong>P = V × I</strong>（電力[W]）。V=IRを代入すると <strong>P = I²R = V²/R</strong> も使える。</p>
+          <p><strong>電力量</strong> W = P × t（時間）。kWhは「キロワット×時間」——蓄電池の容量Ahとは別単位、混同しないように。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trivia-box">
+      <strong>うんちく：ワットとボルトアンペア</strong>
+      <p>100V × 10A = 1000W = 1kW。電気代の「1kWh」はこの1kWを1時間使った量。オフグリッドの消費電力見積もりはこの計算の繰り返し。</p>
+    </div>
+  </section>
+
+  <div class="quiz" data-correct="2" data-feedback-correct="正解。V=IR → I=100/50=2A。" data-feedback-wrong="I = V/R = 100/50 = 2A。">
+    <p class="quiz-question">Q. 100V、50Ωの負荷に流れる電流は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">0.5 A</button>
+      <button class="quiz-option" type="button">1 A</button>
+      <button class="quiz-option" type="button">2 A</button>
+      <button class="quiz-option" type="button">5 A</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0011-remaining-regulations.html">← レッスン11</a>
+    <a href="../lessons/0013-ac-circuit-basics.html">レッスン13 →</a>
+    <a href="../reference/exam-map.html">試験全体マップ</a>
+  </nav>
+</article>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

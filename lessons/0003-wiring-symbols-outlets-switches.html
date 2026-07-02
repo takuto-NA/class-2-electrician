@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン3 — 図記号入門：コンセントとスイッチ</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+  <style>
+    .symbol-box {
+      font-family: 'Source Sans 3', monospace;
+      font-size: 1.1rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1rem 1.2rem;
+      margin: 1rem 0;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+<article>
+  <h1>図記号入門：コンセントとスイッチ</h1>
+  <p class="lesson-meta">レッスン 0003 · 約25分 · <a href="../reference/symbol-decoder.html">図記号デコーダー</a>とセット</p>
+
+  <p class="lead">学科50問のうち<strong>20問が配線図</strong>。すべて「図記号を見て名前を言えるか」の勝負。まずは現場で最も出会う<strong>コンセントとスイッチ</strong>から、JIS図記号を会話で覚える。</p>
+
+  <div class="position-badge">
+    <div class="position-badge-header">
+      <span class="position-badge-subject">📍 科目⑥ 配線図</span>
+      <span class="position-badge-weight">学科50問中 20問（配点 約40%）</span>
+    </div>
+    <span class="progress-track"><span class="progress-fill" style="width:33%"></span></span>
+    <ul class="subtopic-checklist">
+      <li class="done">コンセント・スイッチの図記号（このレッスン）</li>
+      <li class="todo">照明・機器・分電盤の図記号</li>
+      <li class="todo">配線図問題の解き方（電線本数・接続）</li>
+    </ul>
+    <p class="position-badge-note">配点最大の科目。ここを固めると学科合格の半分が見える。<a href="../reference/exam-map.html">試験全体マップ</a>参照。</p>
+  </div>
+
+  <div class="cast-intro">
+    <div class="cast-member">
+      <div class="cast-avatar">⚡</div>
+      <div><strong>ボルト先生</strong><span>解説役</span></div>
+    </div>
+    <div class="cast-member student">
+      <div class="cast-avatar">💡</div>
+      <div><strong>アンペアくん</strong><span>DIYでオフグリッドを目指す聞き手</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>配線図とは何を読む図か</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>配線図って、家の電気配線を鳥瞰で見た図ですよね？　でも記号が記号で、丸と線ばっかりで…</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>その通り。第2種の配線図問題は<strong>単線結線図</strong>——1本の線で回路を表す簡略図だ。記号＝「この位置にこの器具がある」という<strong>地図のピン</strong>と考えればいい。</p>
+          <p>試験では「この記号は何？」「この回路に何本の電線が必要？」の2パターンが中心。まず記号の名前を<strong>反射的に</strong>言えることが第一歩だよ。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">DIYとの接点</div>
+      <p>オフグリッド小屋に<strong>100V配線</strong>を引くとき、分電盤から照明・コンセントへどうつなぐかを単線図で描く。資格試験の図記号は、その「設計図の共通言語」そのもの。ソーラー系統とは別回路でも、<strong>屋内配線の記号は同じJIS</strong>だ。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>コンセント（差込接続器）の図記号</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>コンセントは<strong>円の中に2本の平行線</strong>が基本。接地極付きは<strong>下に短い縦線（接地記号）</strong>が付く。覚え方は「円＝壁の穴、平行線＝100Vの2極」。</p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="wire-diagram">
+      <figcaption>コンセント記号（模式）</figcaption>
+      <pre>  接地なし          接地極付き
+    ┌───┐              ┌───┐
+    │ ║ │              │ ║ │
+    │ ║ │              │ ║ │
+    └───┘              └───┘
+                         │
+                         ▼  ← 接地（アース）</pre>
+    </figure>
+
+    <p class="reveal-mode-note">記号の名前を思い出してから、行にホバー（タップ）で確認。</p>
+    <table class="reveal-table">
+      <thead>
+        <tr><th>図記号の特徴</th><th>正式名称</th><th>現場での呼び方</th></tr>
+      </thead>
+      <tbody>
+        <tr class="reveal-row" tabindex="0">
+          <td>円＋平行2線</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバーで答え</span><span class="reveal-body">差込接続器（2極）</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバーで答え</span><span class="reveal-body">コンセント（アースなし）</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>円＋平行2線＋接地線</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバーで答え</span><span class="reveal-body">差込接続器（接地付）</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバーで答え</span><span class="reveal-body">アース付コンセント</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>円＋平行2線＋S字付近</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバーで答え</span><span class="reveal-body">スイッチ付差込接続器</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバーで答え</span><span class="reveal-body">スイッチ付コンセント</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="trivia-box">
+      <strong>うんちく：なぜ「差込接続器」？</strong>
+      <p>正式名称は「差込接続器（plug and socket outlet）」。プラグを<strong>差し込む</strong>側の器具だから。試験問題文は正式名称、現場は「コンセント」と呼ぶ——両方の言い方を結びつけて覚える。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>スイッチの図記号 — 片切・3路・4路</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>スイッチって種類多いですよね。図記号でどう見分けるんですか？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>コツは<strong>接続点の数</strong>。片切は2点、3路は3点、4路は4点。記号は「S」の文字に、接続できる<strong>枝の数</strong>で区別する。</p>
+          <p>「路」＝<strong>スイッチから照明までの経路が何本あるか</strong>。3路スイッチ2個で、2か所から同じ照明を操作できる——階段の上下で使うやつだね。</p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="wire-diagram">
+      <figcaption>スイッチ記号（接続点数で区別）</figcaption>
+      <pre>  片切（2点）      3路（3点）       4路（4点）
+      S──○             S──○──           S──○──○
+     接点1つ          接点2つ           接点3つ</pre>
+    </figure>
+
+    <div class="scene-card">
+      <div class="scene-card-label">こんな場所で見かける</div>
+      <p><strong>片切</strong>：部屋の入り口1か所だけで照明をON/OFF。<strong>3路</strong>：階段の上と下、長い廊下の両端。<strong>4路</strong>：3路の間にもう1か所スイッチを増やしたいとき（3路×2＋4路×1 など）。技能試験の候補問題でも3路・4路は頻出。</p>
+    </div>
+
+    <div class="trivia-box">
+      <strong>歴史：「3路」の英語圏との違い</strong>
+      <p>日本の「3路スイッチ」は英語の <em>3-way switch</em>（米）や <em>2-way switch</em>（英）に相当。国によって呼び方が違うが、<strong>図記号の形（3接続点）</strong>はJISで統一されている。試験は日本の呼び方だけ覚えればOK。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>接地（アース）記号</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>接地記号は<strong>3本の短い水平線</strong>（上ほど短い）。配線図では「ここを大地に接続する」印。コンセントの下に付いていたり、分電盤から出る線の先に付いていたりする。</p>
+          <p>DIYの蓄電池系統でも、インバーター出力側の<strong>100V配線のアース</strong>は同じ考え方。ただし系統の接地方法（D種など）は別レッスンで詳しく扱うよ。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h2>確認クイズ</h2>
+
+  <div class="quiz" data-correct="1"
+       data-feedback-correct="正解。円＋平行2線＋下の接地線が接地極付きコンセント。"
+       data-feedback-wrong="接地極付きは、コンセント記号の下に接地記号（短い縦線→3本の横線）が付く。">
+    <p class="quiz-question">Q1. 接地極付き差込接続器の図記号として正しいのは？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">円の中に平行2線のみ</button>
+      <button class="quiz-option" type="button">円＋平行2線＋接地記号</button>
+      <button class="quiz-option" type="button">S字と平行2線</button>
+      <button class="quiz-option" type="button">三角形と平行2線</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="2"
+       data-feedback-correct="正解。3路スイッチは接続点が3つ。"
+       data-feedback-wrong="3路は接続点3つ。片切2点、4路4点と数える。">
+    <p class="quiz-question">Q2. 2か所から同じ照明を操作するのに使うスイッチは？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">片切スイッチ</button>
+      <button class="quiz-option" type="button">タイムスイッチ</button>
+      <button class="quiz-option" type="button">3路スイッチ</button>
+      <button class="quiz-option" type="button">自動点滅器</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <h2>暗記練習</h2>
+  <p class="reveal-mode-note">記号の特徴を読んで、名前を思い出してからカードをホバー（タップ）。</p>
+  <ol class="flashcard-list">
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt">
+        <strong>円＋║║（平行2線）</strong>
+        <span class="flashcard-question">この記号の名前は？</span>
+        <span class="flashcard-hint">ホバーで答え</span>
+      </div>
+      <div class="flashcard-answer">
+        <div class="flashcard-answer-inner">
+          <strong>差込接続器（2極）</strong>＝コンセント（接地なし）<br>
+          <span class="answer-scene">📍 和室・廊下などアース不要な箇所（現在は新築でも接地付が主流）</span>
+        </div>
+      </div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt">
+        <strong>S──○（2接続点）</strong>
+        <span class="flashcard-question">スイッチの種類は？</span>
+        <span class="flashcard-hint">ホバーで答え</span>
+      </div>
+      <div class="flashcard-answer">
+        <div class="flashcard-answer-inner">
+          <strong>片切スイッチ</strong><br>
+          1か所から照明をON/OFF
+          <span class="answer-trivia">技能試験で最も基本的な接続練習</span>
+        </div>
+      </div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt">
+        <strong>S──○──（3接続点）</strong>
+        <span class="flashcard-question">スイッチの種類は？</span>
+        <span class="flashcard-hint">ホバーで答え</span>
+      </div>
+      <div class="flashcard-answer">
+        <div class="flashcard-answer-inner">
+          <strong>3路スイッチ</strong><br>
+          2か所から同じ照明を操作（階段・長廊下）
+        </div>
+      </div>
+    </li>
+  </ol>
+
+  <h2>このレッスンで終わっていないこと</h2>
+  <p>配線図科目（40%）の第1歩としてコンセント・スイッチ・接地記号をカバー。残りは<strong>照明・機器・分電盤の記号</strong>（レッスン4）と<strong>電線本数の数え方</strong>（レッスン5）。一覧暗記は<a href="../reference/symbol-decoder.html">図記号デコーダー</a>を並行利用。</p>
+
+  <div class="source-box">
+    <strong>今回の primary source</strong>
+    <a href="https://www.shiken.or.jp/construction/second/overview/">試験センター「第2種電気工事士試験の概要」</a> — 配線図20問の出題形式を確認。図記号はJIS C 0617 系に準拠。
+  </div>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0002-decode-cable-names.html">← レッスン2</a>
+    <a href="../lessons/0004-wiring-symbols-lighting-panel.html">レッスン4 →</a>
+    <a href="../reference/symbol-decoder.html">図記号デコーダー</a>
+    <a href="../reference/exam-map.html">試験全体マップ</a>
+  </nav>
+</article>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/reveal-answer.js"></script>
+</body>
+</html>

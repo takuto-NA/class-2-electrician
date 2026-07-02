@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン15 — 配線設計：電線の太さと遮断器</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <h1>配線設計：電線の太さと遮断器</h1>
+  <p class="lesson-meta">レッスン 0015 · 約30分 · 科目② 完了</p>
+
+  <p class="lead"><strong>許容電流</strong>と<strong>遮断器定格</strong>の組み合わせ——「この太さのVVFに何Aのブレーカー？」は試験もDIY設計も必須。</p>
+
+  <div class="position-badge">
+    <div class="position-badge-header">
+      <span class="position-badge-subject">📍 科目② 配電理論及び配線設計</span>
+      <span class="position-badge-weight">学科50問中 約5〜7問（配点 約12%）</span>
+    </div>
+    <span class="progress-track"><span class="progress-fill" style="width:100%"></span></span>
+    <ul class="subtopic-checklist">
+      <li class="done">電圧降下・電力損失</li>
+      <li class="done">電線太さ・遮断器選定（このレッスン）</li>
+    </ul>
+  </div>
+
+  <div class="cast-intro">
+    <div class="cast-member"><div class="cast-avatar">⚡</div><div><strong>ボルト先生</strong><span>解説役</span></div></div>
+    <div class="cast-member student"><div class="cast-avatar">💡</div><div><strong>アンペアくん</strong><span>聞き手</span></div></div>
+  </div>
+
+  <section>
+    <h2>許容電流の目安（VVF・IV）</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>試験頻出の暗記セット：<strong>1.6mm² → 15A</strong>、<strong>2.0mm² → 20A</strong>（周囲温度30℃付近）。遮断器は<strong>許容電流以下</strong>で選ぶ。</p>
+          <p>一般住宅の照明回路15A、エアコン200V回路20Aなど——太さとブレーカーのペアで覚える。</p>
+        </div>
+      </div>
+    </div>
+
+    <table class="reveal-table">
+      <thead><tr><th>断面積</th><th>許容電流（目安）</th><th>遮断器（目安）</th></tr></thead>
+      <tbody>
+        <tr class="reveal-row" tabindex="0">
+          <td>1.6 mm²</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">15 A</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">15 A以下</span></td>
+        </tr>
+        <tr class="reveal-row" tabindex="0">
+          <td>2.0 mm²</td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">20 A</span></td>
+          <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">20 A以下</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="scene-card">
+      <div class="scene-card-label">DIYとの接点</div>
+      <p>オフグリッド分電盤で<strong>15A回路に2.0mm²</strong>を使うのは問題なし（余裕あり）。逆に<strong>1.6mm²に20Aブレーカー</strong>は危険——許容を超えると発熱・火災。資格知識＝安全設計。</p>
+    </div>
+  </section>
+
+  <div class="quiz" data-correct="1" data-feedback-correct="正解。2.0mm²の許容は約20A。" data-feedback-wrong="2.0mm² VVFの許容電流は約20A。">
+    <p class="quiz-question">Q. VVF 2.0mm²に適切な遮断器定格は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">30 A</button>
+      <button class="quiz-option" type="button">20 A</button>
+      <button class="quiz-option" type="button">10 A</button>
+      <button class="quiz-option" type="button">40 A</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0014-voltage-drop.html">← レッスン14</a>
+    <a href="../lessons/9001-mock-exam.html">模試 →</a>
+    <a href="../reference/numbers-to-memorize.html">数値暗記表</a>
+  </nav>
+</article>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/reveal-answer.js"></script>
+</body>
+</html>

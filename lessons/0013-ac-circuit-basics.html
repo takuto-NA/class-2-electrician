@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン13 — 交流回路の基礎</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <h1>交流回路の基礎</h1>
+  <p class="lesson-meta">レッスン 0013 · 約25分 · 科目① 完了</p>
+
+  <p class="lead"><strong>実効値</strong>・<strong>力率</strong>・<strong>単相三線</strong>——住宅配電（100V/200V）の前提知識。計算問題の応用編。</p>
+
+  <div class="position-badge">
+    <div class="position-badge-header">
+      <span class="position-badge-subject">📍 科目① 電気に関する基礎理論</span>
+      <span class="position-badge-weight">学科50問中 約4〜6問（配点 約10%）</span>
+    </div>
+    <span class="progress-track"><span class="progress-fill" style="width:100%"></span></span>
+    <ul class="subtopic-checklist">
+      <li class="done">オームの法則・合成抵抗・電力</li>
+      <li class="done">交流回路（このレッスン）</li>
+    </ul>
+  </div>
+
+  <div class="cast-intro">
+    <div class="cast-member"><div class="cast-avatar">⚡</div><div><strong>ボルト先生</strong><span>解説役</span></div></div>
+    <div class="cast-member student"><div class="cast-avatar">💡</div><div><strong>アンペアくん</strong><span>聞き手</span></div></div>
+  </div>
+
+  <section>
+    <h2>実効値 — 100Vの正体</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>コンセントの<strong>100V</strong>は交流の<strong>実効値</strong>。瞬時最大値（約141V）ではない。試験の計算はすべて実効値でOK。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>力率</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn student">
+        <div class="dialogue-avatar">💡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">アンペアくん</span>
+          <p>力率って、モーターとかにつくやつですよね？</p>
+        </div>
+      </div>
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>そう。モーター・蛍光灯など<strong>コイル</strong>を含む負荷で力率が低下。力率 = cosθ、<strong>有効電力 P = V × I × cosθ</strong>。</p>
+          <p>インバーター・蓄電池のAC出力でモーター負荷を動かすときも、力率が低いと同じ見かけ電力でも有効電力が減る——太い配線が必要になる理由の1つ。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>単相三線式</h2>
+    <div class="dialogue">
+      <div class="dialogue-turn">
+        <div class="dialogue-avatar">⚡</div>
+        <div class="dialogue-bubble">
+          <span class="dialogue-name">ボルト先生</span>
+          <p>一般住宅は<strong>単相三線</strong>：中性線（0V）を中心に、100V（照明・コンセント）と200V（エアコン等）を使い分ける。中性線から各側100V、両側間200V。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">DIYとの接点</div>
+      <p>オフグリッドの<strong>単相100Vインバーター</strong>は2線（L+N）。200V機器を動かすなら単相三線対応インバーターか、変圧器が必要——単三の理解は設計の前提。</p>
+    </div>
+  </section>
+
+  <div class="quiz" data-correct="0" data-feedback-correct="正解。P = VIcosθ。" data-feedback-wrong="有効電力は P = V × I × cosθ（力率）。">
+    <p class="quiz-question">Q. 交流の有効電力の式は？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">P = V × I × cosθ</button>
+      <button class="quiz-option" type="button">P = V × I × sinθ</button>
+      <button class="quiz-option" type="button">P = V / I × cosθ</button>
+      <button class="quiz-option" type="button">P = V² × R</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0012-ohms-law.html">← レッスン12</a>
+    <a href="../lessons/0014-voltage-drop.html">レッスン14 →</a>
+  </nav>
+</article>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>
