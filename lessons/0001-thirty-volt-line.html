@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン1 — 30Vラインと資格の関係</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <h1>30Vラインと資格の関係</h1>
+  <p class="lesson-meta">レッスン 0001 · 約10分 · <a href="../MISSION.md">ミッション</a>に直結</p>
+
+  <p class="lead">「DIYで30V以上の電気を扱いたい」— その一言が、第2種電気工事士の勉強と直結している理由を押さえる。</p>
+
+  <h2>なぜ30V？</h2>
+  <p>日本の電気法令では、<strong>30V</strong>が重要な境界線になる。電気事業法上の「電気工作物」から、次の条件を<strong>すべて</strong>満たす設備は除外される。</p>
+
+  <div class="callout">
+    <strong>電気工作物から除外される条件</strong>
+    電圧が30V未満であること。<br>
+    かつ、30V以上の電気設備と<strong>電気的に接続されていない</strong>こと。
+  </div>
+
+  <p>Arduinoの5V実験や、単独の豆電球回路は、この枠外に収まることが多い。一方、あなたが挙げた<strong>オフグリッド・蓄電池・ソーラー</strong>は、たいてい30Vを超え、しかも系統や他の機器と接続する。つまり<strong>電気工作物</strong>に入り、原則として<strong>資格のある者</strong>が工事を行う領域になる。</p>
+
+  <p>参考：<a href="../reference/thirty-volt-line.html">30Vライン早見表</a></p>
+
+  <h2>第2種がカバーする範囲</h2>
+  <p>第2種電気工事士は、<strong>600V以下の一般用電気工作物</strong>の電気工事ができる国家資格。具体例：</p>
+  <ul>
+    <li>家庭の100V配線（コンセント増設、分電盤まわり）</li>
+    <li>出力50kW未満の太陽電池発電設備（小出力発電設備）</li>
+    <li>600V以下の蓄電池への接続工事</li>
+  </ul>
+  <p>DIYで現実的に目指すオフグリッド設備の多くは、この「一般用電気工作物」の中に収まる。だから第2種は「試験のため」ではなく、<strong>自分のDIYを合法化するための最低ライン</strong>として機能する。</p>
+
+  <h2>「無資格でできる」は例外だけ</h2>
+  <p>経産省の資料では、資格不要の<strong>軽微な工事</strong>が施行令で限定列挙されている。代表例：</p>
+  <ul>
+    <li>600V以下の機器に<strong>コード</strong>（プラグ付き電線）を接続する</li>
+    <li>600V以下の<strong>蓄電池端子</strong>に電線をねじ止めする</li>
+  </ul>
+  <p>逆に、<strong>電線同士を接続する</strong>、<strong>配線器具（スイッチ・コンセント）に接続する</strong>作業は、原則として電気工事士が必要。ソーラーと蓄電池を直結する、分電盤にブレーカを追加する— こうした DIY の本丸は、軽微な工事の例外には入りにくい。</p>
+
+  <figure>
+    <table>
+      <thead>
+        <tr>
+          <th>あなたのDIY目標</th>
+          <th>資格の要否（原則）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12V LEDだけの独立回路</td>
+          <td>30V未満・非接続なら除外</td>
+        </tr>
+        <tr>
+          <td>48Vリチウム蓄電池バンク</td>
+          <td>第2種が必要になりうる</td>
+        </tr>
+        <tr>
+          <td>ソーラー＋蓄電池＋インバータ</td>
+          <td>第2種が必要になりうる</td>
+        </tr>
+        <tr>
+          <td>既存100Vコンセント増設</td>
+          <td>第2種が必要</td>
+        </tr>
+      </tbody>
+    </table>
+    <figcaption>詳細はケースバイケース。早見表を参照。</figcaption>
+  </figure>
+
+  <h2>試験との接続</h2>
+  <p>1年以内の合格を目指すなら、試験は<strong>学科（50問）→ 技能（候補13問から1問）</strong>の2段階。年2回（上期・下期）実施。</p>
+  <p>学科の7科目のうち、今日の内容は特に<strong>法令</strong>と<strong>保安</strong>の土台になる。技能では配線・接地・測定を実際の手で覚える— ソーラー設置でも同じ配線技術がそのまま活きる。</p>
+
+  <h2>確認クイズ</h2>
+
+  <div class="quiz" data-correct="0"
+       data-feedback-correct="その通り。30V未満かつ非接続なら電気工作物から除外される。"
+       data-feedback-wrong="除外されるのは「30V未満」かつ「他の30V以上設備と非接続」の両方を満たす場合。">
+    <p class="quiz-question">Q1. 電気工作物の定義から「除外」されるのはどれ？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">30V未満で他設備と非接続</button>
+      <button class="quiz-option" type="button">48V系オフグリッド蓄電一式</button>
+      <button class="quiz-option" type="button">100V屋内配線設備一式</button>
+      <button class="quiz-option" type="button">600V以下太陽光発電一式</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="2"
+       data-feedback-correct="正解。列挙された例外に限り資格不要。範囲は狭い。"
+       data-feedback-wrong="原則必要。資格不要なのは施行令で列挙された軽微な工事のみ。">
+    <p class="quiz-question">Q2. 原則として第2種が必要な作業はどれ？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">機器へのコード接続工事</button>
+      <button class="quiz-option" type="button">蓄電池端子へのねじ止め</button>
+      <button class="quiz-option" type="button">配線器具への電線接続</button>
+      <button class="quiz-option" type="button">36V以下変圧器二次側</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="source-box">
+    <strong>今回の primary source（必読）</strong>
+    <a href="https://www.jeea.or.jp/course/contents/11101/">JEEA「電気設備技術基準・解釈の解説〔その1〕」</a> — 30V・150V・300Vの電圧区分が整理されている。音声付きで、試験の法令科目の土台にもなる。
+  </div>
+
+  <div class="ask-teacher">
+    <strong>わからないことがあれば、このチャットで質問してください。</strong>
+    「うちの48V蓄電池構成だと資格要る？」「上期試験の申込はいつ？」など、具体例で聞くと答えやすいです。
+  </div>
+
+  <h2>次にやること</h2>
+  <ol>
+    <li>上の primary source の「電圧30V以下」の節を読む（15分）</li>
+    <li><a href="../reference/thirty-volt-line.html">30Vライン早見表</a>を印刷またはブックマーク</li>
+    <li>次のレッスンで「試験の全体像と1年スケジュール」に進む</li>
+  </ol>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0002-decode-cable-names.html">レッスン2 →</a>
+    <a href="../reference/glossary.html">用語集</a>
+    <a href="../reference/thirty-volt-line.html">30Vライン早見表</a>
+    <a href="../MISSION.md">ミッション</a>
+    <a href="../RESOURCES.md">リソース一覧</a>
+  </nav>
+</article>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

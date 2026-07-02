@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30Vライン早見表</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <h1>30Vライン早見表</h1>
+  <p class="lesson-meta">参照資料 · 印刷向け</p>
+
+  <p class="lead">DIYで「ここから資格が要る？」と迷ったときの判断フロー。</p>
+
+  <h2>電気工作物に該当するか</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>条件</th>
+        <th>電気工作物？</th>
+        <th>第2種が関係？</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>30V未満 ＋ 他の30V以上設備と<strong>非接続</strong></td>
+        <td>いいえ（除外）</td>
+        <td>原則不要</td>
+      </tr>
+      <tr>
+        <td>30V以上の設備</td>
+        <td>はい</td>
+        <td>工事には原則必要</td>
+      </tr>
+      <tr>
+        <td>100V 屋内配線（コンセント等）</td>
+        <td>はい（一般用電気工作物）</td>
+        <td>原則必要</td>
+      </tr>
+      <tr>
+        <td>48V オフグリッド蓄電（他と接続）</td>
+        <td>はい</td>
+        <td>原則必要</td>
+      </tr>
+      <tr>
+        <td>ソーラー＋蓄電池（600V以下・小出力）</td>
+        <td>はい（一般用電気工作物）</td>
+        <td>原則必要</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>資格不要になりうる例外（軽微な工事）</h2>
+  <p>施行令第1条。範囲は狭い。代表例：</p>
+  <ul>
+    <li>600V以下の機器に<strong>コード</strong>を接続する工事</li>
+    <li>600V以下の<strong>蓄電池端子</strong>に電線をねじ止めする工事</li>
+    <li>二次36V以下の小型変圧器の二次側配線（インターホン等）</li>
+  </ul>
+  <p><em>「電線同士を接続する」「配線器具に接続する」は原則、資格が必要。</em></p>
+
+  <h2>電圧区分（電技解釈・試験でも重要）</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>区分</th>
+        <th>交流</th>
+        <th>直流</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>低圧</td>
+        <td>600V以下</td>
+        <td>750V以下</td>
+      </tr>
+      <tr>
+        <td>高圧</td>
+        <td>600V超</td>
+        <td>750V超</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="source-box">
+    <strong>出典</strong>
+    <a href="https://www.jeea.or.jp/course/contents/11101/">JEEA 電気設備技術基準・解釈の解説</a>、
+    <a href="https://www.meti.go.jp/policy/safety_security/industrial_safety/sangyo/electric/files/1-3keibi.pdf">経産省 軽微な工事PDF</a>
+  </p>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0001-thirty-volt-line.html">← レッスン1</a>
+    <a href="../reference/glossary.html">用語集 →</a>
+  </nav>
+</article>
+</body>
+</html>

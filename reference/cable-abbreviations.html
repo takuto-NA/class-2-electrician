@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ケーブル略称デコーダー</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+  <style>
+    .letter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 0.5rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.85rem;
+      margin: 1rem 0 2rem;
+    }
+    .letter-card {
+      border: 1px solid var(--border);
+      padding: 0.5rem 0.65rem;
+      background: var(--card);
+      min-height: 3.5rem;
+    }
+    .letter-card strong {
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+    .decode {
+      font-family: 'Source Sans 3', monospace;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+    }
+    .decode span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    td:first-child {
+      font-family: 'Source Sans 3', monospace;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+<article>
+  <h1>ケーブル略称デコーダー</h1>
+  <p class="lesson-meta">参照資料 · 印刷向け · 試験・現場で出会う電線名</p>
+
+  <p class="lead">日本の電線名は英語の頭文字を並べた「暗号」に見えるが、ルールがある。文字を1つずつ読めば名前が意味になる。</p>
+
+  <h2>読み方の3ステップ</h2>
+  <ol>
+    <li>左から1文字ずつ、下の<strong>文字辞典</strong>で意味を当てはめる</li>
+    <li>「絶縁が何か」「シースがあるか」「形状は平形か」がわかる</li>
+    <li>600V / 300V など定格は JIS 規格名で別途確認（略称だけでは電圧が出ないことも）</li>
+  </ol>
+
+  <h2>文字辞典（コアセット）</h2>
+  <p class="reveal-mode-note">文字だけ見えています。意味を思い出してから、カードにホバー（タップ）で確認。</p>
+  <div class="letter-grid">
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>V</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Vinyl ビニル（PVC）</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>I</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Indoor 屋内 / Insulated 絶縁</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>H</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Heat-resistant 耐熱</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>C</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Cable ケーブル / Cross-linked 架橋</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>F</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Flat 平形</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>R</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Round 丸形</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>T</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Triplex 3本より / CabTyre の T</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>CT</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Cab Tyre キャブタイヤ</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>K</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Kiki 機器（機器用）</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>O</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Outdoor 屋外</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>D</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Derivation 引込</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>E</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Eco-Material 環境配慮</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>CE</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Cross-linked PE 架橋PE</span></div>
+    <div class="letter-card reveal-letter-card" tabindex="0"><strong>IE</strong><span class="reveal-letter-placeholder">ホバーで答え</span><span class="reveal-letter-body">Insulated Eco 環境配慮絶縁</span></div>
+  </div>
+  <p><em>出典：<a href="https://densenkan.com/densen/densen6/">電線館.com 電線の記号</a>、<a href="https://denko-land.com/knowledge/cable.html">電工ランド</a></em></p>
+
+  <h2>試験頻出：電線・ケーブル一覧</h2>
+  <p class="reveal-mode-note">略称だけ見えています。分解を思い出してから、行にホバー（タップ）で答えを表示。</p>
+  <table class="reveal-table">
+    <thead>
+      <tr>
+        <th>略称</th>
+        <th>分解</th>
+        <th>意味・由来</th>
+        <th>どこで使う？</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="reveal-row">
+        <td tabindex="0">IV</td>
+        <td class="reveal-cell decode"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content"><span>I</span>ndoor + <span>V</span>inyl</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">600Vビニル絶縁電線。心線1本。JIS C 3307<br><span class="answer-scene">📍 電線管の中、分電盤→器具の引き込み。緑=アース専用</span></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">技能試験の主役。剥線・接続の練習相手<br><span class="answer-trivia">Indoor Vinyl — Wikipedia もこの語源</span></span></td>
+      </tr>
+      <tr class="reveal-row">
+        <td tabindex="0">HIV</td>
+        <td class="reveal-cell decode"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content"><span>H</span>eat + <span>I</span>ndoor + <span>V</span>inyl</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">耐熱版IV（75℃）。JIS C 3317</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">温度の上がる場所、盤内</span></td>
+      </tr>
+      <tr class="reveal-row">
+        <td tabindex="0">KIV</td>
+        <td class="reveal-cell decode"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content"><span>K</span>iki + <span>I</span> + <span>V</span></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">電気機器用ビニル絶縁電線。JIS C 3316</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">機器内部配線</span></td>
+      </tr>
+      <tr class="reveal-row">
+        <td tabindex="0">VVF</td>
+        <td class="reveal-cell decode"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content"><span>V</span>inyl + <span>V</span>inyl sheath + <span>F</span>lat</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">ビニル2重+平形。JIS C 3342<br><span class="answer-scene">📍 天井裏・壁裏。コンセント・照明・エアコン</span><br><span class="answer-trivia">1964 JIS前は関東=F、関西=VA線</span></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">住宅配線の標準。1.6/2.0/2.6mm<br><span class="answer-trivia">職人は今も「Fケーブル」と呼ぶ</span></span></td>
+      </tr>
+      <tr class="reveal-row">
+        <td tabindex="0">VVR</td>
+        <td class="reveal-cell decode"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content"><span>V</span> + <span>V</span> + <span>R</span>ound</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">VVFの丸形版</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">配線ダクト、引っ張り配線</span></td>
+      </tr>
+      <tr class="reveal-row">
+        <td tabindex="0">CV</td>
+        <td class="reveal-cell decode"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content"><span>C</span>ross-linked PE + <span>V</span>inyl sheath</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">架橋PE+ビニルシース。JIS C 3605<br><span class="answer-scene">📍 幹線・地中・動力。ソーラー→分電盤も</span></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">VVFより太い動脈<br><span class="answer-trivia">かつては鉛被(RL)が主流だった</span></span></td>
+      </tr>
+      <tr class="reveal-row">
+        <td tabindex="0">CVT</td>
+        <td class="reveal-cell decode"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content"><span>CV</span> + <span>T</span>riplex</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">CV 3本をより合わせた3心ケーブル</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">3相動力の幹線</span></td>
+      </tr>
+      <tr class="reveal-row">
+        <td tabindex="0">VCT</td>
+        <td class="reveal-cell decode"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content"><span>V</span>inyl + <span>C</span>ab <span>T</span>yre</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">600Vビニルキャブタイヤ。JIS C 3312<br><span class="answer-scene">📍 電ドリ、クレーン、仮設延長</span><br><span class="answer-trivia">語源=馬車(Cab)タイヤ用ゴムメーカー</span></span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">通電したまま引っ張れる<br><span class="answer-trivia">「キャプタイヤ」は誤表記</span></span></td>
+      </tr>
+      <tr class="reveal-row">
+        <td tabindex="0">VCTF</td>
+        <td class="reveal-cell decode"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content"><span>VCT</span> + <span>F</span>（code）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">300V以下のビニルキャブタイヤ<strong>コード</strong>。JIS C 3306</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">家電電源コード、300V以下機器</span></td>
+      </tr>
+      <tr class="reveal-row">
+        <td tabindex="0">OW</td>
+        <td class="reveal-cell decode"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content"><span>O</span>utdoor + <span>W</span>ire</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">屋外用ビニル絶縁電線。JIS C 3340</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">屋外配線、耐候性が必要な場所</span></td>
+      </tr>
+      <tr class="reveal-row">
+        <td tabindex="0">DV</td>
+        <td class="reveal-cell decode"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content"><span>D</span>erivation</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">引込用ビニル絶縁電線。JIS C 3341</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">電柱から建物への引込み</span></td>
+      </tr>
+      <tr class="reveal-row">
+        <td tabindex="0">EM</td>
+        <td class="reveal-cell decode"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content"><span>E</span>co-<span>M</span>aterial</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">環境配慮型（ハロゲンフリー等）。従来品の冠記号</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバーで表示</span><span class="reveal-content">IV→IE/F、CV→CE/F など対応表あり</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>語源メモ：Cab Tyre（キャブタイヤ）</h2>
+  <div class="scene-card">
+    <div class="scene-card-label">1860年代イギリス → 日本の現場まで</div>
+    <p>馬車（Cab）のタイヤ用ゴムを作っていた英国メーカーが、同じゴム技術を電線被覆に転用。「タイヤのように引っ張り回しても耐える」から <strong>Cab Tyre</strong>。工場の天井クレーン、港湾、製鉄所——<a href="https://sumitomoelectric.com/jp/products/wire-cable/cabtyre">通電したまま動く機械</a>の定番になった。ビニル版が VCT、環境版が EM-OOCT。</p>
+  </div>
+  <aside class="trivia-box">
+    <strong>うんちく</strong>
+    <p>「キャプタイヤ」は語源上の誤り（Capture っぽく聞こえるが Cab が正解）。和製英語がそのまま70年以上生き残っている稀有な例。試験では CT の意味を問うより、<strong>移動用・柔軟・コード取付</strong>の文脈で出る。</p>
+  </aside>
+
+  <h2>覚え方の型</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>型</th>
+        <th>パターン</th>
+        <th>例</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>単心電線</td>
+        <td>場所(I/O) + 材料(V) または 用途 + V</td>
+        <td>IV, HIV, OW, DV, KIV</td>
+      </tr>
+      <tr>
+        <td>シース付きケーブル</td>
+        <td>絶縁 + シース + 形状(F/R)</td>
+        <td>VVF, VVR</td>
+      </tr>
+      <tr>
+        <td>架橋PE系</td>
+        <td>C(cross-linked) + V(sheath) + 形状</td>
+        <td>CV, CVT, CVV</td>
+      </tr>
+      <tr>
+        <td>移動用</td>
+        <td>V + CabTyre (+ F=code)</td>
+        <td>VCT, VCTF</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="source-box">
+    <strong>出典</strong>
+    <a href="https://ja.wikipedia.org/wiki/600V%E3%83%93%E3%83%8B%E3%83%AB%E7%B5%B6%E7%B8%81%E9%9B%BB%E7%B7%9A">Wikipedia IV</a> ·
+    <a href="https://www.jefcom.co.jp/media/useful_information/a10">ジェフコム ケーブル基礎編</a> ·
+    <a href="https://www.jcma2.jp/gijyutu/kankyo/em/index.html">日本電線工業会 EM</a> ·
+    <a href="https://www.jectec.or.jp/certification/jis/jis-kikaku/">JECTEC JIS一覧</a>
+  </p>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0002-decode-cable-names.html">← レッスン2</a>
+    <a href="../reference/glossary.html">用語集</a>
+    <a href="../lessons/0001-thirty-volt-line.html">レッスン1</a>
+  </nav>
+</article>
+</body>
+</html>

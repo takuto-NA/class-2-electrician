@@ -1,0 +1,212 @@
+/*
+ * 責務: 暗記向けフラッシュカード — 答えを隠し、ホバー/フォーカスで表示
+ */
+
+/* --- フラッシュカード（縦リスト） --- */
+.flashcard-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem;
+}
+
+.flashcard {
+  font-family: 'Source Sans 3', sans-serif;
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 4px;
+  margin-bottom: 0.65rem;
+  padding: 0.85rem 1rem;
+  cursor: default;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.flashcard:hover,
+.flashcard:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(180, 83, 9, 0.08);
+}
+
+.flashcard-prompt {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.flashcard-prompt strong {
+  font-size: 1.15rem;
+  font-family: 'Source Sans 3', monospace;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.flashcard-question {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.flashcard-hint {
+  font-size: 0.75rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.flashcard-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.2s ease;
+}
+
+.flashcard-answer-inner {
+  overflow: hidden;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.flashcard:hover .flashcard-answer,
+.flashcard:focus-within .flashcard-answer,
+.flashcard.is-revealed .flashcard-answer {
+  grid-template-rows: 1fr;
+}
+
+.flashcard:hover .flashcard-hint,
+.flashcard:focus-within .flashcard-hint,
+.flashcard.is-revealed .flashcard-hint {
+  visibility: hidden;
+}
+
+.flashcard:hover .flashcard-answer-inner,
+.flashcard:focus-within .flashcard-answer-inner,
+.flashcard.is-revealed .flashcard-answer-inner {
+  padding-top: 0.65rem;
+  border-top: 1px dashed var(--border);
+  margin-top: 0.5rem;
+}
+
+/* --- テーブル行：略称だけ見せて答えを隠す --- */
+.reveal-table tbody tr.reveal-row {
+  cursor: default;
+  outline: none;
+}
+
+.reveal-table tbody tr.reveal-row:hover,
+.reveal-table tbody tr.reveal-row:focus-within {
+  background: var(--accent-light);
+}
+
+.reveal-cell {
+  position: relative;
+}
+
+.reveal-cell .reveal-content {
+  filter: blur(5px);
+  user-select: none;
+  transition: filter 0.2s ease;
+}
+
+.reveal-cell .reveal-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(250, 250, 248, 0.95);
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-family: 'Source Sans 3', sans-serif;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.reveal-row:hover .reveal-placeholder,
+.reveal-row:focus-within .reveal-placeholder {
+  opacity: 0;
+}
+
+.reveal-row:hover .reveal-content,
+.reveal-row:focus-within .reveal-content {
+  filter: none;
+  user-select: text;
+}
+
+/* --- 文字辞典カード --- */
+.reveal-letter-card {
+  position: relative;
+  outline: none;
+}
+
+.reveal-letter-card strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.reveal-letter-card .reveal-letter-body {
+  filter: blur(5px);
+  user-select: none;
+  transition: filter 0.2s ease;
+}
+
+.reveal-letter-card .reveal-letter-placeholder {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.5rem;
+  text-align: center;
+  font-size: 0.65rem;
+  color: var(--muted);
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.reveal-letter-card:hover .reveal-letter-body,
+.reveal-letter-card:focus-within .reveal-letter-body {
+  filter: none;
+  user-select: text;
+}
+
+.reveal-letter-card:hover .reveal-letter-placeholder,
+.reveal-letter-card:focus-within .reveal-letter-placeholder {
+  opacity: 0;
+}
+
+.reveal-mode-note {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+/* 印刷時は答えをすべて表示 */
+@media print {
+  .flashcard-answer {
+    grid-template-rows: 1fr;
+  }
+
+  .flashcard-hint {
+    display: none;
+  }
+
+  .flashcard-answer-inner {
+    padding-top: 0.65rem;
+    border-top: 1px dashed var(--border);
+    margin-top: 0.5rem;
+  }
+
+  .reveal-content,
+  .reveal-letter-body {
+    filter: none !important;
+  }
+
+  .reveal-placeholder,
+  .reveal-letter-placeholder {
+    display: none;
+  }
+}
+
+@media (hover: none) {
+  .flashcard-hint::after {
+    content: '（タップでも表示）';
+  }
+}

@@ -1,0 +1,122 @@
+/*
+ * 責務: 現場イメージ・歴史・うんちくの読み物用コンポーネント
+ */
+
+.scene-card,
+.trivia-box,
+.wire-diagram {
+  font-family: 'Source Sans 3', sans-serif;
+  margin: 1.25rem 0;
+}
+
+.scene-card {
+  background: linear-gradient(135deg, #fff 0%, #f8f6f0 100%);
+  border: 1px solid var(--border);
+  border-left: 4px solid #64748b;
+  padding: 1rem 1.25rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.scene-card-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+  margin-bottom: 0.4rem;
+}
+
+.scene-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.trivia-box {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.trivia-box strong {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: #0369a1;
+  margin-bottom: 0.35rem;
+}
+
+.trivia-box p {
+  margin: 0;
+}
+
+.wire-diagram {
+  background: #1e1e1e;
+  color: #e2e8f0;
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.wire-diagram figcaption {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin-bottom: 0.65rem;
+}
+
+.wire-diagram pre {
+  margin: 0;
+  font-family: 'Consolas', 'Source Sans 3', monospace;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  white-space: pre;
+}
+
+.cable-story-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.cable-story-section:last-of-type {
+  border-bottom: none;
+}
+
+.cable-nickname {
+  display: inline-block;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  background: #f1f5f9;
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.35rem;
+  color: var(--muted);
+}
+
+.flashcard-answer-inner .answer-scene {
+  display: block;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dotted var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.flashcard-answer-inner .answer-trivia {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: #0369a1;
+}
+
+@media print {
+  .wire-diagram {
+    background: #f5f5f0;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン2 — ケーブル名を文字分解する</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+  <style>
+    .decode-box {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      margin: 1rem 0;
+    }
+    .decode-box .letter {
+      display: inline-block;
+      padding: 0.2rem 0.35rem;
+      margin: 0 0.1rem;
+      background: var(--accent-light);
+      border-radius: 3px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .decode-box .arrow {
+      font-size: 1rem;
+      color: var(--muted);
+      margin: 0 0.25rem;
+    }
+    .meaning {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+<article>
+  <h1>ケーブル名を文字分解する</h1>
+  <p class="lesson-meta">レッスン 0002 · 約20分 · <a href="../reference/cable-abbreviations.html">デコーダー</a>とセット</p>
+
+  <p class="lead">IV、VVF、CV… アルファベットの羅列に見える名前は、実は<strong>英語の頭文字の並び</strong>。分解の型を覚えつつ、<strong>どこで使うか・なぜそう呼ぶか</strong>をセットで覚えると、試験もDIYも頭に残る。</p>
+
+  <section class="cable-story-section">
+    <h2>IV — 電線管の中を走る「屋内の血管」</h2>
+    <div class="decode-box">
+      <span class="letter">I</span><span class="arrow">→</span><span class="meaning">Indoor 屋内</span>
+      <span class="letter">V</span><span class="arrow">→</span><span class="meaning">Vinyl ビニル</span>
+    </div>
+    <p><strong>IV</strong> = Indoor Vinyl。心線1本だけのシンプルな電線。技能試験の卓上で何本も使う、まず覚える1本。</p>
+
+    <figure class="wire-diagram">
+      <figcaption>断面イメージ（心線1本）</figcaption>
+      <pre>        ┌─ ビニル被覆（絶縁）
+        │    ╭───╮
+        └─── │ Cu │ ← 銅の心線
+             ╰───╯</pre>
+    </figure>
+
+    <div class="scene-card">
+      <div class="scene-card-label">こんな場所で見かける</div>
+      <p>白い<strong>電線管（ダクト）</strong>の中。分電盤から照明・コンセントへ「引き込む」一本線。技能試験では、この IV を剥いてスイッチやコンセントに接続する。現場では<strong>緑色の IV だけアース（接地）専用</strong>——色で役割が決まっている。</p>
+    </div>
+
+    <aside class="trivia-box">
+      <strong>うんちく</strong>
+      <p>頭文字を足すと家族が増える：<strong>H</strong>IV（耐熱75℃版）、<strong>K</strong>IV（機器の中）、<strong>O</strong>W（屋外）、<strong>D</strong>V（電柱から家への引込）。いずれも「IV に修飾語が付いた兄弟」だと思えばよい。</p>
+    </aside>
+  </section>
+
+  <section class="cable-story-section">
+    <h2>VVF — 天井裏を這う「日本の住宅の標準装備」</h2>
+    <p>
+      <span class="cable-nickname">Fケーブル</span>
+      <span class="cable-nickname">VA線</span>
+      <span class="cable-nickname">ビニル平形</span>
+      — 現場では略称より<strong>通称</strong>で呼ばれることも多い。
+    </p>
+    <div class="decode-box">
+      <span class="letter">V</span><span class="arrow">→</span><span class="meaning">Vinyl 絶縁</span>
+      <span class="letter">V</span><span class="arrow">→</span><span class="meaning">Vinyl シース</span>
+      <span class="letter">F</span><span class="arrow">→</span><span class="meaning">Flat 平形</span>
+    </div>
+
+    <figure class="wire-diagram">
+      <figcaption>VVF の断面（平たい2心＋場合によりアース）</figcaption>
+      <pre>  上から見ると扁平：
+  ●黒    ●白        ← 2心（L/N など）
+  ━━━━━━━━━━━━━     ← ビニルシース（外膜）
+  ※ VVR は同じ中身を丸く束ねた形（R = Round）</pre>
+    </figure>
+
+    <div class="scene-card">
+      <div class="scene-card-label">こんな場所で見かける</div>
+      <p>一戸建ての<strong>天井裏・壁の中</strong>。エアコン、照明、コンセント回路の主力。太さ 1.6 / 2.0 / 2.6 mm が住宅の三種の神器。露出配線なら壁に直接、隠蔽ならこのケーブルが家全体を網のように結ぶ。</p>
+    </div>
+
+    <aside class="trivia-box">
+      <strong>歴史</strong>
+      <p>1956年、米国視察から持ち帰られた施工のしやすさがルーツ。<a href="https://www.kawai-cable.co.jp/products/vvf-roots.html">1964年に JIS 制定</a>されるまで、関東では <strong>Fケーブル</strong>（Flat）、関西では <strong>VA線</strong>（Vinyl Armor）と呼び分けていた——今も職人の会話にその名残が残る。VVF という名前は、国際的な頭文字方式に合わせた「後から付いた正式略称」に近い。</p>
+    </aside>
+  </section>
+
+  <section class="cable-story-section">
+    <h2>CV / CVT — 地中や幹線を担う「太い動脈」</h2>
+    <div class="decode-box">
+      <span class="letter">C</span><span class="arrow">→</span><span class="meaning">Cross-linked 架橋PE</span>
+      <span class="letter">V</span><span class="arrow">→</span><span class="meaning">Vinyl シース</span>
+      <span class="letter">T</span><span class="arrow">→</span><span class="meaning">Triplex 3本より</span>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">こんな場所で見かける</div>
+      <p>マンション・工場の<strong>幹線</strong>、<strong>地中埋設</strong>、エアコンの太い動力線。ソーラーではパワコンから分電盤へ、蓄電池からインバータへ——太さと用途次第で CV 系が選ばれる。CVT は CV を3本より合わせた3相動力向け。</p>
+    </div>
+
+    <aside class="trivia-box">
+      <strong>うんちく</strong>
+      <p>かつて低圧地中線は<strong>鉛被（RL）</strong>や<strong>紙ベルト</strong>が主流だった。架橋ポリエチレン（CV）は耐熱・耐水・施工性で段々とシェアを伸ばした。VVF が「住宅の毛细血管」なら、CV は「街区の動脈」——太さと場所で使い分けるイメージ。</p>
+    </aside>
+  </section>
+
+  <section class="cable-story-section">
+    <h2>VCT / VCTF — 辻馬車タイヤが名前の「引っ張り回せるコード」</h2>
+    <div class="decode-box">
+      <span class="letter">V</span><span class="arrow">→</span><span class="meaning">Vinyl</span>
+      <span class="letter">C</span><span class="letter">T</span><span class="arrow">→</span><span class="meaning">Cab Tyre</span>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-card-label">こんな場所で見かける</div>
+      <p>電動工具のコード、仮設現場の延長、工場の<strong>天井クレーン</strong>（通電したまま横移動）。家なら洗濯機・電子レンジの裏。VCT = 600V以下、VCTF = 300V以下の<strong>コード</strong>（細い区分）。技能試験の「コード取付け」はここ。</p>
+    </div>
+
+    <aside class="trivia-box">
+      <strong>歴史 — 和製英語の名付け親</strong>
+      <p>19世紀イギリス、<strong>Sent Helens Cable and Rubber Co.</strong> がもとは馬車（Cab）のタイヤ（Tyre）用ゴムメーカー。このゴムを電線被覆に転用し「キャブタイヤケーブル」と呼ばれた——<a href="https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%A3%E3%83%96%E3%82%BF%E3%82%A4%E3%83%A4%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB">辻馬車のタイヤのように丈夫</a>、という比喩がそのまま名称に。⚠️「キャプタイヤ」は語源上の誤りで、ネット検索も「キャブタイヤ」が正解。</p>
+    </aside>
+  </section>
+
+  <section class="cable-story-section">
+    <h2>EM — 1990年代生まれの「環境配慮の冠」</h2>
+    <p><strong>EM</strong> = <strong>E</strong>co-<strong>M</strong>aterial。IV → IE/F、CV → CE/F のように、従来品の「環境版」に冠する。<a href="https://www.jcma2.jp/gijyutu/kankyo/em/index.html">日本電線工業会</a>が1990年代から推進。火災時のハロゲンガス問題への回答でもある。</p>
+    <aside class="trivia-box">
+      <strong>うんちく</strong>
+      <p>公的施設では EM 採用が進み、出荷量の十数%に達した（電線工業会）。試験では従来の IV/VVF と EM 版の<strong>対応関係</strong>がたまに問われる——「同じ用途、素材だけ違う兄弟」と捉える。</p>
+    </aside>
+  </section>
+
+  <h2>あなたのDIYで出会う場面</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>あなたの作業</th>
+        <th>イメージ</th>
+        <th>出会う略称</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>蓄電池 → インバータ配線</td>
+        <td>盤の中を這う太い線、端子へのIV接続</td>
+        <td>IV, CV</td>
+      </tr>
+      <tr>
+        <td>ソーラー → パワコン</td>
+        <td>屋根から室内へ。幹線は地中or配管</td>
+        <td>CV, CVT, IV</td>
+      </tr>
+      <tr>
+        <td>100Vコンセント増設</td>
+        <td>天井裏のVVFを分岐、IVで器具へ</td>
+        <td>VVF, IV</td>
+      </tr>
+      <tr>
+        <td>ポータブル電源・延長</td>
+        <td>引っ張っても断れないコード</td>
+        <td>VCT, VCTF</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>確認クイズ（文字分解）</h2>
+
+  <div class="quiz" data-correct="0"
+       data-feedback-correct="正解。F = Flat（平形）。VVFは平らな2心ケーブル。"
+       data-feedback-wrong="VVFのFは形状。Flat = 平形。">
+    <p class="quiz-question">Q1. VVF の F は何の略？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">Flat平形タイプの省略</button>
+      <button class="quiz-option" type="button">Fire難燃性の省略記号</button>
+      <button class="quiz-option" type="button">Floor床下用の省略記号</button>
+      <button class="quiz-option" type="button">Fuse熔断器の省略記号</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="0"
+       data-feedback-correct="その通り。Triplex = 3本をより合わせた構造。"
+       data-feedback-wrong="CVTのTはTriplex（3本より）。Twisted（対より）ではない。">
+    <p class="quiz-question">Q2. CVT の T は何の略？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">Triplex三本よりの意</button>
+      <button class="quiz-option" type="button">Twisted対よりの意</button>
+      <button class="quiz-option" type="button">Terminal末端部の意</button>
+      <button class="quiz-option" type="button">Transformer変圧器</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <div class="quiz" data-correct="1"
+       data-feedback-correct="正解。Cab = 辻馬車、Tyre = タイヤ状のゴム被覆が語源。"
+       data-feedback-wrong="CT = Cab Tyre。辻馬車のタイヤのように丈夫な被覆が由来。">
+    <p class="quiz-question">Q3. VCT の CT は何の略？</p>
+    <div class="quiz-options">
+      <button class="quiz-option" type="button">Control制御信号の意</button>
+      <button class="quiz-option" type="button">CabTyreキャブタイヤ</button>
+      <button class="quiz-option" type="button">CopperTwist銅より線</button>
+      <button class="quiz-option" type="button">CableTerminal端末部</button>
+    </div>
+    <div class="quiz-feedback"></div>
+  </div>
+
+  <h2>練習：自分で分解してみる</h2>
+  <p class="reveal-mode-note">答えは隠してあります。思い出してから、カードにマウスを乗せる（スマホはタップ）で確認してください。</p>
+  <ol class="flashcard-list">
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt">
+        <strong>HIV</strong>
+        <span class="flashcard-question">何が付いて、何の電線？</span>
+        <span class="flashcard-hint">ホバーで答え</span>
+      </div>
+      <div class="flashcard-answer">
+        <div class="flashcard-answer-inner">
+          <strong>H</strong> = Heat-resistant（耐熱）＋ <strong>IV</strong><br>
+          → 600V二種ビニル絶縁電線（75℃）。盤内・温度の上がる場所。
+          <span class="answer-scene">📍 分電盤内、変圧器近く——普通のIVより「暑がり」向け</span>
+        </div>
+      </div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt">
+        <strong>VVR</strong>
+        <span class="flashcard-question">VVFと何が違う？</span>
+        <span class="flashcard-hint">ホバーで答え</span>
+      </div>
+      <div class="flashcard-answer">
+        <div class="flashcard-answer-inner">
+          最後の文字だけ <strong>R</strong> = Round（丸形）。<br>
+          絶縁・シースは VVF と同じ（V + V）。
+          <span class="answer-scene">📍 配線ダクト内——平たいVVFが通りにくい曲がり角で活躍</span>
+          <span class="answer-trivia">中身は同じ、束ね方だけ違う兄弟</span>
+        </div>
+      </div>
+    </li>
+    <li class="flashcard" tabindex="0">
+      <div class="flashcard-prompt">
+        <strong>VCTF</strong>
+        <span class="flashcard-question">VCTと何が違う？</span>
+        <span class="flashcard-hint">ホバーで答え</span>
+      </div>
+      <div class="flashcard-answer">
+        <div class="flashcard-answer-inner">
+          <strong>F</strong> = 300V以下の code（コード）区分。<br>
+          VCT = 600V以下ケーブル / VCTF = 300V以下コード。
+          <span class="answer-scene">📍 家電の電源コード、PCの電源ケーブル</span>
+          <span class="answer-trivia">300V以下は「コード」、600V以下は「ケーブル」と呼び分ける</span>
+        </div>
+      </div>
+    </li>
+  </ol>
+
+  <div class="source-box">
+    <strong>今回の primary source（必読）</strong>
+    <a href="https://www.jefcom.co.jp/media/useful_information/a10">ジェフコム「今さら聞けない！ケーブルの種類について 基礎編」</a> — 種類・用途が表で整理されている。文字の意味と照合しながら読むと定着する。
+  </div>
+
+  <div class="ask-teacher">
+    <strong>わからない略称があれば、このチャットで聞いてください。</strong>
+    「ELB」「AFCI」「D種接地」など試験用語も同じ分解方式で解説します。
+  </div>
+
+  <nav class="lesson-nav">
+    <a href="../lessons/0001-thirty-volt-line.html">← レッスン1</a>
+    <a href="../reference/cable-abbreviations.html">ケーブルデコーダー</a>
+    <a href="../reference/glossary.html">用語集</a>
+  </nav>
+</article>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/reveal-answer.js"></script>
+</body>
+</html>
