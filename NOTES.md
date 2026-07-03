@@ -36,6 +36,7 @@
 ## 暗記表の設計ルール（2026-07-02 追加）
 
 - **暗記表4種セット**が学科の核：①`numbers-to-memorize.html` ②`symbol-decoder.html` ③`cable-abbreviations.html` ④`formulas-and-calculations.html`。レッスンを拡充したら、試験数値・公式・記号は必ずいずれかに追記する
+- **過去問ギャップ修正**（2026-07-03）：公式PDF監査で×だった17問を4表＋レッスン6/7へ追記。写真問題は実物画像の代わりに**テキスト特徴描写ドリル**（`lessons/0006`, `0007`）。カバレッジ再評価は `reference/past-exam-coverage-audit.html`
 - `numbers-to-memorize.html` は数値・ルール・施工・法令のハブ。計算の「やり方」は `formulas-and-calculations.html` に分離
 - 各 `<h2>` の直下に `<p class="see-lesson">わからなければ → <a href="...">レッスンXで解説</a></p>` を必ず入れる（`assets/reveal-answer.css` の `.see-lesson`）。4表すべてこのパターンで統一
 - 数値だけ暗記して「なぜその数値か」を忘れた時に、無理なく該当レッスンに戻れる導線を常に確保する

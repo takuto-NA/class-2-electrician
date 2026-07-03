@@ -125,9 +125,9 @@
     </tbody>
   </table>
 
-  <h2>計算の典型例12連（暗算で解く）</h2>
+  <h2>計算の典型例17連（暗算で解く）</h2>
   <p class="see-lesson">わからなければ → <a href="../lessons/0012-ohms-law.html">レッスン12</a>〜<a href="../lessons/0014-voltage-drop.html">14</a>のクイズ</p>
-  <p class="reveal-mode-note">本番計算10〜12問はこの12型のバリエーション。答えだけでなく<strong>使った公式</strong>もセットで覚える。</p>
+  <p class="reveal-mode-note">本番計算10〜12問はこの17型のバリエーション。答えだけでなく<strong>使った公式</strong>もセットで覚える。</p>
   <table class="reveal-table">
     <thead><tr><th>問題</th><th>公式</th><th>答え</th></tr></thead>
     <tbody>
@@ -191,8 +191,54 @@
         <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">W = P×t</span></td>
         <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>3kWh</strong></span></td>
       </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>1.6mm・8m と同抵抗の32m線の直径</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">R＝ρL/A、A∝d² → d₂＝d₁×√(L₂/L₁)</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>3.2mm</strong>（1.6×√4）（R7上期Q2）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>単相2線・10A・100m・抵抗表方式</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">e＝2×I×R×L（R＝Ω/km、L＝km）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">4V以内→<strong>14mm²</strong>以上（1.30Ω/km）（R7上期Q6）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>単相3線・線0.1Ω・負荷20A</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">Vab＝100V（中性線電位差で補正）</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>100V</strong>（R7上期Q7）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>PF管内3本・5.5mm²・減少係数0.7</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">許容＝表値×減少係数</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">49×0.7＝<strong>34A</strong>（R7上期Q8）</span></td>
+      </tr>
+      <tr class="reveal-row" tabindex="0">
+        <td>6極・50Hz誘導電動機の同期速度</td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body">N＝120×f÷p</span></td>
+        <td class="reveal-cell"><span class="reveal-placeholder">ホバー</span><span class="reveal-body"><strong>1000min⁻¹</strong>（120×50÷6）（R7上期Q14）</span></td>
+      </tr>
     </tbody>
   </table>
+
+  <h2>抵抗と電線の公式（R7上期で頻出）</h2>
+  <p class="see-lesson">わからなければ → <a href="../lessons/0012-ohms-law.html">レッスン12</a>・<a href="../lessons/0014-voltage-drop.html">レッスン14</a></p>
+  <div class="formula-box">
+    <span class="formula-label">電線の抵抗</span>
+    R ＝ ρ × L ÷ A　　（ρ＝抵抗率、L＝長さ[m]、A＝断面積[mm²]）
+    <span class="formula-label" style="margin-top:0.5rem;">同じ材料なら R₁/R₂ ＝ L₁/L₂ × A₂/A₁ 　直径 d なら A∝d²</span>
+  </div>
+  <div class="formula-box">
+    <span class="formula-label">電圧降下（抵抗表方式・単相2線）</span>
+    e ＝ 2 × I × R × L　　（R＝1km当たり導体抵抗[Ω/km]、L＝こう長[km]）
+    <span class="formula-label" style="margin-top:0.5rem;">係数法 e＝35.6×L×I÷(1000×A) とも結果を照合する</span>
+  </div>
+  <div class="formula-box">
+    <span class="formula-label">管内許容電流</span>
+    許容電流 ＝ 表の許容値 × 電流減少係数（3本収め等で0.7等）
+  </div>
+  <div class="formula-box">
+    <span class="formula-label">誘導電動機の同期速度</span>
+    N ＝ 120 × f ÷ p　　（f＝周波数[Hz]、p＝極数）— 実回転はこれより数%低い（すべり）
+  </div>
 
   <h2>電圧降下係数の選び方（暗記表）</h2>
   <p class="see-lesson">係数の数値は<a href="numbers-to-memorize.html">数値暗記表</a>が正本</p>
